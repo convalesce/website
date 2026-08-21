@@ -8,7 +8,7 @@ export function Nav() {
   return (
     <header className="bg-bg/75 supports-[backdrop-filter]:bg-bg/45 sticky top-0 z-50 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto flex h-16 w-full max-w-[1230px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
-        <Link href="#top" aria-label="Heal by Convalesce, back to top">
+        <Link href="#top" aria-label="Convalesce, back to top">
           <Logo />
         </Link>
 
@@ -17,7 +17,7 @@ export function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-muted hover:text-ink text-[14px] transition-colors"
+              className="text-muted hover:text-ink text-small transition-colors"
             >
               {link.label}
             </a>
@@ -29,6 +29,7 @@ export function Nav() {
             href={CTA.primary.href}
             size="sm"
             event="request_early_access"
+            label="Request early access"
             trailing="↗"
           >
             <span className="hidden sm:inline">Request early access</span>

@@ -14,7 +14,7 @@ const COLUMNS = [
   {
     heading: "Company",
     links: [
-      { label: "Early access", href: mailto("Heal early access") },
+      { label: "Early access", href: mailto("Convalesce early access") },
       { label: "Contact", href: mailto("Hello from your site") },
     ],
   },
@@ -28,7 +28,7 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-2">
               <Logo />
-              <p className="text-muted mt-5 max-w-[30ch] text-[14px]">
+              <p className="text-muted text-small mt-5 max-w-[30ch]">
                 {SITE.tagline}
               </p>
             </div>
@@ -41,7 +41,7 @@ export function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-muted hover:text-ink text-[14px] transition-colors"
+                        className="text-muted hover:text-ink text-small transition-colors"
                       >
                         {link.label}
                       </a>
@@ -52,7 +52,7 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="border-line text-faint mt-10 border-t pt-5 text-[13px]">
+          <p className="border-line text-faint text-mono-sm font-mono mt-10 border-t pt-5">
             Docs and integration guides are on the way.
           </p>
         </div>
@@ -70,8 +70,7 @@ export function Footer() {
           aria-hidden="true"
           className="font-display text-display text-ink/[0.13] select-none"
         >
-          {HERO.headLeft}{" "}
-          <span className="text-ink/[0.2]">{HERO.headRight}</span>
+          {HERO.head}
         </p>
       </FrameWidth>
     </footer>

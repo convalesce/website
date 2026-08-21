@@ -1,6 +1,6 @@
-# Heal — Convalesce landing site
+# Convalesce landing site
 
-Marketing site for **Heal**, Convalesce's self-healing layer for data pipelines.
+Marketing site for **Convalesce**, the self-healing layer for data pipelines.
 
 ```bash
 npm install
@@ -26,22 +26,25 @@ Vercel Analytics and Speed Insights need no configuration; they activate on depl
 
 ## Editing content
 
-All copy is in **`lib/content.ts`** — headlines, steps, FAQ, integrations, and the hero incident. Nothing else needs touching for a wording change.
+All copy is in **`lib/content.ts`**: headlines, steps and their artifacts, context sources, FAQ, integrations, and the example incident used in `llms-full.txt`. Nothing else needs touching for a wording change.
 
 To move an integration from coming-soon to live, flip its `status` from `"soon"` to `"live"` in `INTEGRATIONS`.
 
 ## Layout system
 
-The page follows opal.dev's structural grammar, measured off the live site rather than eyeballed. Two components hold it:
+Every section sits inside a hairline frame with mono furniture at its corners, and headers are deliberately asymmetric. Three components hold the grammar:
 
 - **`components/frame.tsx`** — the hairline frame every section sits inside (`max-w-[1230px]`, so it insets ~105px at 1440px wide) with mono index/label furniture at its top corners.
-- **`components/ui/section-header.tsx`** — the asymmetric header: display heading on the left, supporting paragraph thrown to the far-right column *and* dropped below the heading baseline.
+- **`components/ui/section-header.tsx`** — the asymmetric header: display heading on the left, supporting paragraph thrown to the far-right column *and* dropped below the heading baseline. Takes an optional `action` for a closing CTA.
+- **`components/ui/grid.tsx`** — the contiguous hairline grid (`Grid` + `Cell`): one top and left rail, every cell closes its own right and bottom. One breakpoint ladder, one cell padding, so sections cannot drift apart.
 
-Sections compose these rather than re-deriving the layout. Key metrics carried over: `156px` section tail padding, display line-height exactly `1.0` at tracking `-0.04em`, body at `15px`, radii `2/4/6/12/36/pill`.
+Sections compose these rather than re-deriving the layout. Key metrics: `156px` section tail padding, `mt-14 lg:mt-24` between header and content, body at `16px`, radii `4/6/12`.
+
+Every font size is a step on the scale in `app/globals.css` (`text-display`, `h2`, `h3`, `body`, `small`, `mono`, `mono-sm`, `label`). Sections never set pixel sizes. Mono is not decoration: it carries product data (run ids, table names, what each source reads) in every section.
 
 ## Colour
 
-Dark only. Black page, near-black surfaces, `#142820` matte green for the brand, and a bright emerald reserved for state signals (live dots, the healed cell, the logo arc) where the matte green would be invisible.
+Dark only. Black page, near-black surfaces, `#142820` matte green for the brand, and a bright emerald reserved for state signals (live dots, the marquee logos, the logo arc) where the matte green would be invisible.
 
 Hierarchy comes from a single ink colour at varying alpha (`--muted` 64%, `--faint` 48%, `--line` 10%) rather than a grey ramp, so every surface stays in the same family. All tokens live in one `:root` block at the top of `app/globals.css`.
 
@@ -51,9 +54,11 @@ No component uses a `dark:` utility — every colour resolves through a token, s
 
 ## Motion
 
-One orchestrated moment — the hero run grid fills, stalls red, gathers evidence, and heals — plus restrained scroll reveals driven by a single shared `IntersectionObserver` in `components/ui/reveal.tsx`.
+Restrained scroll reveals from `components/ui/reveal.tsx`, driven by one shared `IntersectionObserver`. The hero headline's object rotates through the stack (`components/ui/rotating-word.tsx`, words in `HERO.rotating`): a one-line clipped window, outgoing word rises out, incoming word rises in, every 3s. Two ambient loops, the stack marquee and the context ticker.
 
-Under `prefers-reduced-motion: reduce` everything collapses to its final state and the grid renders healed and static.
+Both marquee halves are rendered wider than the frame; the track wraps by shifting exactly `-50%`, so a half narrower than the viewport would run dry before the loop came round.
+
+Under `prefers-reduced-motion: reduce` everything collapses to its final state and the headline holds its first word.
 
 ## Not in this repo
 

@@ -1,19 +1,19 @@
 export const SITE = {
   company: "Convalesce",
-  product: "Heal",
-  domain: "https://convalesce.ai",
+  product: "Convalesce",
+  domain: "https://convalesce.io",
   tagline: "Self-healing for data pipelines.",
   description:
-    "Heal's agents pick up a failed pipeline run, trace the blast radius through your lineage, and return a fix with the evidence behind it.",
-  email: "hello@convalesce.ai",
+    "Convalesce's agents pick up a failed pipeline run, trace the blast radius through your lineage, and return a fix with the evidence behind it.",
+  email: "vedanshu7.joshi@gmail.com",
 } as const;
 
 export const mailto = (subject: string) =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
 
 export const CTA = {
-  primary: { label: "Request early access", href: mailto("Heal early access") },
-  secondary: { label: "See how it works", href: "#how-it-works" },
+  primary: { label: "Request early access", href: mailto("Convalesce early access") },
+  secondary: { label: "See the evidence trail", href: "#how-it-works" },
 } as const;
 
 export const NAV_LINKS = [
@@ -23,14 +23,12 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO = {
-  eyebrow: "Self-healing data infrastructure",
-  headLeft: "When data breaks,",
-  headRight: "Heal fixes it.",
-  body: "Heal's agents pick up the failed run, trace the blast radius through your lineage, and return a fix with the evidence behind it, before your team opens a single tab.",
-  assurances: [
-    "Designed for privacy-conscious teams",
-    "Context stays scoped to the incident",
-  ],
+  head: "Self-healing data infrastructure",
+  /* the headline as rendered: a fixed stem and a rotating object, so a
+     visitor sees their own stack named within a few seconds */
+  headStem: "Self-healing",
+  rotating: ["data infrastructure", "data pipelines", "Airflow DAGs", "dbt models"],
+  body: "Agents pick up the failed run, trace its blast radius through your lineage, and return a fix with the evidence attached, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
 } as const;
 
 export const STACK = [
@@ -41,65 +39,102 @@ export const STACK = [
   "OpenTelemetry",
 ] as const;
 
+/* What the product actually holds at this stage, shown as key/value mono. */
+export type Artifact = {
+  caption: string;
+  rows: readonly (readonly [string, string])[];
+};
+
 export type Step = {
   n: string;
   title: string;
   body: string;
   footnote: string;
+  artifact: Artifact;
 };
 
 export const STEPS: readonly Step[] = [
   {
     n: "01",
     title: "Capture the failure",
-    body: "Heal's orchestration integration captures the failed run, the exception, task state, and the correlated execution metadata around it.",
-    footnote: "Airflow SDK → Heal SDK",
+    body: "Convalesce's orchestration integration captures the failed run, the exception, the task state, and the correlated execution metadata around it.",
+    footnote: "Airflow SDK → Convalesce SDK",
+    artifact: {
+      caption: "Captured run",
+      rows: [
+        ["dag", "daily_orders"],
+        ["task", "load_orders"],
+        ["state", "failed · 09:42:18 UTC"],
+        ["exception", "SnowflakeSQLException: invalid type"],
+      ],
+    },
   },
   {
     n: "02",
     title: "Build the context",
-    body: "Heal combines runtime evidence with warehouse metadata, lineage, telemetry, and context from the tools already connected to the run.",
-    footnote: "Evidence, connected",
+    body: "Convalesce combines runtime evidence with warehouse metadata, lineage, telemetry, and context from the tools already connected to the run.",
+    footnote: "Lineage + telemetry + schema history",
+    artifact: {
+      caption: "Incident bundle",
+      rows: [
+        ["runtime", "task state, retries, exit codes"],
+        ["lineage", "upstream cause, downstream blast radius"],
+        ["warehouse", "schema, types, freshness, row counts"],
+        ["telemetry", "spans, exceptions, timing"],
+      ],
+    },
   },
   {
     n: "03",
     title: "Resolve and heal",
     body: "Agents reason over a scoped incident bundle, then propose or apply the fix, with the evidence trail attached, so an engineer can verify before it ships.",
     footnote: "Cause → evidence → action",
+    artifact: {
+      caption: "Evidence trail",
+      rows: [
+        ["+0.2s", "Airflow task exception captured"],
+        ["+0.8s", "Lineage impact resolved"],
+        ["+1.4s", "Schema history compared"],
+        ["cause", "order_total NUMBER → VARCHAR in raw.shopify_orders"],
+        ["fix", "CAST(order_total AS NUMBER)"],
+        ["confidence", "94%"],
+      ],
+    },
   },
 ] as const;
 
 export type ContextSource = {
-  n: string;
   name: string;
   question: string;
+  /** the concrete signals this source contributes, in mono */
+  reads: string;
 };
 
 export const CONTEXT_SOURCES: readonly ContextSource[] = [
   {
-    n: "01",
-    name: "Connectors",
+    name: "Orchestrator runs",
     question: "What happened in your data tools?",
+    reads: "task state · exceptions · retries",
   },
   {
-    n: "02",
     name: "OpenLineage",
     question: "What data is connected and impacted?",
+    reads: "inputs · outputs · job runs",
   },
   {
-    n: "03",
     name: "OpenTelemetry",
     question: "What execution caused what?",
+    reads: "spans · traces · timing",
   },
   {
-    n: "04",
     name: "Warehouse metadata",
     question: "What changed in the tables underneath?",
+    reads: "information_schema · row counts · freshness",
   },
   {
-    n: "05",
-    name: "Heal instrumentation",
+    name: "Convalesce instrumentation",
     question: "What did this run know at the moment it failed?",
+    reads: "params · upstream versions · config",
   },
 ] as const;
 
@@ -113,12 +148,30 @@ export const TICKER_ITEMS = [
   "marts.arr_rollup",
 ] as const;
 
-export const PILLARS = [
-  { name: "Runtime execution", detail: "Task state, retries, exit codes" },
-  { name: "Data lineage", detail: "Upstream cause, downstream blast radius" },
-  { name: "Warehouse metadata", detail: "Schema, types, freshness, row counts" },
-  { name: "Logs & telemetry", detail: "Spans, exceptions, timing" },
-] as const;
+/* The hero's incident as a lineage graph. Columns are left-to-right flow,
+   rows separate the join. Blast order is how far downstream each hit sits. */
+export const LINEAGE = {
+  run: "HL-2847",
+  nodes: [
+    { id: "shopify", name: "raw.shopify_orders", col: 0, row: 1 },
+    { id: "stg", name: "stg_orders", col: 1, row: 1 },
+    { id: "customers", name: "dim_customers", col: 1, row: 0 },
+    { id: "daily", name: "daily_orders", col: 2, row: 1 },
+    { id: "revenue", name: "finance.daily_revenue", col: 3, row: 1 },
+  ],
+  edges: [
+    ["shopify", "stg"],
+    ["stg", "daily"],
+    ["customers", "daily"],
+    ["daily", "revenue"],
+  ],
+  origin: "shopify",
+  blast: ["stg", "daily", "revenue"],
+  change: "order_total: NUMBER → VARCHAR",
+  fix: "CAST(order_total AS NUMBER)",
+} as const;
+
+export type LineageNode = (typeof LINEAGE.nodes)[number];
 
 export type Integration = {
   name: string;
@@ -142,25 +195,28 @@ export const PRINCIPLES = [
   {
     name: "Evidence before answers",
     body: "Every conclusion is tied to the signals behind it, so engineers can verify before acting.",
+    proof: "every conclusion cites its signals",
   },
   {
     name: "Scoped by design",
-    body: "Heal collects incident-relevant context instead of becoming another uncontrolled copy of your data.",
+    body: "Convalesce collects the context an incident needs, not another copy of your data.",
+    proof: "reads information_schema · never table rows",
   },
   {
     name: "Fits the stack you have",
     body: "Start with your orchestrator and warehouse, then add context sources as your needs grow.",
+    proof: "one SDK · your warehouse · nothing else",
   },
 ] as const;
 
 export const FAQ = [
   {
-    q: "Does Heal apply fixes on its own?",
-    a: "You choose. Heal can stop at a proposed fix with its evidence attached, or apply it and open the trail for review. Auto-apply is opt-in per pipeline, never a default.",
+    q: "Does Convalesce apply fixes on its own?",
+    a: "You choose. Convalesce can stop at a proposed fix with its evidence attached, or apply it and open the trail for review. Auto-apply is opt-in per pipeline, never a default.",
   },
   {
-    q: "What does Heal need access to?",
-    a: "Read access to your orchestrator's run metadata and your warehouse's information schema. Heal reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves.",
+    q: "What does Convalesce need access to?",
+    a: "Read access to your orchestrator's run metadata and your warehouse's information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves.",
   },
   {
     q: "Does our data leave our environment?",
@@ -168,7 +224,7 @@ export const FAQ = [
   },
   {
     q: "How long does setup take?",
-    a: "Install the SDK in your Airflow deployment and connect your warehouse. Heal starts building context on the next failed run.",
+    a: "Install the SDK in your Airflow deployment and connect your warehouse. Convalesce starts building context on the next failed run.",
   },
   {
     q: "Which orchestrators are supported?",
@@ -178,29 +234,8 @@ export const FAQ = [
 
 export const CLOSER = {
   eyebrow: "Early access",
-  head: "Spend less time reconstructing failures.",
-  body: "We're working with early data teams to shape Heal around real production incidents.",
-  cta: { label: "Join the early access list", href: mailto("Heal early access") },
-} as const;
-
-/* The hero's incident, reused verbatim from the working demo. */
-export const INCIDENT = {
-  id: "HL-2847",
-  source: "Airflow · prod",
-  pipeline: "daily_orders",
-  time: "09:42:18 UTC",
-  rootSignal: "Column type drift",
-  downstream: "finance.daily_revenue",
-  trail: [
-    { text: "Airflow task exception captured", at: "+0.2s" },
-    { text: "Lineage impact resolved", at: "+0.8s" },
-    { text: "Schema history compared", at: "+1.4s" },
-  ],
-  cause: {
-    column: "order_total",
-    change: "changed from NUMBER to VARCHAR in",
-    table: "raw.shopify_orders",
-  },
-  confidence: "94%",
-  fix: "CAST(order_total AS NUMBER)",
+  head: "Stop reconstructing failures.",
+  body: "We're working with early data teams to shape Convalesce around real production incidents.",
+  cta: { label: "Join the early access list", href: mailto("Convalesce early access") },
+  note: "Airflow today · Dagster next",
 } as const;
