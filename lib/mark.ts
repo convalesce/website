@@ -5,8 +5,10 @@
  *
  * Geometry lives here because it is drawn on three surfaces at three sizes
  * (in-page logo, OG image, favicon) and used to drift between them.
- * `app/icon.svg` is a static file and cannot import this; it carries the
- * r=9 paths inline and points back here.
+ * `public/icon.svg` is a static file and cannot import this; it carries the
+ * r=9 paths inline and points back here. The rasters in `public/` are rendered
+ * from that same geometry on an opaque plate, because search results draw a
+ * favicon on white and a transparent theme-adaptive stroke vanishes there.
  */
 
 /** Half-width of the C's opening, in degrees off east. */

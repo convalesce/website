@@ -2,9 +2,9 @@ export const SITE = {
   company: "Convalesce",
   product: "Convalesce",
   domain: "https://convalesce.io",
-  tagline: "Self-healing for data pipelines.",
+  tagline: "Self-healing data infrastructure.",
   description:
-    "Convalesce's agents pick up a failed pipeline run, trace the blast radius through your environment, and return a fix with the evidence behind it.",
+    "Convalesce self-heals your data infrastructure. Agents pick up a failed run, trace its blast radius, and return a fix with the evidence behind it.",
   email: "vedanshu7.joshi@gmail.com",
 } as const;
 
@@ -35,6 +35,9 @@ export const HERO = {
     "data workflows",
   ],
   body: "Agents pick up the failed run, trace its blast radius through your environment, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
+  /* The share card carries one supporting line under the headline, so it gets
+     its own sentence rather than a slice of the body. */
+  sub: "Agents pick up the failed run, trace its blast radius, and return a fix with the evidence behind it.",
 } as const;
 
 export const STACK = [
@@ -85,7 +88,7 @@ export const STEPS: readonly Step[] = [
       rows: [
         ["runtime", "task state, retries, exit codes"],
         ["lineage", "upstream cause, downstream blast radius"],
-        ["warehouse", "schema, types, freshness, row counts"],
+        ["metadata", "schema, types, freshness, row counts"],
         ["telemetry", "spans, exceptions, timing"],
       ],
     },
@@ -98,7 +101,7 @@ export const STEPS: readonly Step[] = [
     artifact: {
       caption: "Evidence trail",
       rows: [
-        ["+0.2s", "Airflow task exception captured"],
+        ["+0.2s", "Task exception captured"],
         ["+0.8s", "Lineage impact resolved"],
         ["+1.4s", "Schema history compared"],
         ["cause", "order_total NUMBER → VARCHAR in raw.shopify_orders"],
@@ -157,7 +160,7 @@ export const TICKER_ITEMS = [
 /* The hero's incident as a lineage graph. Columns are left-to-right flow,
    rows separate the join. Blast order is how far downstream each hit sits. */
 export const LINEAGE = {
-  run: "HL-2847",
+  run: "CV-2847",
   nodes: [
     { id: "shopify", name: "raw.shopify_orders", col: 0, row: 1 },
     { id: "stg", name: "stg_orders", col: 1, row: 1 },
@@ -176,8 +179,6 @@ export const LINEAGE = {
   change: "order_total: NUMBER → VARCHAR",
   fix: "CAST(order_total AS NUMBER)",
 } as const;
-
-export type LineageNode = (typeof LINEAGE.nodes)[number];
 
 export type Integration = {
   name: string;
@@ -210,7 +211,7 @@ export const PRINCIPLES = [
   },
   {
     name: "Fits the stack you have",
-    body: "Start with your orchestrator and warehouse, then add context sources as your needs grow.",
+    body: "Start with the tools you already run, then connect more context as you need it.",
     proof: "one tool · your environment · nothing else",
   },
 ] as const;
@@ -222,7 +223,7 @@ export const FAQ = [
   },
   {
     q: "What does Convalesce need access to?",
-    a: "Read access to your orchestrator's run metadata and your warehouse's information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves.",
+    a: "Read access to your run metadata and your information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves.",
   },
   {
     q: "Does our data leave our environment?",

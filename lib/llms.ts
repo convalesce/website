@@ -11,8 +11,9 @@ import {
   STEPS,
 } from "@/lib/content";
 
-/* Both LLM index files are derived from the same copy the page renders, so
-   what a model reads is exactly what a visitor reads. */
+/* Both LLM index files are derived from the same copy the page renders. The
+   full text adds one thing the page does not spell out: the example incident
+   walked end to end, assembled from the same LINEAGE data the artifacts cite. */
 
 const live = INTEGRATIONS.filter((i) => i.status === "live").map((i) => i.name);
 const soon = INTEGRATIONS.filter((i) => i.status === "soon").map((i) => i.name);
@@ -20,9 +21,9 @@ const soon = INTEGRATIONS.filter((i) => i.status === "soon").map((i) => i.name);
 export function llmsIndex() {
   return `# ${SITE.company}
 
-> ${SITE.tagline} ${SITE.description}
+> ${SITE.description}
 
-${SITE.company} is a developer tool for data teams. Its agents pick up a failed pipeline run in Airflow, assemble the context around it (lineage, warehouse metadata, telemetry, run state), and return a proposed or applied fix with the evidence attached. It reads the shape of data (schemas, types, row counts, lineage), not the rows.
+${SITE.company} is a developer tool for data teams. Its agents pick up a failed run, assemble the context around it (lineage, metadata, telemetry, run state), and return a proposed or applied fix with the evidence attached. It reads the shape of data (schemas, types, row counts, lineage), not the rows.
 
 ## Site
 

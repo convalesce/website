@@ -1,4 +1,8 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
+
 import { HERO, SITE } from "@/lib/content";
 import { markPaths } from "@/lib/mark";
 
@@ -8,7 +12,15 @@ export const alt = `${SITE.company}: ${SITE.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+/* Satori cannot read woff2, and next/font only ever emits woff2, so the display
+   face is vendored as ttf beside this file and read at build time. Without it
+   the card falls back to a system sans and stops looking like the site. */
+const font = (weight: 400 | 600) =>
+  readFile(join(process.cwd(), "app/fonts", `InstrumentSans-${weight}.ttf`));
+
+export default async function OpenGraphImage() {
+  const [regular, semibold] = await Promise.all([font(400), font(600)]);
+
   return new ImageResponse(
     (
       <div
@@ -20,6 +32,7 @@ export default function OpenGraphImage() {
           justifyContent: "space-between",
           background: "#000000",
           color: "#ededed",
+          fontFamily: "Instrument Sans",
           padding: 72,
         }}
       >
@@ -61,16 +74,22 @@ export default function OpenGraphImage() {
           <span
             style={{
               fontSize: 26,
+              fontWeight: 400,
               color: "rgba(237,237,237,0.64)",
               maxWidth: 900,
             }}
           >
-            Agents that investigate a failed pipeline run, trace the blast radius,
-            and return a fix with the evidence behind it.
+            {HERO.sub}
           </span>
         </div>
       </div>
     ),
-    size,
+    {
+      ...size,
+      fonts: [
+        { name: "Instrument Sans", data: regular, weight: 400, style: "normal" },
+        { name: "Instrument Sans", data: semibold, weight: 600, style: "normal" },
+      ],
+    },
   );
 }

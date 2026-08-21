@@ -40,31 +40,71 @@ export const metadata: Metadata = {
   creator: SITE.company,
   publisher: SITE.company,
   category: "technology",
+  /* Declared by hand from public/ rather than through the app/ file convention,
+     for the two reasons the icon was missing from search results in the first
+     place: the URLs stay clean and stable instead of carrying a build hash, and
+     the theme-adaptive icon.svg is deliberately NOT declared. Google rasterises
+     a favicon onto a white row, where that SVG's prefers-color-scheme stroke has
+     nothing to hold on to. It stays on disk for anyone who wants it directly. */
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   alternates: { canonical: "/" },
   keywords: [
+    // Brand.
+    "Convalesce",
+    "convalesce.io",
+    // Core nouns.
     "data infrastructure",
     "data pipelines",
     "data workflows",
     "data warehouse",
     "data lakehouse",
     "data platform",
+    "data orchestration",
+    "data engineering",
+    // The product.
     "self-healing",
+    "self-healing data infrastructure",
     "self-healing data pipelines",
     "data pipeline automation",
     "pipeline failure recovery",
+    "automated incident resolution",
     "pipeline monitoring",
+    // Outcomes.
     "data observability",
     "data reliability",
     "data quality",
     "data downtime",
+    "data incident response",
+    // Mechanism.
     "data lineage",
     "blast radius analysis",
     "root cause analysis",
     "incident investigation",
     "schema drift",
-    "data orchestration",
-    "data engineering",
+    "schema drift detection",
+    "evidence trail",
+    // AI category.
     "AI agents for data",
+    "agentic data engineering",
+    "autonomous data operations",
+    "AI data engineer",
+    // Question keywords.
+    "what is self-healing data infrastructure",
+    "how to fix a failed data pipeline",
+    "why did my data pipeline fail",
+    "how to find the root cause of a pipeline failure",
+    "what is blast radius in data",
+    "how to detect schema drift",
+    "data observability vs data quality",
   ],
   openGraph: {
     title,
@@ -79,12 +119,10 @@ export const metadata: Metadata = {
     title,
     description: SITE.description,
   },
+  /* index+follow is the crawler default, so stating it here only duplicates
+     the tag Next emits on /404. Only the googleBot extensions earn their tag. */
   robots: {
-    index: true,
-    follow: true,
     googleBot: {
-      index: true,
-      follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
@@ -108,8 +146,23 @@ const jsonLd = {
       name: SITE.company,
       url: SITE.domain,
       description: SITE.description,
-      logo: `${SITE.domain}/icon.svg`,
+      /* Google's logo guidance wants dimensions it can trust, not a bare URL. */
+      logo: {
+        "@type": "ImageObject",
+        "@id": `${SITE.domain}/#logo`,
+        url: `${SITE.domain}/favicon-512x512.png`,
+        width: 512,
+        height: 512,
+        caption: SITE.company,
+      },
+      image: { "@id": `${SITE.domain}/#logo` },
       email: SITE.email,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: SITE.email,
+        availableLanguage: "English",
+      },
     },
     {
       "@type": "WebSite",
@@ -155,6 +208,12 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${sans.variable} ${mono.variable} h-full antialiased`}
     >
+      <head>
+        {/* The site is dark by design; Dark Reader would re-invert it into mush.
+            Next drops a metadata `other` entry whose value is an empty string,
+            so this one has to be a real tag. */}
+        <meta name="darkreader-lock" />
+      </head>
       <body className="bg-bg text-ink min-h-full">
         {children}
         <script
