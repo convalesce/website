@@ -16,8 +16,8 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-8 px-3 text-[13px]",
-  md: "h-10 px-4 text-[14px]",
+  sm: "h-8 px-3 text-small",
+  md: "h-10 px-4 text-small",
 };
 
 export function Button({
@@ -26,6 +26,7 @@ export function Button({
   variant = "primary",
   size = "md",
   event,
+  label,
   className = "",
   trailing,
 }: {
@@ -34,13 +35,17 @@ export function Button({
   variant?: Variant;
   size?: Size;
   event?: AnalyticsEvent;
+  /** analytics label when children is not a plain string */
+  label?: string;
   className?: string;
   trailing?: ReactNode;
 }) {
+  const analyticsLabel = label ?? (typeof children === "string" ? children : "");
+
   return (
     <a
       href={href}
-      onClick={event ? () => track(event, { label: String(children) }) : undefined}
+      onClick={event ? () => track(event, { label: analyticsLabel }) : undefined}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
