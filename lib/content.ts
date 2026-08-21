@@ -4,7 +4,7 @@ export const SITE = {
   domain: "https://convalesce.io",
   tagline: "Self-healing for data pipelines.",
   description:
-    "Convalesce's agents pick up a failed pipeline run, trace the blast radius through your lineage, and return a fix with the evidence behind it.",
+    "Convalesce's agents pick up a failed pipeline run, trace the blast radius through your environment, and return a fix with the evidence behind it.",
   email: "vedanshu7.joshi@gmail.com",
 } as const;
 
@@ -27,8 +27,14 @@ export const HERO = {
   /* the headline as rendered: a fixed stem and a rotating object, so a
      visitor sees their own stack named within a few seconds */
   headStem: "Self-healing",
-  rotating: ["data infrastructure", "data pipelines", "Airflow DAGs", "dbt models"],
-  body: "Agents pick up the failed run, trace its blast radius through your lineage, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
+  rotating: [
+    "data infrastructure",
+    "data pipelines",
+    "data warehouses",
+    "data lakehouses",
+    "data workflows",
+  ],
+  body: "Agents pick up the failed run, trace its blast radius through your environment, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
 } as const;
 
 export const STACK = [
@@ -57,8 +63,8 @@ export const STEPS: readonly Step[] = [
   {
     n: "01",
     title: "Capture the failure",
-    body: "Convalesce's orchestration integration captures the failed run, the exception, the task state, and the correlated execution metadata around it.",
-    footnote: "Airflow SDK → Convalesce SDK",
+    body: "Convalesce's integration captures the failed run, the exception, the task state, and the correlated execution metadata around it.",
+    footnote: "Your env → Convalesce ENV",
     artifact: {
       caption: "Captured run",
       rows: [
@@ -72,7 +78,7 @@ export const STEPS: readonly Step[] = [
   {
     n: "02",
     title: "Build the context",
-    body: "Convalesce combines runtime evidence with warehouse metadata, lineage, telemetry, and context from the tools already connected to the run.",
+    body: "Convalesce combines runtime evidence with metadata, lineage, telemetry, and context from the tools already connected to it.",
     footnote: "Lineage + telemetry + schema history",
     artifact: {
       caption: "Incident bundle",
@@ -127,7 +133,7 @@ export const CONTEXT_SOURCES: readonly ContextSource[] = [
     reads: "spans · traces · timing",
   },
   {
-    name: "Warehouse metadata",
+    name: "Metadata",
     question: "What changed in the tables underneath?",
     reads: "information_schema · row counts · freshness",
   },
@@ -205,7 +211,7 @@ export const PRINCIPLES = [
   {
     name: "Fits the stack you have",
     body: "Start with your orchestrator and warehouse, then add context sources as your needs grow.",
-    proof: "one SDK · your warehouse · nothing else",
+    proof: "one tool · your environment · nothing else",
   },
 ] as const;
 
@@ -224,11 +230,11 @@ export const FAQ = [
   },
   {
     q: "How long does setup take?",
-    a: "Install the SDK in your Airflow deployment and connect your warehouse. Convalesce starts building context on the next failed run.",
+    a: "Configure your environment to connect the tools you want. Convalesce starts building context on the next failed run.",
   },
   {
-    q: "Which orchestrators are supported?",
-    a: "Airflow today. Dagster is next. If you run something else, tell us what. Early access is where we decide the order.",
+    q: "Which tools are supported?",
+    a: "The integrations listed above are live today, and the rest are on the way. If you run something that isn't there, tell us what. Early access is where we decide the order.",
   },
 ] as const;
 
@@ -237,5 +243,4 @@ export const CLOSER = {
   head: "Stop reconstructing failures.",
   body: "We're working with early data teams to shape Convalesce around real production incidents.",
   cta: { label: "Join the early access list", href: mailto("Convalesce early access") },
-  note: "Airflow today · Dagster next",
 } as const;

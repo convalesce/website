@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { Logo } from "@/components/logo";
@@ -30,7 +31,7 @@ export function Nav() {
             size="sm"
             event="request_early_access"
             label="Request early access"
-            trailing="↗"
+            trailing={<ArrowUpRight className="size-4" />}
           >
             <span className="hidden sm:inline">Request early access</span>
             <span className="sm:hidden">Early access</span>

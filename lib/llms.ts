@@ -98,7 +98,7 @@ ${faq}
 
 ## Early access
 
-${CLOSER.head} ${CLOSER.body} ${CLOSER.note}.
+${CLOSER.head} ${CLOSER.body}
 
 Request early access: ${CTA.primary.href}
 `;

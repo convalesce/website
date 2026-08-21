@@ -50,7 +50,7 @@ export function Button({
     >
       {children}
       {trailing ? (
-        <span aria-hidden="true" className="text-[0.9em] opacity-70">
+        <span aria-hidden="true" className="inline-flex items-center text-[0.9em] opacity-70">
           {trailing}
         </span>
       ) : null}

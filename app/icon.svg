@@ -2,7 +2,11 @@
   <!-- Geometry mirrors lib/mark.ts at r=9 — drawn fuller than the in-page mark
        because a browser tab gives it 16px. No background plate, so the C takes
        a mid-grey that holds on light and dark chrome, and lifts toward ink
-       where the browser reports a dark theme. -->
+       where the browser reports a dark theme.
+
+       app/favicon.ico sits alongside this: Google's search results need a
+       raster square of at least 48px on an opaque plate, which a transparent
+       theme-adaptive SVG cannot give them. -->
   <style>
     .c { stroke: #7d8481 }
     @media (prefers-color-scheme: dark) { .c { stroke: #ededed; stroke-opacity: .42 } }

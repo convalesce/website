@@ -1,3 +1,5 @@
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+
 import { Section } from "@/components/frame";
 import { Button } from "@/components/ui/button";
 import { Reveal, SplitText } from "@/components/ui/reveal";
@@ -13,10 +15,12 @@ export function Hero() {
           because nothing follows the buttons */}
       <div className="px-5 pt-14 pb-20 text-center sm:px-8 sm:pt-20 sm:pb-28 lg:px-10 lg:pt-28 lg:pb-36">
         <Reveal mode="words">
-          {/* one line from sm up; a phone may break it after the stem */}
-          <h1 className="font-display text-hero sm:whitespace-nowrap">
+          {/* the rotating object always drops to its own line under the stem */}
+          <h1 className="font-display text-hero">
             <SplitText text={HERO.headStem} />{" "}
-            <RotatingWord words={HERO.rotating} from={stemWords} className="text-accent-text" />
+            <span className="block">
+              <RotatingWord words={HERO.rotating} from={stemWords} className="text-accent-text" />
+            </span>
           </h1>
         </Reveal>
 
@@ -26,14 +30,18 @@ export function Hero() {
 
         <Reveal delay={200}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3 lg:mt-11">
-            <Button href={CTA.primary.href} event="request_early_access" trailing="↗">
+            <Button
+              href={CTA.primary.href}
+              event="request_early_access"
+              trailing={<ArrowUpRight className="size-4" />}
+            >
               {CTA.primary.label}
             </Button>
             <Button
               href={CTA.secondary.href}
               variant="secondary"
               event="see_how_it_works"
-              trailing="↓"
+              trailing={<ArrowDown className="size-4" />}
             >
               {CTA.secondary.label}
             </Button>

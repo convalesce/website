@@ -1,3 +1,4 @@
+import { Circle } from "lucide-react";
 import type { IconType } from "react-icons";
 import {
   SiApacheairflow,
@@ -25,7 +26,7 @@ const LOGOS: Record<string, IconType> = {
   Postgres: SiPostgresql,
 };
 
-const chip = "mono-label border-line rounded-sm border px-2 py-1";
+const chip = "mono-label border-line inline-flex items-center gap-1.5 rounded-sm border px-2 py-1";
 
 export function Integrations() {
   return (
@@ -59,7 +60,8 @@ export function Integrations() {
                 </div>
                 {live ? (
                   <span className={`${chip} text-accent-text border-accent/30 shrink-0`}>
-                    <span aria-hidden="true">● </span>Live
+                    <Circle aria-hidden="true" className="size-2 fill-current" />
+                    Live
                   </span>
                 ) : (
                   <span className={`${chip} shrink-0`}>Soon</span>
