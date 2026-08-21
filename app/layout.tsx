@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { GA_ID } from "@/lib/analytics";
-import { SITE } from "@/lib/content";
+import { FAQ, SITE } from "@/lib/content";
 import "./globals.css";
 
 const display = Instrument_Sans({
@@ -26,7 +26,7 @@ const mono = Geist_Mono({
   display: "swap",
 });
 
-const title = `${SITE.product} by ${SITE.company}: ${SITE.tagline}`;
+const title = `${SITE.company}: ${SITE.tagline}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   applicationName: SITE.product,
+  authors: [{ name: SITE.company, url: SITE.domain }],
+  creator: SITE.company,
+  publisher: SITE.company,
+  category: "technology",
+  alternates: { canonical: "/" },
   keywords: [
     "data pipelines",
     "self-healing",
@@ -49,6 +54,7 @@ export const metadata: Metadata = {
     description: SITE.description,
     url: SITE.domain,
     siteName: SITE.company,
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -56,7 +62,17 @@ export const metadata: Metadata = {
     title,
     description: SITE.description,
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -64,22 +80,54 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
+/* One graph, four entities: who we are, the site, the product, and the FAQ.
+   Each node is addressable by id so crawlers can connect them. */
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: SITE.company,
-  url: SITE.domain,
-  description: SITE.description,
-  email: SITE.email,
-  makesOffer: {
-    "@type": "Offer",
-    itemOffered: {
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE.domain}/#org`,
+      name: SITE.company,
+      url: SITE.domain,
+      description: SITE.description,
+      logo: `${SITE.domain}/icon.svg`,
+      email: SITE.email,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE.domain}/#site`,
+      url: SITE.domain,
+      name: SITE.company,
+      description: SITE.description,
+      publisher: { "@id": `${SITE.domain}/#org` },
+      inLanguage: "en",
+    },
+    {
       "@type": "SoftwareApplication",
+      "@id": `${SITE.domain}/#product`,
       name: SITE.product,
       applicationCategory: "DeveloperApplication",
+      operatingSystem: "Cloud",
       description: SITE.description,
+      url: SITE.domain,
+      author: { "@id": `${SITE.domain}/#org` },
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/PreOrder",
+        url: `${SITE.domain}/#top`,
+      },
     },
-  },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE.domain}/#faq`,
+      mainEntity: FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    },
+  ],
 };
 
 export default function RootLayout({
