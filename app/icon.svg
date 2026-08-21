@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-  <rect width="24" height="24" rx="5" fill="#0a0a0a"/>
-  <circle cx="12" cy="12" r="6.6" fill="none" stroke="#ededed" stroke-opacity="0.28" stroke-width="2"/>
-  <path d="M12 5.4A6.6 6.6 0 0 0 5.4 12" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="12" cy="5.4" r="2" fill="#10b981"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none">
+  <!-- Geometry mirrors lib/mark.ts at r=9 — drawn fuller than the in-page mark
+       because a browser tab gives it 16px. No background plate, so the C takes
+       a mid-grey that holds on light and dark chrome, and lifts toward ink
+       where the browser reports a dark theme. -->
+  <style>
+    .c { stroke: #7d8481 }
+    @media (prefers-color-scheme: dark) { .c { stroke: #ededed; stroke-opacity: .42 } }
+  </style>
+  <path class="c" d="M18.89 6.21A9 9 0 1 0 18.89 17.79" stroke-width="2.75" stroke-linecap="round"/>
+  <path d="M18.89 17.79A9 9 0 0 0 18.89 6.21" stroke="#34d399" stroke-width="2.75" stroke-linecap="round"/>
 </svg>
