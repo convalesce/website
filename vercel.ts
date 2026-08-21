@@ -19,21 +19,11 @@ import type { VercelConfig } from "@vercel/config/v1";
  * the hydration bootstrap, and there is no nonce to hand them without putting
  * middleware in front of a fully static site. The allowlist still blocks
  * script loads from any host not listed here.
+ *
+ * Written out as one literal rather than a joined array: the platform's config
+ * validator does not resolve the identifier the way the local CLI does, and
+ * rejected the header as having no value.
  */
-const csp = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://va.vercel-scripts.com",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com",
-  "font-src 'self' data:",
-  "connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://va.vercel-scripts.com",
-  "form-action 'self'",
-  "base-uri 'self'",
-  "object-src 'none'",
-  "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
-].join("; ");
-
 export const config: VercelConfig = {
   framework: "nextjs",
 
@@ -41,7 +31,11 @@ export const config: VercelConfig = {
     {
       source: "/(.*)",
       headers: [
-        { key: "Content-Security-Policy", value: csp },
+        {
+          key: "Content-Security-Policy",
+          value:
+            "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://va.vercel-scripts.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+        },
         // the site embeds nothing and should never be embedded
         { key: "X-Frame-Options", value: "DENY" },
         { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
