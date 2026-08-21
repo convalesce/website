@@ -28,9 +28,6 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-2">
               <Logo />
-              <p className="text-muted text-small mt-5 max-w-[30ch]">
-                {SITE.tagline}
-              </p>
             </div>
 
             {COLUMNS.map((column) => (
