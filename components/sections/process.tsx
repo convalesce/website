@@ -1,10 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import { Section } from "@/components/frame";
+import { Reveal } from "@/components/ui/reveal";
 import { SectionHeader } from "@/components/ui/section-header";
-import { STEPS } from "@/lib/content";
+import { STEPS, type Artifact } from "@/lib/content";
+
+/* What the product holds at this stage, as the product would print it. */
+function ArtifactBlock({ artifact }: { artifact: Artifact }) {
+  return (
+    <div className="border-line mt-8 border-y py-5">
+      <p className="mono-label">{artifact.caption}</p>
+      <dl className="font-mono text-mono mt-4 grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 gap-y-1.5">
+        {artifact.rows.map(([key, value]) => (
+          <Fragment key={`${key}-${value}`}>
+            <dt className="text-faint">{key}</dt>
+            <dd className="text-ink/85 break-words">{value}</dd>
+          </Fragment>
+        ))}
+      </dl>
+    </div>
+  );
+}
 
 export function Process() {
   const [active, setActive] = useState(0);
@@ -32,13 +50,13 @@ export function Process() {
       <SectionHeader
         eyebrow="The investigation layer"
         heading="From alert to fix, in one continuous thread."
-        body="Heal gathers the evidence automatically, reasons over it, and hands your team a resolution they can verify."
+        body="Convalesce gathers the evidence automatically, reasons over it, and hands your team a resolution they can verify."
       />
 
-      <div className="mt-16 grid gap-10 lg:mt-28 lg:grid-cols-12">
-        {/* sticky rail — the steps are a real sequence, so the numbering is earned */}
-        {/* min-w-0 lets the rail actually scroll on narrow screens instead of
-            widening the grid track */}
+      <div className="mt-14 grid gap-10 lg:mt-24 lg:grid-cols-12">
+        {/* sticky rail: the steps are a real sequence, so the numbering is earned.
+            min-w-0 lets the rail scroll on narrow screens instead of widening
+            the grid track. */}
         <div className="min-w-0 lg:col-span-3">
           <div className="lg:sticky lg:top-28">
             <div className="mb-5 flex items-center justify-between lg:mb-6">
@@ -60,7 +78,7 @@ export function Process() {
                     onClick={() =>
                       blocks.current[i]?.scrollIntoView({ block: "center" })
                     }
-                    className={`text-left text-[15px] whitespace-nowrap transition-colors ${
+                    className={`text-small text-left whitespace-nowrap transition-colors ${
                       i === active ? "text-ink" : "text-faint hover:text-muted"
                     }`}
                   >
@@ -81,16 +99,17 @@ export function Process() {
                   blocks.current[i] = node;
                 }}
               >
-                <div className="bg-brand text-on-brand font-mono mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg text-[12px]">
-                  {step.n}
-                </div>
-                <h3 className="font-display text-h2 max-w-[18ch] text-balance">
-                  {step.title}
-                </h3>
-                <p className="text-muted mt-4 max-w-[52ch]">{step.body}</p>
-                <p className="border-line text-faint font-mono mt-6 border-t pt-4 text-[11px]">
-                  {step.footnote}
-                </p>
+                <Reveal>
+                  <div className="bg-brand text-on-brand font-mono text-mono-sm mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg">
+                    {step.n}
+                  </div>
+                  <h3 className="font-display text-h2 max-w-[18ch] text-balance">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted mt-4 max-w-[52ch]">{step.body}</p>
+                  <ArtifactBlock artifact={step.artifact} />
+                  <p className="text-faint font-mono text-mono-sm mt-4">{step.footnote}</p>
+                </Reveal>
               </div>
             ))}
           </div>
