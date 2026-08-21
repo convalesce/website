@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Sans } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { GA_ID } from "@/lib/analytics";
+import { Analytics } from "@/components/analytics";
 import { FAQ, SITE } from "@/lib/content";
 import "./globals.css";
 
@@ -220,9 +219,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Analytics />
+        <VercelAnalytics />
         <SpeedInsights />
-        {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+        <Analytics />
       </body>
     </html>
   );
