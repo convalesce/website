@@ -28,7 +28,7 @@ export const HERO = {
      visitor sees their own stack named within a few seconds */
   headStem: "Self-healing",
   rotating: ["data infrastructure", "data pipelines", "Airflow DAGs", "dbt models"],
-  body: "Agents pick up the failed run, trace its blast radius through your lineage, and return a fix with the evidence attached, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
+  body: "Agents pick up the failed run, trace its blast radius through your lineage, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
 } as const;
 
 export const STACK = [
