@@ -52,6 +52,26 @@ export const config: VercelConfig = {
       ],
     },
     {
+      /* Every deployment is also reachable on its *.vercel.app hostname, which
+         serves the same production HTML and is crawlable. The canonical tag
+         points home, but a noindex on that host is the unambiguous signal and
+         keeps preview URLs out of the index too. */
+      source: "/(.*)",
+      has: [{ type: "host", value: { suf: ".vercel.app" } }],
+      headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+    },
+    {
+      /* Icons and the share card are stable but not fingerprinted, so they get
+         a real browser lifetime with revalidation rather than immutability. */
+      source: "/(favicon.*|apple-touch-icon.png|icon.svg|opengraph-image)",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+        },
+      ],
+    },
+    {
       // fingerprinted build output is safe to cache forever
       source: "/_next/static/(.*)",
       headers: [
