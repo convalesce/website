@@ -10,12 +10,12 @@ const COLUMNS = [
       { label: "Context", href: "/#context" },
       { label: "Integrations", href: "/#integrations" },
       { label: "Docs", href: SITE.docs },
+      { label: "Sign in", href: SITE.app },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "Sign in", href: SITE.app },
       { label: "Contact", href: mailto("Hello from your site") },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
@@ -58,7 +58,7 @@ export function Footer() {
         {/* coda */}
         <div className="flex items-center justify-between py-6">
           <span className="mono-label">© 2026 {SITE.company}</span>
-          <a href="#top" className="mono-label hover:text-ink transition-colors">
+          <a href="#top" className="mono-label hover:text-ink py-2 transition-colors">
             Back to top
           </a>
         </div>

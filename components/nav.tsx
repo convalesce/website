@@ -19,7 +19,7 @@ export function Nav() {
               key={link.href}
               href={link.href}
               {...outside(link.href)}
-              className="text-muted hover:text-ink text-small transition-colors"
+              className="text-muted hover:text-ink text-small py-2 transition-colors"
             >
               {link.label}
             </a>

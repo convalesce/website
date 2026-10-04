@@ -1,33 +1,40 @@
 import { Plus } from "lucide-react";
 
 import { Section } from "@/components/frame";
-import { Reveal } from "@/components/ui/reveal";
-import { SectionHeader } from "@/components/ui/section-header";
+import { Reveal, SplitText } from "@/components/ui/reveal";
 import { FAQ as ITEMS } from "@/lib/content";
 
 export function Faq() {
   return (
-    <Section index="07" label="Questions">
-      <SectionHeader eyebrow="Before you ask" heading="Questions data teams open with." />
-
-      {/* one-column hairline grid: each question is its own box, sharing
-          lines with its neighbours like every other grid on the page */}
-      <Reveal className="mt-14 lg:mt-24">
-        <div className="border-line border-t border-l">
-          {ITEMS.map((item) => (
-            <details key={item.q} className="border-line group border-r border-b">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-5 sm:px-6 [&::-webkit-details-marker]:hidden">
-                <span className="text-h3">{item.q}</span>
-                <Plus
-                  aria-hidden="true"
-                  className="text-faint size-5 shrink-0 transition-transform duration-200 group-open:rotate-45"
-                />
-              </summary>
-              <p className="text-muted max-w-[62ch] px-5 pb-6 sm:px-6">{item.a}</p>
-            </details>
-          ))}
+    <Section index="07" label="Questions" pad="tight">
+      {/* the heading stays beside the list as it scrolls, so the questions
+          start at the top of the section instead of a screen below it */}
+      <div className="grid gap-8 pt-10 sm:pt-12 lg:grid-cols-12 lg:gap-6 lg:pt-16">
+        <div className="lg:col-span-4">
+          <Reveal mode="words" className="lg:sticky lg:top-28">
+            <h2 className="font-display text-h2 max-w-[14ch] text-balance">
+              <SplitText text="Questions data teams open with." />
+            </h2>
+          </Reveal>
         </div>
-      </Reveal>
+
+        <Reveal className="lg:col-span-8">
+          <div className="border-line border-t">
+            {ITEMS.map((item) => (
+              <details key={item.q} className="border-line group border-b">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 [&::-webkit-details-marker]:hidden">
+                  <span className="text-h3">{item.q}</span>
+                  <Plus
+                    aria-hidden="true"
+                    className="text-faint size-5 shrink-0 transition-transform duration-200 group-open:rotate-45"
+                  />
+                </summary>
+                <p className="text-muted max-w-[62ch] pb-6">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </Reveal>
+      </div>
     </Section>
   );
 }

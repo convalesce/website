@@ -11,7 +11,10 @@ import { STEPS, type Artifact } from "@/lib/content";
 function ArtifactBlock({ artifact }: { artifact: Artifact }) {
   return (
     <div className="border-line mt-8 border-y py-5">
-      <p className="mono-label">{artifact.caption}</p>
+      <p className="mono-label flex items-center justify-between gap-4">
+        {artifact.caption}
+        <span>Example</span>
+      </p>
       <dl className="font-mono text-mono mt-4 grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 gap-y-1.5">
         {artifact.rows.map(([key, value]) => (
           <Fragment key={`${key}-${value}`}>
@@ -48,12 +51,11 @@ export function Process() {
   return (
     <Section id="how-it-works" index="03" label="How it works">
       <SectionHeader
-        eyebrow="The investigation layer"
         heading="From alert to fix, in one continuous thread."
         body="Convalesce gathers the evidence automatically, reasons over it, and hands your team a resolution they can verify."
       />
 
-      <div className="mt-14 grid gap-10 lg:mt-24 lg:grid-cols-12">
+      <div className="mt-10 grid gap-10 lg:mt-16 lg:grid-cols-12">
         {/* sticky rail: the steps are a real sequence, so the numbering is earned.
             min-w-0 lets the rail scroll on narrow screens instead of widening
             the grid track. */}
@@ -69,7 +71,7 @@ export function Process() {
               {STEPS.map((step, i) => (
                 <li
                   key={step.n}
-                  className={`transition-colors lg:border-l-2 lg:py-2 lg:pl-4 ${
+                  className={`transition-colors lg:border-l-2 lg:pl-4 ${
                     i === active ? "lg:border-accent" : "lg:border-line"
                   }`}
                 >
@@ -78,7 +80,7 @@ export function Process() {
                     onClick={() =>
                       blocks.current[i]?.scrollIntoView({ block: "center" })
                     }
-                    className={`text-small text-left whitespace-nowrap transition-colors ${
+                    className={`text-small py-2 text-left whitespace-nowrap transition-colors lg:py-2.5 ${
                       i === active ? "text-ink" : "text-faint hover:text-muted"
                     }`}
                   >
@@ -91,7 +93,7 @@ export function Process() {
         </div>
 
         <div className="lg:col-span-8 lg:col-start-5">
-          <div className="space-y-16 lg:space-y-[132px]">
+          <div className="space-y-14 lg:space-y-24">
             {STEPS.map((step, i) => (
               <div
                 key={step.n}

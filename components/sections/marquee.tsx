@@ -11,7 +11,7 @@ export function Marquee() {
   return (
     <Section index="02" label="Your stack" pad="none">
       <div className="px-5 pb-14 sm:px-8 lg:px-10 lg:pb-20">
-        <p className="mono-label mono-eyebrow mb-5">Context across the tools you already run</p>
+        <p className="text-muted text-small mb-5">Context across the tools you already run</p>
 
         <Reveal className="bg-panel overflow-hidden rounded-lg py-9">
           <div className="[mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">

@@ -8,12 +8,11 @@ export function WhyConvalesce() {
   return (
     <Section id="context" index="04" label="Context">
       <SectionHeader
-        eyebrow="What the agent can see"
         heading="Your agent is only as good as what it can see."
         body="A generic copilot sees an error message. Convalesce sees the execution that produced it, the data it touched, and the systems around it."
       />
 
-      <Reveal className="mt-14 lg:mt-24">
+      <Reveal className="mt-10 lg:mt-14">
         <Grid cols={3}>
           {CONTEXT_SOURCES.map((source) => (
             <Cell key={source.name} className="flex flex-col">

@@ -2,27 +2,31 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Section } from "@/components/frame";
 import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/ui/section-header";
+import { Reveal, SplitText } from "@/components/ui/reveal";
 import { CLOSER } from "@/lib/content";
 
 export function Closer() {
   return (
-    <Section index="08" label="Get started" pad="tight">
-      <SectionHeader
-        eyebrow={CLOSER.eyebrow}
-        heading={CLOSER.head}
-        body={CLOSER.body}
-        action={
+    <Section index="08" label="Get started" pad="none">
+      {/* the page ends the way it opened: one centred line and one action */}
+      <div className="px-5 pt-14 pb-20 text-center sm:px-8 sm:pt-20 sm:pb-24 lg:px-10 lg:pt-24 lg:pb-32">
+        <Reveal mode="words">
+          <h2 className="font-display text-display text-balance">
+            <SplitText text={CLOSER.head} />
+          </h2>
+        </Reveal>
+        <Reveal delay={140}>
+          <p className="text-muted mx-auto mt-6 max-w-[48ch] text-pretty">{CLOSER.body}</p>
           <Button
             href={CLOSER.cta.href}
             event="open_app"
             trailing={<ArrowUpRight className="size-4" />}
-            className="mt-7"
+            className="mt-8"
           >
             {CLOSER.cta.label}
           </Button>
-        }
-      />
+        </Reveal>
+      </div>
     </Section>
   );
 }

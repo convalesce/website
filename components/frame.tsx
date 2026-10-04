@@ -27,7 +27,7 @@ export function Section({
   top?: boolean;
 }) {
   const padding = {
-    default: "px-5 pb-20 sm:px-8 sm:pb-28 lg:px-10 lg:pb-[156px]",
+    default: "px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10 lg:pb-28",
     tight: "px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10 lg:pb-24",
     none: "",
   }[pad];

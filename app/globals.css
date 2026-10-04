@@ -154,17 +154,24 @@ body {
   color: var(--ink);
 }
 
-/* Matte primary action: flat fill, no gradient, no sheen. */
+/* The primary action is the brightest flat thing on the page: ink on black.
+   Green stays out of it, because bright green means state here. */
 .btn-primary {
-  background-color: var(--brand);
-  color: var(--on-brand);
-  border: 1px solid var(--brand-rim);
+  background-color: var(--ink);
+  color: var(--on-accent);
+  border: 1px solid transparent;
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-hover);
+  background-color: rgb(var(--ink-c) / 0.86);
 }
 
+/* The hero's trail arrives one step at a time, then the fix. Each step is
+   whole from the start, so with motion reduced it is simply there. */
+.hero-step {
+  animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(0.6s + var(--i, 0) * 0.28s);
+}
 /* Uppercase mono furniture: frame corners, footer headings, status chips. */
 .mono-label {
   font-family: var(--font-mono);
@@ -173,12 +180,6 @@ body {
   letter-spacing: var(--text-label--letter-spacing);
   text-transform: uppercase;
   color: var(--faint);
-}
-
-/* An eyebrow states a section's premise, so it sits a step above the corner
-   furniture that shares the same mono treatment. */
-.mono-eyebrow {
-  font-size: var(--text-mono);
 }
 
 /* ---------------------------------------------------------------------------
@@ -314,7 +315,8 @@ body {
   }
 
   .marquee-track,
-  .ticker-track {
+  .ticker-track,
+  .hero-step {
     animation: none;
     transform: none;
   }
