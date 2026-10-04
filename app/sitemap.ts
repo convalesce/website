@@ -16,5 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
          makes it discoverable to image search, which never sees an og: tag. */
       images: [`${SITE.domain}/opengraph-image`],
     },
+    ...["privacy", "terms"].map((page) => ({
+      url: `${SITE.domain}/${page}`,
+      lastModified: new Date("2026-10-04"),
+      changeFrequency: "yearly" as const,
+      priority: 0.2,
+    })),
   ];
 }

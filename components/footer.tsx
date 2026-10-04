@@ -6,9 +6,9 @@ const COLUMNS = [
   {
     heading: "Product",
     links: [
-      { label: "How it works", href: "#how-it-works" },
-      { label: "Context", href: "#context" },
-      { label: "Integrations", href: "#integrations" },
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "Context", href: "/#context" },
+      { label: "Integrations", href: "/#integrations" },
     ],
   },
   {
@@ -16,6 +16,8 @@ const COLUMNS = [
     links: [
       { label: "Early access", href: mailto("Convalesce early access") },
       { label: "Contact", href: mailto("Hello from your site") },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
     ],
   },
 ] as const;

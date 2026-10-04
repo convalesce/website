@@ -9,7 +9,7 @@ export function Nav() {
   return (
     <header className="bg-bg/75 supports-[backdrop-filter]:bg-bg/45 sticky top-0 z-50 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto flex h-16 w-full max-w-[1230px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
-        <Link href="#top" aria-label="Convalesce, back to top">
+        <Link href="/#top" aria-label="Convalesce, back to top">
           <Logo />
         </Link>
 

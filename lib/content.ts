@@ -17,9 +17,9 @@ export const CTA = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Context", href: "#context" },
-  { label: "Integrations", href: "#integrations" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Context", href: "/#context" },
+  { label: "Integrations", href: "/#integrations" },
 ] as const;
 
 export const HERO = {
