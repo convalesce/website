@@ -71,8 +71,20 @@ export const TERMS: LegalPage = {
   title: "Terms of service",
   updated: "4 October 2026",
   intro:
-    "These terms cover your use of Convalesce. By signing in you agree to them. If you use Convalesce for a company, you agree on its behalf.",
+    "These terms cover your use of Convalesce. By signing in you agree to them. If you use Convalesce for a company, you agree on its behalf. Convalesce is an early version: please read the next section before relying on it.",
   clauses: [
+    {
+      heading: "An early version",
+      body: [
+        "This is the first version of Convalesce, offered free of charge so that people can try it and tell us what is wrong with it. It is not finished.",
+      ],
+      points: [
+        "It can be wrong. A diagnosis may miss the real cause, and a proposed fix may not work or may break something else.",
+        "It can change or stop. Features may be altered or removed, and the service may be unavailable, without notice.",
+        "It can lose things. Do not treat Convalesce as the only record of an incident, and keep your own monitoring and alerting in place.",
+        "Check before you act. Read every proposed change as you would a stranger's, and test it before it reaches anything that matters.",
+      ],
+    },
     {
       heading: "Using Convalesce",
       points: [
@@ -96,7 +108,7 @@ export const TERMS: LegalPage = {
     {
       heading: "Warranty and liability",
       body: [
-        "Convalesce is provided as it is, without warranty. To the extent the law allows, we are not liable for indirect or consequential loss arising from your use of it.",
+        "Convalesce is provided as it is, without warranty of any kind, and you use it at your own risk. To the extent the law allows, we are not liable for loss arising from your use of it, including loss caused by a wrong diagnosis or a proposed change you applied.",
       ],
     },
     {
