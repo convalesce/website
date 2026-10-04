@@ -23,7 +23,7 @@ export function llmsIndex() {
 
 > ${SITE.description}
 
-${SITE.company} is a developer tool for data teams. Its agents pick up a failed run, assemble the context around it (lineage, metadata, telemetry, run state), and return a proposed or applied fix with the evidence attached. It reads the shape of data (schemas, types, row counts, lineage), not the rows.
+${SITE.company} is a developer tool for data teams. Its agents pick up a failed run, assemble the context around it (lineage, metadata, code, run state), and open a pull request with the fix and the evidence attached. It reads the shape of data (schemas, types, row counts, lineage), not the rows.
 
 ## Site
 
@@ -35,7 +35,7 @@ ${SITE.company} is a developer tool for data teams. Its agents pick up a failed 
 
 ## Contact
 
-- Early access: ${CTA.primary.href}
+- App: ${CTA.primary.href}
 - Email: ${SITE.email}
 `;
 }
@@ -97,11 +97,11 @@ ${principles}
 
 ${faq}
 
-## Early access
+## Get started
 
 ${CLOSER.head} ${CLOSER.body}
 
-Request early access: ${CTA.primary.href}
+Sign in: ${CTA.primary.href}
 `;
 }
 

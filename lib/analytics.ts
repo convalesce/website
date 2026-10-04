@@ -1,6 +1,6 @@
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-export type AnalyticsEvent = "request_early_access" | "see_how_it_works";
+export type AnalyticsEvent = "open_app" | "see_how_it_works";
 
 declare global {
   interface Window {

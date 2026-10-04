@@ -1,6 +1,6 @@
 import { FrameWidth } from "@/components/frame";
 import { Logo } from "@/components/logo";
-import { HERO, SITE, mailto } from "@/lib/content";
+import { HERO, SITE, mailto, outside } from "@/lib/content";
 
 const COLUMNS = [
   {
@@ -9,12 +9,13 @@ const COLUMNS = [
       { label: "How it works", href: "/#how-it-works" },
       { label: "Context", href: "/#context" },
       { label: "Integrations", href: "/#integrations" },
+      { label: "Docs", href: SITE.docs },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "Early access", href: mailto("Convalesce early access") },
+      { label: "Sign in", href: SITE.app },
       { label: "Contact", href: mailto("Hello from your site") },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
@@ -40,6 +41,7 @@ export function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
+                        {...outside(link.href)}
                         className="text-muted hover:text-ink text-small transition-colors"
                       >
                         {link.label}
@@ -51,9 +53,6 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="border-line text-faint text-mono-sm font-mono mt-10 border-t pt-5">
-            Docs and integration guides are on the way.
-          </p>
         </div>
 
         {/* coda */}

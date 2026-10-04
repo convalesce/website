@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { CTA, NAV_LINKS } from "@/lib/content";
+import { CTA, NAV_LINKS, outside } from "@/lib/content";
 
 export function Nav() {
   return (
@@ -18,6 +18,7 @@ export function Nav() {
             <a
               key={link.href}
               href={link.href}
+              {...outside(link.href)}
               className="text-muted hover:text-ink text-small transition-colors"
             >
               {link.label}
@@ -29,12 +30,11 @@ export function Nav() {
           <Button
             href={CTA.primary.href}
             size="sm"
-            event="request_early_access"
-            label="Request early access"
+            event="open_app"
+            label={CTA.primary.label}
             trailing={<ArrowUpRight className="size-4" />}
           >
-            <span className="hidden sm:inline">Request early access</span>
-            <span className="sm:hidden">Early access</span>
+            {CTA.primary.label}
           </Button>
         </div>
       </div>

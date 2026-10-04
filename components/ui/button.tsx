@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { track, type AnalyticsEvent } from "@/lib/analytics";
+import { outside } from "@/lib/content";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md";
@@ -45,6 +46,7 @@ export function Button({
   return (
     <a
       href={href}
+      {...outside(href)}
       onClick={event ? () => track(event, { label: analyticsLabel }) : undefined}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
     >

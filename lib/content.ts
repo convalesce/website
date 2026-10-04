@@ -5,14 +5,20 @@ export const SITE = {
   tagline: "Self-healing data infrastructure.",
   description:
     "Convalesce self-heals your data infrastructure. Agents pick up a failed run, trace its blast radius, and return a fix with the evidence behind it.",
-  email: "vedanshu7.joshi@gmail.com",
+  email: "v.joshi@convalesce.io",
+  app: "https://app.convalesce.io",
+  docs: "https://docs.convalesce.io",
 } as const;
+
+/** A link that leaves the site opens beside it, so the page being read stays. */
+export const outside = (href: string) =>
+  href.startsWith("http") ? ({ target: "_blank", rel: "noopener noreferrer" } as const) : {};
 
 export const mailto = (subject: string) =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
 
 export const CTA = {
-  primary: { label: "Request early access", href: mailto("Convalesce early access") },
+  primary: { label: "Get started", href: SITE.app },
   secondary: { label: "See the evidence trail", href: "#how-it-works" },
 } as const;
 
@@ -20,6 +26,7 @@ export const NAV_LINKS = [
   { label: "How it works", href: "/#how-it-works" },
   { label: "Context", href: "/#context" },
   { label: "Integrations", href: "/#integrations" },
+  { label: "Docs", href: SITE.docs },
 ] as const;
 
 export const HERO = {
@@ -34,7 +41,7 @@ export const HERO = {
     "data lakehouses",
     "data workflows",
   ],
-  body: "Agents pick up the failed run, trace its blast radius through your environment, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and you decide whether a fix is proposed or applied.",
+  body: "Agents pick up the failed run, trace its blast radius through your environment, and return a fix with the evidence, before anyone opens a tab. Convalesce reads the shape of your data, never the rows, and a fix reaches you as a pull request you choose to merge.",
   /* The share card carries one supporting line under the headline, so it gets
      its own sentence rather than a slice of the body. */
   sub: "Agents pick up the failed run, trace its blast radius, and return a fix with the evidence behind it.",
@@ -44,8 +51,12 @@ export const STACK = [
   "Airflow",
   "Snowflake",
   "dbt",
+  "Databricks",
+  "Spark",
+  "Prefect",
+  "Postgres",
+  "Kafka",
   "OpenLineage",
-  "OpenTelemetry",
 ] as const;
 
 /* What the product actually holds at this stage, shown as key/value mono. */
@@ -81,22 +92,22 @@ export const STEPS: readonly Step[] = [
   {
     n: "02",
     title: "Build the context",
-    body: "Convalesce combines runtime evidence with metadata, lineage, telemetry, and context from the tools already connected to it.",
-    footnote: "Lineage + telemetry + schema history",
+    body: "Convalesce combines runtime evidence with metadata, lineage, the code behind the run, and context from the tools already connected to it.",
+    footnote: "Lineage + code + schema history",
     artifact: {
       caption: "Incident bundle",
       rows: [
         ["runtime", "task state, retries, exit codes"],
         ["lineage", "upstream cause, downstream blast radius"],
         ["metadata", "schema, types, freshness, row counts"],
-        ["telemetry", "spans, exceptions, timing"],
+        ["code", "the query, the model, the commit that changed it"],
       ],
     },
   },
   {
     n: "03",
     title: "Resolve and heal",
-    body: "Agents reason over a scoped incident bundle, then propose or apply the fix, with the evidence trail attached, so an engineer can verify before it ships.",
+    body: "Agents reason over a scoped incident bundle, then open a pull request with the fix and the evidence trail attached, so an engineer can verify before it ships.",
     footnote: "Cause → evidence → action",
     artifact: {
       caption: "Evidence trail",
@@ -131,9 +142,9 @@ export const CONTEXT_SOURCES: readonly ContextSource[] = [
     reads: "inputs · outputs · job runs",
   },
   {
-    name: "OpenTelemetry",
-    question: "What execution caused what?",
-    reads: "spans · traces · timing",
+    name: "Your repositories",
+    question: "What code ran, and what changed in it?",
+    reads: "queries · models · commits",
   },
   {
     name: "Metadata",
@@ -180,6 +191,29 @@ export const LINEAGE = {
   fix: "CAST(order_total AS NUMBER)",
 } as const;
 
+/* Each tool's own mark, served from public/logos. */
+export const TOOL_LOGOS: Record<string, string> = {
+  Airflow: "airflow.svg",
+  Dagster: "dagster.svg",
+  Prefect: "prefect.svg",
+  dbt: "dbt.svg",
+  Spark: "spark.svg",
+  Snowflake: "snowflake.svg",
+  Databricks: "databricks.png",
+  Postgres: "postgres.svg",
+  "AWS Glue": "glue.svg",
+  "Amazon S3": "s3.svg",
+  Fivetran: "fivetran.png",
+  "Great Expectations": "great-expectations.png",
+  Tableau: "tableau.png",
+  OpenLineage: "openlineage.svg",
+  BigQuery: "bigquery.svg",
+  "Google Cloud Storage": "gcs.svg",
+  Dataplex: "dataplex.svg",
+  "Vertex AI": "vertexai.png",
+  Looker: "looker.svg",
+};
+
 export type Integration = {
   name: string;
   kind: string;
@@ -188,14 +222,26 @@ export type Integration = {
 
 export const INTEGRATIONS: readonly Integration[] = [
   { name: "Airflow", kind: "Orchestrator", status: "live" },
-  { name: "Snowflake", kind: "Warehouse", status: "live" },
+  { name: "Dagster", kind: "Orchestrator", status: "live" },
+  { name: "Prefect", kind: "Orchestrator", status: "live" },
   { name: "dbt", kind: "Transformation", status: "live" },
+  { name: "Spark", kind: "Processing", status: "live" },
+  { name: "Snowflake", kind: "Warehouse", status: "live" },
+  { name: "Databricks", kind: "Lakehouse", status: "live" },
+  { name: "Postgres", kind: "Database", status: "live" },
+  { name: "AWS Glue", kind: "Catalogue and jobs", status: "live" },
+  { name: "Amazon S3", kind: "Storage", status: "live" },
+  { name: "Kafka", kind: "Streaming", status: "live" },
+  { name: "Great Expectations", kind: "Data quality", status: "live" },
+  { name: "Tableau", kind: "Dashboards", status: "live" },
+  { name: "GitHub", kind: "Code and pull requests", status: "live" },
   { name: "OpenLineage", kind: "Lineage", status: "live" },
-  { name: "OpenTelemetry", kind: "Telemetry", status: "live" },
-  { name: "Dagster", kind: "Orchestrator", status: "soon" },
   { name: "BigQuery", kind: "Warehouse", status: "soon" },
-  { name: "Databricks", kind: "Lakehouse", status: "soon" },
-  { name: "Postgres", kind: "Database", status: "soon" },
+  { name: "Google Cloud Storage", kind: "Storage", status: "soon" },
+  { name: "Dataplex", kind: "Catalogue", status: "soon" },
+  { name: "Vertex AI", kind: "Machine learning", status: "soon" },
+  { name: "Looker", kind: "Dashboards", status: "soon" },
+  { name: "Fivetran", kind: "Ingestion", status: "soon" },
 ] as const;
 
 export const PRINCIPLES = [
@@ -219,11 +265,11 @@ export const PRINCIPLES = [
 export const FAQ = [
   {
     q: "Does Convalesce apply fixes on its own?",
-    a: "You choose. Convalesce can stop at a proposed fix with its evidence attached, or apply it and open the trail for review. Auto-apply is opt-in per pipeline, never a default.",
+    a: "No. The most it does is open a pull request against your repository, with the evidence attached. You review it and you merge it.",
   },
   {
     q: "What does Convalesce need access to?",
-    a: "Read access to your run metadata and your information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves.",
+    a: "Read access to your run metadata and your information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves. Access to your code is a separate step you choose, by installing the GitHub app on the repositories you pick.",
   },
   {
     q: "Does our data leave our environment?",
@@ -231,17 +277,17 @@ export const FAQ = [
   },
   {
     q: "How long does setup take?",
-    a: "Configure your environment to connect the tools you want. Convalesce starts building context on the next failed run.",
+    a: "Sign in with GitHub or Google, answer three short questions, and connect the tools you want. Convalesce starts building context on the next failed run.",
   },
   {
     q: "Which tools are supported?",
-    a: "The integrations listed above are live today, and the rest are on the way. If you run something that isn't there, tell us what. Early access is where we decide the order.",
+    a: "The integrations listed above are live today, and more are on the way. The docs have a setup guide for each. If you run something that isn't there, tell us what.",
   },
 ] as const;
 
 export const CLOSER = {
-  eyebrow: "Early access",
+  eyebrow: "Get started",
   head: "Stop reconstructing failures.",
-  body: "We're working with early data teams to shape Convalesce around real production incidents.",
-  cta: { label: "Join the early access list", href: mailto("Convalesce early access") },
+  body: "Sign in with GitHub or Google, connect a tool, and see your next failed run explained.",
+  cta: { label: "Open Convalesce", href: SITE.app },
 } as const;

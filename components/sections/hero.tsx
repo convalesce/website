@@ -32,7 +32,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3 lg:mt-11">
             <Button
               href={CTA.primary.href}
-              event="request_early_access"
+              event="open_app"
               trailing={<ArrowUpRight className="size-4" />}
             >
               {CTA.primary.label}

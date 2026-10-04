@@ -1,17 +1,7 @@
-import type { IconType } from "react-icons";
-import { SiApacheairflow, SiOpentelemetry, SiSnowflake } from "react-icons/si";
-
 import { Section } from "@/components/frame";
 import { Reveal } from "@/components/ui/reveal";
+import { ToolLogo } from "@/components/ui/tool-logo";
 import { STACK } from "@/lib/content";
-
-/* dbt, OpenLineage and Dagster ship no mark in any icon set, so they ride on
-   their wordmark alone. */
-const LOGOS: Partial<Record<(typeof STACK)[number], IconType>> = {
-  Airflow: SiApacheairflow,
-  Snowflake: SiSnowflake,
-  OpenTelemetry: SiOpentelemetry,
-};
 
 /* The track wraps by shifting exactly half its width, so each half has to be
    wider than the frame or the tail runs dry before the loop comes round. */
@@ -33,15 +23,12 @@ export function Marquee() {
                   className="flex shrink-0 items-center gap-16 pr-16 lg:gap-20 lg:pr-20"
                 >
                   {GROUP.map((name, i) => {
-                    const Logo = LOGOS[name];
                     return (
                       <span
                         key={`${name}-${i}`}
                         className="text-faint flex items-center gap-3 whitespace-nowrap"
                       >
-                        {Logo ? (
-                          <Logo aria-hidden="true" className="size-5 shrink-0" />
-                        ) : null}
+                        <ToolLogo name={name} />
                         <span className="font-display text-h3">
                           {name}
                         </span>

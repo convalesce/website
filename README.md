@@ -22,7 +22,7 @@ cp .env.example .env.local   # then paste your G-XXXXXXXXXX
 
 In production set the same key under **Project → Settings → Environment Variables**.
 
-Custom events live in `lib/analytics.ts` as a typed union — `request_early_access`, `see_how_it_works`, `theme_changed`. Add a new one there and it becomes available to `track()` everywhere.
+Custom events live in `lib/analytics.ts` as a typed union — `open_app`, `see_how_it_works`, `theme_changed`. Add a new one there and it becomes available to `track()` everywhere.
 
 Vercel Analytics and Speed Insights need no configuration; they activate on deploy.
 
