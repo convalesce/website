@@ -166,11 +166,39 @@ body {
   background-color: rgb(var(--ink-c) / 0.86);
 }
 
-/* The hero's trail arrives one step at a time, then the fix. Each step is
-   whole from the start, so with motion reduced it is simply there. */
-.hero-step {
-  animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
-  animation-delay: calc(0.6s + var(--i, 0) * 0.28s);
+/* The backdrop graph. It is faint by default; one failure travels downstream
+   in red, then heals in green along the same path, and the loop rests before
+   it comes round. With motion reduced it is a still graph. */
+.lineage-wire {
+  color: rgb(var(--ink-c) / 0.1);
+  stroke-width: 1;
+}
+
+.lineage-node {
+  color: rgb(var(--ink-c) / 0.24);
+  stroke-width: 1;
+}
+
+@keyframes lineage-wire {
+  0%, 5% { color: rgb(var(--ink-c) / 0.1); }
+  9%, 40% { color: var(--fail); }
+  48%, 80% { color: var(--accent); }
+  100% { color: rgb(var(--ink-c) / 0.1); }
+}
+
+@keyframes lineage-node {
+  0%, 5% { color: rgb(var(--ink-c) / 0.24); fill: var(--bg); }
+  9%, 40% { color: var(--fail); fill: var(--fail); }
+  48%, 80% { color: var(--accent); fill: var(--accent); }
+  100% { color: rgb(var(--ink-c) / 0.24); fill: var(--bg); }
+}
+
+.lineage-wire.lineage-hot {
+  animation: lineage-wire 11s ease-in-out infinite;
+}
+
+.lineage-node.lineage-hot {
+  animation: lineage-node 11s ease-in-out infinite;
 }
 /* Uppercase mono furniture: frame corners, footer headings, status chips. */
 .mono-label {
@@ -316,7 +344,7 @@ body {
 
   .marquee-track,
   .ticker-track,
-  .hero-step {
+  .lineage-hot {
     animation: none;
     transform: none;
   }

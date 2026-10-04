@@ -47,31 +47,6 @@ export const HERO = {
   sub: "Agents pick up the failed run, trace its blast radius, and return a fix with the evidence behind it.",
 } as const;
 
-/* The hero shows what a team actually receives: the pull request, and how
-   Convalesce got to it. One made-up incident, the same one the steps below
-   walk through, and the panel says it is an example. */
-export const HERO_INCIDENT = {
-  title: "Cast order_total back to a number in stg_orders",
-  branch: "convalesce/fix-daily-orders",
-  file: "models/staging/stg_orders.sql",
-  trail: [
-    { at: "09:42:18", state: "fail", text: "daily_orders failed at load_orders" },
-    { at: "+0.8s", state: "step", text: "Three tables downstream are affected" },
-    { at: "+1.4s", state: "step", text: "order_total changed from NUMBER to VARCHAR in raw.shopify_orders" },
-    { at: "+2.3s", state: "done", text: "Fix written, pull request opened" },
-  ],
-  diff: [
-    { n: 4, kind: "same", code: "select" },
-    { n: 5, kind: "same", code: "  order_id," },
-    { n: 6, kind: "cut", code: "  order_total," },
-    { n: 6, kind: "add", code: "  cast(order_total as number) as order_total," },
-    { n: 7, kind: "same", code: "  customer_id," },
-    { n: 8, kind: "same", code: "  ordered_at" },
-    { n: 9, kind: "same", code: "from raw.shopify_orders" },
-  ],
-  reaches: ["stg_orders", "daily_orders", "finance.daily_revenue"],
-} as const;
-
 export const STACK = [
   "Airflow",
   "Snowflake",
