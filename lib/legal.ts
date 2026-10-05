@@ -23,7 +23,7 @@ const CONTACT = `Write to ${SITE.email}.`;
 
 export const PRIVACY: LegalPage = {
   title: "Privacy policy",
-  updated: "4 October 2026",
+  updated: "5 October 2026",
   intro:
     "This page says what Convalesce collects, why, and the choices you have.",
   clauses: [
@@ -33,6 +33,14 @@ export const PRIVACY: LegalPage = {
         "Account details from the provider you sign in with, such as your name and email address, and what you tell us about your role and organisation.",
         "Information from the systems you choose to connect, which Convalesce needs to detect and investigate failures. This is mostly descriptions of your data, not the data. While investigating a failure, Convalesce may also read a small, capped sample of rows from a connection, unless you switch that off for the connection.",
         "How the service is used, to keep it working and improve it.",
+      ],
+    },
+    {
+      heading: "How the console is used, and cookies",
+      body: [
+        "The console sets only the cookies it needs to work: to sign you in and keep you signed in, to finish connecting a repository, and a marker that lasts a few minutes after you sign in. None of them identifies you to an analytics or advertising service.",
+        "We may record how the console is used: which screens are opened, which actions are taken, and a recording of the page in which every name, value and piece of your data is hidden. This happens only for a workspace where it has been switched on, and only after you say yes when the console asks. It is sent to an analytics service we run ourselves, and you are identified there by a code, not by your name or email address.",
+        "No tracking cookie is set for this and no identifier is kept in your browser. Your browser remembers only the answer you gave, so you are not asked on every visit, and that a few first-time events were already counted.",
       ],
     },
     {
