@@ -31,7 +31,7 @@ export const PRIVACY: LegalPage = {
       heading: "What is collected",
       points: [
         "Account details from the provider you sign in with, such as your name and email address, and what you tell us about your role and organisation.",
-        "Information from the systems you choose to connect, which Convalesce needs to detect and investigate failures.",
+        "Information from the systems you choose to connect, which Convalesce needs to detect and investigate failures. This is mostly descriptions of your data, not the data. While investigating a failure, Convalesce may also read a small, capped sample of rows from a connection, unless you switch that off for the connection.",
         "How the service is used, to keep it working and improve it.",
       ],
     },
@@ -44,7 +44,7 @@ export const PRIVACY: LegalPage = {
     {
       heading: "Who it is shared with",
       body: [
-        "Service providers that host and operate Convalesce on our behalf, under terms that protect your data, and the tools you connect, as far as needed to do what you asked. Otherwise only where the law requires it.",
+        "Service providers that host and operate Convalesce on our behalf, under terms that protect your data, and the tools you connect, as far as needed to do what you asked. That includes the provider of the AI model an investigation runs on, which receives what the investigation reads, including any sampled rows. Otherwise only where the law requires it.",
       ],
     },
     {

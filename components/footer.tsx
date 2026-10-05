@@ -57,7 +57,7 @@ export function Footer() {
 
         {/* coda */}
         <div className="flex items-center justify-between py-6">
-          <span className="mono-label">© 2026 {SITE.company}</span>
+          <span className="mono-label">Copyright 2026 {SITE.company}</span>
           <a href="#top" className="mono-label hover:text-ink py-2 transition-colors">
             Back to top
           </a>

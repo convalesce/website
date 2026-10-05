@@ -11,7 +11,7 @@ export function Legal({ page, index }: { page: LegalPage; index: string }) {
       <Nav />
 
       <main id="main">
-        <Section index={index} label={page.title} top pad="tight">
+        <Section index={index} label={page.title} pad="tight">
           <div className="max-w-[68ch] pt-12 sm:pt-16 lg:pt-24">
             <h1 className="font-display text-h2 text-balance">{page.title}</h1>
             <p className="text-faint text-mono-sm mt-3 font-mono">Last updated {page.updated}</p>

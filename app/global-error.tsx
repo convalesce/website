@@ -39,7 +39,7 @@ export default function GlobalError({
               margin: "0 0 24px",
             }}
           >
-            Convalesce · unhandled error
+            Convalesce: unhandled error
           </p>
 
           <h1
@@ -80,7 +80,7 @@ export default function GlobalError({
             }}
           >
             <span style={{ color: "rgba(237, 237, 237, 0.5)" }}>status</span>
-            <span style={{ color: "rgba(237, 237, 237, 0.85)" }}>500 · unhandled</span>
+            <span style={{ color: "rgba(237, 237, 237, 0.85)" }}>500, unhandled</span>
             <span style={{ color: "rgba(237, 237, 237, 0.5)" }}>digest</span>
             <span style={{ color: "rgba(237, 237, 237, 0.85)", wordBreak: "break-all" }}>
               {error.digest ?? "not recorded"}

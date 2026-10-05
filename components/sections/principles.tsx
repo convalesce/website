@@ -6,7 +6,7 @@ import { PRINCIPLES } from "@/lib/content";
 export function Principles() {
   return (
     <Section index="06" label="Principles">
-      <SectionHeader heading="Less noise. More certainty." />
+      <SectionHeader heading="Three things we hold to." />
 
       {/* three ruled rows, read across: the commitment, what it means, and
           the fact that backs it */}

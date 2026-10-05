@@ -13,7 +13,7 @@ export function Faq() {
         <div className="lg:col-span-4">
           <Reveal mode="words" className="lg:sticky lg:top-28">
             <h2 className="font-display text-h2 max-w-[14ch] text-balance">
-              <SplitText text="Questions data teams open with." />
+              <SplitText text="Questions teams ask first." />
             </h2>
           </Reveal>
         </div>

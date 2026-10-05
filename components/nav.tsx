@@ -7,8 +7,10 @@ import { CTA, NAV_LINKS, outside } from "@/lib/content";
 
 export function Nav() {
   return (
-    <header className="bg-bg/75 supports-[backdrop-filter]:bg-bg/45 sticky top-0 z-50 backdrop-blur-xl backdrop-saturate-150">
-      <div className="mx-auto flex h-16 w-full max-w-[1230px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
+    // the bar is the page's first panel: the same width, rails and rounded
+    // foot as every section, so the first section's rails start beneath it
+    <header className="bg-bg/75 supports-[backdrop-filter]:bg-bg/45 sticky top-0 z-50 px-4 backdrop-blur-xl backdrop-saturate-150 sm:px-6 lg:px-0">
+      <div className="border-line mx-auto flex h-16 w-full max-w-[1230px] items-center justify-between gap-4 rounded-b-lg border-x border-b px-5 sm:px-8 lg:px-10">
         <Link href="/#top" aria-label="Convalesce, back to top">
           <Logo />
         </Link>

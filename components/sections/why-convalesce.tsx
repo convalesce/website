@@ -8,8 +8,8 @@ export function WhyConvalesce() {
   return (
     <Section id="context" index="04" label="Context">
       <SectionHeader
-        heading="Your agent is only as good as what it can see."
-        body="A generic copilot sees an error message. Convalesce sees the execution that produced it, the data it touched, and the systems around it."
+        heading="What Convalesce reads before it answers."
+        body="An error message rarely says why. Convalesce also reads the run that produced it, the tables it touched, and the code behind it."
       />
 
       <Reveal className="mt-10 lg:mt-14">

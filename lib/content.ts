@@ -41,7 +41,7 @@ export const HERO = {
     "data lakehouses",
     "data workflows",
   ],
-  body: "Agents pick up the failed run, trace its blast radius, and open a pull request with the fix and the evidence. Convalesce reads the shape of your data, never the rows.",
+  body: "Agents pick up the failed run, trace its blast radius, and open a pull request with the fix and the evidence. Convalesce reads the shape of your data, and only looks at rows to confirm a cause.",
   /* The share card carries one supporting line under the headline, so it gets
      its own sentence rather than a slice of the body. */
   sub: "Agents pick up the failed run, trace its blast radius, and return a fix with the evidence behind it.",
@@ -63,13 +63,16 @@ export const STACK = [
 export type Artifact = {
   caption: string;
   rows: readonly (readonly [string, string])[];
+  /** the change itself, where the stage ends in one */
+  diff?: { file: string; lines: readonly { kind: "same" | "cut" | "add"; code: string }[] };
+  /** how the stage ends, in a few words */
+  outcome: string;
 };
 
 export type Step = {
   n: string;
   title: string;
   body: string;
-  footnote: string;
   artifact: Artifact;
 };
 
@@ -77,23 +80,22 @@ export const STEPS: readonly Step[] = [
   {
     n: "01",
     title: "Capture the failure",
-    body: "Convalesce's integration captures the failed run, the exception, the task state, and the correlated execution metadata around it.",
-    footnote: "Your environment → Convalesce",
+    body: "Convalesce's integration records the failed run: the exception, the task state, and what else was running at the time.",
     artifact: {
       caption: "Captured run",
       rows: [
         ["dag", "daily_orders"],
         ["task", "load_orders"],
-        ["state", "failed · 09:42:18 UTC"],
+        ["state", "failed at 09:42:18 UTC"],
         ["exception", "SnowflakeSQLException: invalid type"],
       ],
+      outcome: "Sent from your environment to Convalesce",
     },
   },
   {
     n: "02",
     title: "Build the context",
-    body: "Convalesce combines runtime evidence with metadata, lineage, the code behind the run, and context from the tools already connected to it.",
-    footnote: "Lineage + code + schema history",
+    body: "It adds what your connected tools already know: table shapes, lineage, and the code behind the run.",
     artifact: {
       caption: "Incident bundle",
       rows: [
@@ -102,23 +104,29 @@ export const STEPS: readonly Step[] = [
         ["metadata", "schema, types, freshness, row counts"],
         ["code", "the query, the model, the commit that changed it"],
       ],
+      outcome: "One bundle, scoped to this run",
     },
   },
   {
     n: "03",
-    title: "Resolve and heal",
-    body: "Agents reason over a scoped incident bundle, then open a pull request with the fix and the evidence trail attached, so an engineer can verify before it ships.",
-    footnote: "Cause → evidence → action",
+    title: "Send the fix",
+    body: "Agents work only from that bundle. They open a pull request with the fix and the evidence, so an engineer can check it before it ships.",
     artifact: {
-      caption: "Evidence trail",
+      caption: "Pull request",
       rows: [
-        ["+0.2s", "Task exception captured"],
-        ["+0.8s", "Lineage impact resolved"],
-        ["+1.4s", "Schema history compared"],
-        ["cause", "order_total NUMBER → VARCHAR in raw.shopify_orders"],
-        ["fix", "CAST(order_total AS NUMBER)"],
-        ["confidence", "94%"],
+        ["cause", "order_total went from NUMBER to VARCHAR in raw.shopify_orders"],
+        ["reaches", "stg_orders, daily_orders, finance.daily_revenue"],
       ],
+      diff: {
+        file: "models/staging/stg_orders.sql",
+        lines: [
+          { kind: "same", code: "  order_id," },
+          { kind: "cut", code: "  order_total," },
+          { kind: "add", code: "  cast(order_total as number) as order_total," },
+          { kind: "same", code: "  customer_id," },
+        ],
+      },
+      outcome: "Opened for review, with the evidence attached",
     },
   },
 ] as const;
@@ -134,27 +142,27 @@ export const CONTEXT_SOURCES: readonly ContextSource[] = [
   {
     name: "Orchestrator runs",
     question: "What happened in your data tools?",
-    reads: "task state · exceptions · retries",
+    reads: "task state, exceptions, retries",
   },
   {
     name: "OpenLineage",
     question: "What data is connected and impacted?",
-    reads: "inputs · outputs · job runs",
+    reads: "inputs, outputs, job runs",
   },
   {
     name: "Your repositories",
     question: "What code ran, and what changed in it?",
-    reads: "queries · models · commits",
+    reads: "queries, models, commits",
   },
   {
     name: "Metadata",
     question: "What changed in the tables underneath?",
-    reads: "information_schema · row counts · freshness",
+    reads: "information_schema, row counts, freshness",
   },
   {
     name: "Convalesce instrumentation",
     question: "What did this run know at the moment it failed?",
-    reads: "params · upstream versions · config",
+    reads: "params, upstream versions, config",
   },
 ] as const;
 
@@ -187,7 +195,7 @@ export const LINEAGE = {
   ],
   origin: "shopify",
   blast: ["stg", "daily", "revenue"],
-  change: "order_total: NUMBER → VARCHAR",
+  change: "order_total: NUMBER to VARCHAR",
   fix: "CAST(order_total AS NUMBER)",
 } as const;
 
@@ -247,18 +255,18 @@ export const INTEGRATIONS: readonly Integration[] = [
 export const PRINCIPLES = [
   {
     name: "Evidence before answers",
-    body: "Every conclusion is tied to the signals behind it, so engineers can verify before acting.",
+    body: "Every conclusion links to what it was drawn from, so an engineer can check it before acting.",
     proof: "every conclusion cites its signals",
   },
   {
-    name: "Scoped by design",
+    name: "Only what the incident needs",
     body: "Convalesce collects the context an incident needs, not another copy of your data.",
-    proof: "reads information_schema · never table rows",
+    proof: "small read-only queries, capped and masked",
   },
   {
     name: "Fits the stack you have",
     body: "Start with the tools you already run, then connect more context as you need it.",
-    proof: "one tool · your environment · nothing else",
+    proof: "one tool, your environment, nothing else",
   },
 ] as const;
 
@@ -269,11 +277,11 @@ export const FAQ = [
   },
   {
     q: "What does Convalesce need access to?",
-    a: "Read access to your run metadata and your information schema. Convalesce reads the shape of your data: schemas, types, row counts, lineage. Not the rows themselves. Access to your code is a separate step you choose, by installing the GitHub app on the repositories you pick.",
+    a: "Read access to your run metadata and your tables. Convalesce reads the shape of your data all the time: schemas, types, row counts, lineage. While it investigates a failure it may also run small read-only queries to confirm a cause. Those are capped, personal columns are masked, the rows are never stored, and what comes back is sent to the AI model. You can switch reading off for any connection. Access to your code is a separate step you choose, by installing the GitHub app on the repositories you pick.",
   },
   {
     q: "Does our data leave our environment?",
-    a: "Only the incident bundle does, and only what the investigation needs. Context is scoped to the failed run rather than mirrored wholesale into another system.",
+    a: "Only the incident bundle does, and only what the investigation needs. It covers the failed run and nothing else. It is not a copy of your warehouse.",
   },
   {
     q: "How long does setup take?",

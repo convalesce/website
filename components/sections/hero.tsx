@@ -7,11 +7,14 @@ import { Reveal, SplitText } from "@/components/ui/reveal";
 import { RotatingWord } from "@/components/ui/rotating-word";
 import { CTA, HERO } from "@/lib/content";
 
+// The two actions are one width, set by the longer label.
+const pair = "w-56 justify-center";
+
 export function Hero() {
   const stemWords = HERO.headStem.split(" ").length;
 
   return (
-    <Section id="top" index="01" label="Overview" top pad="none">
+    <Section id="top" index="01" label="Overview" pad="none">
       {/* one centred column over the graph the product watches; the graph
           thins out behind the words so they are read first */}
       <div className="relative overflow-hidden px-5 pt-20 pb-24 text-center sm:px-8 sm:pt-28 sm:pb-32 lg:px-10 lg:pt-40 lg:pb-48">
@@ -33,15 +36,21 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={200}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-3 lg:mt-9">
-              <Button href={CTA.primary.href} event="open_app" trailing={<ArrowUpRight className="size-4" />}>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-9">
+              <Button
+                href={CTA.primary.href}
+                event="open_app"
+                trailing={<ArrowUpRight className="size-4" />}
+                className={pair}
+              >
                 {CTA.primary.label}
               </Button>
               <Button
                 href={CTA.secondary.href}
-                variant="ghost"
+                variant="secondary"
                 event="see_how_it_works"
                 trailing={<ArrowDown className="size-4" />}
+                className={pair}
               >
                 {CTA.secondary.label}
               </Button>

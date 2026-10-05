@@ -23,12 +23,12 @@ export function llmsIndex() {
 
 > ${SITE.description}
 
-${SITE.company} is a developer tool for data teams. Its agents pick up a failed run, assemble the context around it (lineage, metadata, code, run state), and open a pull request with the fix and the evidence attached. It reads the shape of data (schemas, types, row counts, lineage), not the rows.
+${SITE.company} is a developer tool for data teams. Its agents pick up a failed run, assemble the context around it (lineage, metadata, code, run state), and open a pull request with the fix and the evidence attached. It reads the shape of data (schemas, types, row counts, lineage) all the time, and while investigating a failure may run small read-only queries to confirm a cause: capped, masked, never stored, and switchable off per connection.
 
 ## Site
 
 - [Home](${SITE.domain}): ${HERO.head}
-- [How it works](${SITE.domain}/#how-it-works): ${STEPS.map((s) => s.title).join(" → ")}
+- [How it works](${SITE.domain}/#how-it-works): ${STEPS.map((s) => s.title).join(", then ")}
 - [Context](${SITE.domain}/#context): what the agent can see
 - [Integrations](${SITE.domain}/#integrations): live: ${live.join(", ")}; coming: ${soon.join(", ")}
 - [Full text](${SITE.domain}/llms-full.txt): every section of the site as plain text

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 /* The 404 states itself the way the product states an incident: a mono
    key/value block naming the failure, its cause and its fix. */
 const ROWS = [
-  ["status", "404 · not found"],
+  ["status", "404, not found"],
   ["cause", "the route has no upstream"],
   ["fix", "return to the homepage"],
 ] as const;
@@ -20,7 +20,7 @@ export default function NotFound() {
       <Nav />
 
       <main id="main">
-        <Section index="404" label="Not found" top pad="tight">
+        <Section index="404" label="Not found" pad="tight">
           <div className="grid gap-6 pt-10 sm:pt-12 lg:grid-cols-12 lg:gap-6 lg:pt-16">
             <div className="lg:col-span-7">
               <h1 className="font-display text-h2 max-w-[22ch] text-balance">
