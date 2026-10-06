@@ -1,0 +1,1130 @@
+{
+  "title": "Convalesce Free Beta Privacy Policy",
+  "blocks": [
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Effective Date: 10-05-2026 ",
+          "bold": true
+        },
+        {
+          "text": "Last Updated: 10-05-2026",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This Privacy Policy describes how Convalesce collects, uses, discloses, retains, and otherwise processes Personal Data when you access or use our website, applications, software, and related services (collectively, the "
+        },
+        {
+          "text": "“Service”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is currently an unincorporated project operated by "
+        },
+        {
+          "text": "Samarth KaPatel and ",
+          "bold": true
+        },
+        {
+          "text": "Vedanshu Joshi",
+          "bold": true
+        },
+        {
+          "text": " (“"
+        },
+        {
+          "text": "Convalesce",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "we",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "us",
+          "bold": true
+        },
+        {
+          "text": ",” or “"
+        },
+        {
+          "text": "our”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This Privacy Policy applies primarily when Convalesce determines the purposes and means of processing Personal Data, such as account information, application usage information, product analytics, security information, and communications with us."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "When Convalesce processes Personal Data contained in a customer's connected environment "
+        },
+        {
+          "text": "on behalf of that customer",
+          "bold": true
+        },
+        {
+          "text": ", that processing is governed by the "
+        },
+        {
+          "text": "Convalesce Free Beta Data ",
+          "bold": true
+        },
+        {
+          "text": "Processing Addendum (“DPA”)",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Use of the Service is also subject to the "
+        },
+        {
+          "text": "Convalesce Free Beta Terms of Service (“Terms”)",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "1. Personal Data We Collect"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Personal Data we collect depends on how you interact with Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "1.1 Information You Provide"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may collect information you provide directly to us, including:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "name;"
+          }
+        ],
+        [
+          {
+            "text": "email address;"
+          }
+        ],
+        [
+          {
+            "text": "organization or company information;"
+          }
+        ],
+        [
+          {
+            "text": "account information;"
+          }
+        ],
+        [
+          {
+            "text": "role or professional information;"
+          }
+        ],
+        [
+          {
+            "text": "information submitted through forms;"
+          }
+        ],
+        [
+          {
+            "text": "communications with us;"
+          }
+        ],
+        [
+          {
+            "text": "support requests;"
+          }
+        ],
+        [
+          {
+            "text": "feedback;"
+          }
+        ],
+        [
+          {
+            "text": "survey or research responses; and"
+          }
+        ],
+        [
+          {
+            "text": "other information you choose to provide."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Certain information may be necessary to create an account, authenticate you, or provide particular features of the Service."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "1.2 Information Collected Automatically"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "When you use Convalesce, we may collect technical and usage information such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "IP address;"
+          }
+        ],
+        [
+          {
+            "text": "device and browser information;"
+          }
+        ],
+        [
+          {
+            "text": "user or account identifiers;"
+          }
+        ],
+        [
+          {
+            "text": "application activity; and"
+          }
+        ],
+        [
+          {
+            "text": "information about how you interact with the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "1.3 Information From Organizations and Other Sources"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If an organization provides or manages your access to Convalesce, we may receive information such as your name, work email address, organization, role, or account permissions."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may also receive technical or account information from services you choose to connect where necessary to establish or operate an authorized connection."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Personal Data contained within Customer-controlled infrastructure is governed by the DPA where Convalesce processes that information on behalf of the Customer."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "2. How We Use Personal Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may use Personal Data to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "create and manage accounts;"
+          }
+        ],
+        [
+          {
+            "text": "authenticate users;"
+          }
+        ],
+        [
+          {
+            "text": "provide and operate the Service;"
+          }
+        ],
+        [
+          {
+            "text": "communicate with you about your account or the Service;"
+          }
+        ],
+        [
+          {
+            "text": "provide support;"
+          }
+        ],
+        [
+          {
+            "text": "understand how users interact with Convalesce;"
+          }
+        ],
+        [
+          {
+            "text": "measure and improve product functionality and user experience;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshoot technical or usability issues;"
+          }
+        ],
+        [
+          {
+            "text": "develop and improve features;"
+          }
+        ],
+        [
+          {
+            "text": "protect accounts and the Service;"
+          }
+        ],
+        [
+          {
+            "text": "detect and prevent fraud, abuse, or unauthorized access;"
+          }
+        ],
+        [
+          {
+            "text": "enforce our Terms;"
+          }
+        ],
+        [
+          {
+            "text": "comply with legal obligations;"
+          }
+        ],
+        [
+          {
+            "text": "respond to lawful requests; and"
+          }
+        ],
+        [
+          {
+            "text": "establish, exercise, or defend legal claims."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If we send optional marketing communications, you may opt out using the instructions included in those communications."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "3. Legal Bases for Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where applicable law requires us to identify a legal basis for processing Personal Data, we may rely on one or more of the following."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Performance of a Contract"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may process Personal Data where necessary to provide the Service or perform obligations under our Terms."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Legitimate Interests"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may process Personal Data where reasonably necessary for legitimate interests such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "operating and securing Convalesce;"
+          }
+        ],
+        [
+          {
+            "text": "preventing fraud or abuse;"
+          }
+        ],
+        [
+          {
+            "text": "understanding how the Service is used;"
+          }
+        ],
+        [
+          {
+            "text": "improving the Service;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshooting; and"
+          }
+        ],
+        [
+          {
+            "text": "protecting our legal rights."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We rely on legitimate interests only where those interests are not overridden by applicable rights and interests of the individual."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Consent"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where required, we may process Personal Data based on your consent."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where processing depends on consent, you may withdraw that consent as permitted by applicable law. Withdrawal does not affect processing that occurred lawfully before withdrawal."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Legal Obligations"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may process Personal Data where necessary to comply with legal obligations applicable to us."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "4. How We Disclose Personal Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do "
+        },
+        {
+          "text": "not sell Personal Data",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do "
+        },
+        {
+          "text": "not rent Personal Data",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do "
+        },
+        {
+          "text": "not use or disclose Personal Data for cross-context behavioral advertising",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may disclose Personal Data in the circumstances described below."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "4.1 Service Providers"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may use service providers that help us operate, host, secure, maintain, or support Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These providers may process Personal Data only as reasonably necessary to perform services for us and subject to applicable contractual and legal requirements."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where a provider processes Customer Personal Data on behalf of Convalesce in our role as a Processor or Subprocessor, the applicable provider information is described in our DPA."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "4.2 Legal and Safety Reasons"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may disclose Personal Data where reasonably necessary to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "comply with applicable law or valid legal process;"
+          }
+        ],
+        [
+          {
+            "text": "respond to lawful governmental requests;"
+          }
+        ],
+        [
+          {
+            "text": "investigate fraud, abuse, or security incidents;"
+          }
+        ],
+        [
+          {
+            "text": "enforce our agreements; or"
+          }
+        ],
+        [
+          {
+            "text": "protect the rights, property, security, or safety of Convalesce, our users, or others."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "4.3 Business Transfers"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce is incorporated, reorganized, financed, acquired, merged, sold, or transfers some or all of its business or assets, Personal Data may be transferred as part of that transaction, subject to applicable privacy obligations."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "4.4 At Your Direction"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may disclose Personal Data where you direct or authorize us to do so."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "5. Data Retention"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We retain Personal Data that Convalesce controls for its own purposes only for as long as reasonably necessary for the purposes described in this Privacy Policy or as permitted or required by law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Retention may depend on factors such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "whether your account remains active;"
+          }
+        ],
+        [
+          {
+            "text": "why the information was collected;"
+          }
+        ],
+        [
+          {
+            "text": "security and fraud-prevention requirements;"
+          }
+        ],
+        [
+          {
+            "text": "applicable legal obligations;"
+          }
+        ],
+        [
+          {
+            "text": "dispute resolution; and"
+          }
+        ],
+        [
+          {
+            "text": "establishment, exercise, or defense of legal claims."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "When Personal Data is no longer reasonably necessary, we may delete or de-identify it, subject to applicable legal requirements."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Retention and deletion of "
+        },
+        {
+          "text": "Customer Data processed by Convalesce on behalf of a ",
+          "bold": true
+        },
+        {
+          "text": "Customer",
+          "bold": true
+        },
+        {
+          "text": " are governed separately by the Terms and DPA."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "6. Security"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Security responsibilities relating generally to use of the Service are described in our "
+        },
+        {
+          "text": "Terms",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Technical and organizational measures applicable when Convalesce processes Customer Personal Data on behalf of a Customer are described in the "
+        },
+        {
+          "text": "DPA",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "No internet-connected system or method of electronic storage or transmission can be guaranteed to be completely secure."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "7. International Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is operated from the United States."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you access the Service from another country, Personal Data may be processed in the United States or other countries in which applicable service providers operate."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where applicable law requires safeguards for international transfers of Personal Data for which Convalesce acts as the Controller, we will use an appropriate legal mechanism."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "International-transfer terms applicable to Customer Personal Data processed on behalf of Customers are described in the "
+        },
+        {
+          "text": "DPA",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "8. Your Privacy Rights"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Depending on where you live and applicable law, you may have rights relating to your Personal Data, including the right to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "request access to Personal Data we maintain about you;"
+          }
+        ],
+        [
+          {
+            "text": "request correction of inaccurate Personal Data;"
+          }
+        ],
+        [
+          {
+            "text": "request deletion of Personal Data;"
+          }
+        ],
+        [
+          {
+            "text": "request restriction of certain processing;"
+          }
+        ],
+        [
+          {
+            "text": "object to certain processing;"
+          }
+        ],
+        [
+          {
+            "text": "receive certain Personal Data in a portable format;"
+          }
+        ],
+        [
+          {
+            "text": "withdraw consent where processing is based on consent;"
+          }
+        ],
+        [
+          {
+            "text": "opt out of certain processing where required by law; and"
+          }
+        ],
+        [
+          {
+            "text": "lodge a complaint with an applicable privacy or data-protection authority."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These rights are not absolute and may be subject to exceptions under applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do not currently sell Personal Data or share Personal Data for cross-context behavioral advertising."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To exercise an applicable privacy right, contact us using the information in Section 12."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may need to verify your identity before fulfilling a request."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where applicable, an authorized agent may submit a request on your behalf. We may require reasonable evidence of the agent's authority."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We will respond within the period required by applicable law and will not unlawfully discriminate against you for exercising an applicable privacy right."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "9. Personal Data Controlled by Our"
+    },
+    {
+      "type": "h2",
+      "text": "Customers"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If your Personal Data is contained within infrastructure connected to Convalesce by one of our Customers, Convalesce generally processes that information on behalf of the Customer rather than for our own purposes."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "In those circumstances, the Customer generally determines how that Personal Data is used."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Requests concerning such information should normally be directed to the relevant Customer."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you contact Convalesce regarding Customer-controlled Personal Data, we may refer your request to the relevant Customer and provide assistance as required under our DPA or applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "More information about Convalesce's obligations when processing Customer Personal Data is available in the "
+        },
+        {
+          "text": "DPA",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "10. Age Requirements"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Eligibility requirements for the Service, including our minimum age requirement, are described in our "
+        },
+        {
+          "text": "Terms",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do not knowingly collect Personal Data directly through Convalesce accounts from individuals who are not eligible to use the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you believe Personal Data has been provided to us in violation of those requirements, please contact us."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "11. Changes to This Privacy Policy"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may update this Privacy Policy as Convalesce develops, our practices change, or legal requirements evolve."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "When we make changes, we will update the "
+        },
+        {
+          "text": "“Last Updated”",
+          "bold": true
+        },
+        {
+          "text": " date at the top of this Privacy Policy."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If a change is material, we may provide additional notice where appropriate or required by law, including through email, the Service, or our website."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where applicable law requires consent before Personal Data is used for a materially different purpose, we will obtain that consent."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "12. Contact Us"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Questions about this Privacy Policy, our privacy practices, or requests concerning your Personal Data may be directed to:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce ",
+          "bold": true
+        },
+        {
+          "text": "Operated by "
+        },
+        {
+          "text": "Samarth KaPatel and Vedanshu Joshi",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Website",
+          "bold": true
+        },
+        {
+          "text": ":",
+          "bold": true,
+          "href": "https://convalesce.io/"
+        },
+        {
+          "text": " https://convalesce.io/ ",
+          "href": "https://convalesce.io/"
+        },
+        {
+          "text": "Privacy Contac",
+          "bold": true
+        },
+        {
+          "text": "t: ",
+          "bold": true,
+          "href": "mailto:privacy@convalesce.io"
+        },
+        {
+          "text": "privacy@convalesce.io",
+          "href": "mailto:privacy@convalesce.io"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If your request concerns Personal Data processed through a Convalesce Customer, please identify the applicable organization if known so we can appropriately direct the request."
+        }
+      ]
+    }
+  ]
+}

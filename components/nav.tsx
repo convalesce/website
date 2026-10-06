@@ -11,17 +11,24 @@ export function Nav() {
     // foot as every section, so the first section's rails start beneath it
     <header className="bg-bg/75 supports-[backdrop-filter]:bg-bg/45 sticky top-0 z-50 px-4 backdrop-blur-xl backdrop-saturate-150 sm:px-6 lg:px-0">
       <div className="border-line mx-auto flex h-16 w-full max-w-[1230px] items-center justify-between gap-4 rounded-b-lg border-x border-b px-5 sm:px-8 lg:px-10">
-        <Link href="/#top" aria-label="Convalesce, back to top">
+        <Link
+          href="/#top"
+          aria-label="Convalesce, back to top"
+          className="inline-flex min-h-11 items-center"
+        >
           <Logo />
         </Link>
 
-        <nav aria-label="Sections" className="hidden items-center gap-7 md:flex">
+        <nav
+          aria-label="Sections"
+          className="hidden items-center gap-7 md:flex"
+        >
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               {...outside(link.href)}
-              className="text-muted hover:text-ink text-small py-2 transition-colors"
+              className="text-muted hover:text-ink text-small inline-flex min-h-11 items-center transition-colors"
             >
               {link.label}
             </a>
@@ -32,6 +39,7 @@ export function Nav() {
           <Button
             href={CTA.primary.href}
             size="sm"
+            className="max-lg:h-11"
             event="open_app"
             label={CTA.primary.label}
             trailing={<ArrowUpRight className="size-4" />}

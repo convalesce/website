@@ -156,12 +156,20 @@ const jsonLd = {
       },
       image: { "@id": `${SITE.domain}/#logo` },
       email: SITE.email,
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        email: SITE.email,
-        availableLanguage: "English",
-      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          email: SITE.email,
+          availableLanguage: "English",
+        },
+        {
+          "@type": "ContactPoint",
+          contactType: "data protection",
+          email: SITE.privacyEmail,
+          availableLanguage: "English",
+        },
+      ],
     },
     {
       "@type": "WebSite",
@@ -213,7 +221,10 @@ export default function RootLayout({
             so this one has to be a real tag. */}
         <meta name="darkreader-lock" />
       </head>
-      <body className="bg-bg text-ink min-h-full">
+      {/* Browser extensions (a grammar checker, a password manager) write their
+          own attributes onto <body> before React loads. Those are not ours to
+          match, so a difference on this one element is not reported. */}
+      <body className="bg-bg text-ink min-h-full" suppressHydrationWarning>
         {children}
         <script
           type="application/ld+json"

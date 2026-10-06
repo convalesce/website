@@ -19,6 +19,7 @@ const COLUMNS = [
       { label: "Contact", href: mailto("Hello from your site") },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
+      { label: "DPA", href: "/dpa" },
     ],
   },
 ] as const;
@@ -36,13 +37,13 @@ export function Footer() {
             {COLUMNS.map((column) => (
               <div key={column.heading}>
                 <h2 className="mono-label mb-4">{column.heading}</h2>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2.5 max-lg:space-y-0">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
                         href={link.href}
                         {...outside(link.href)}
-                        className="text-muted hover:text-ink text-small transition-colors"
+                        className="text-muted hover:text-ink text-small transition-colors max-lg:inline-flex max-lg:min-h-11 max-lg:items-center"
                       >
                         {link.label}
                       </a>
@@ -52,13 +53,15 @@ export function Footer() {
               </div>
             ))}
           </div>
-
         </div>
 
         {/* coda */}
         <div className="flex items-center justify-between py-6">
           <span className="mono-label">Copyright 2026 {SITE.company}</span>
-          <a href="#top" className="mono-label hover:text-ink py-2 transition-colors">
+          <a
+            href="#top"
+            className="mono-label hover:text-ink inline-flex min-h-11 items-center transition-colors"
+          >
             Back to top
           </a>
         </div>

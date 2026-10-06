@@ -21,7 +21,9 @@ export function Grid({
   children: ReactNode;
 }) {
   return (
-    <div className={`border-line grid border-t border-l ${ladder[cols]} ${className}`}>
+    <div
+      className={`border-line grid grid-cols-1 border-t border-l ${ladder[cols]} ${className}`}
+    >
       {children}
     </div>
   );

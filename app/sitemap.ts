@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/content";
+import { PAGES, SITE } from "@/lib/content";
 
 /* Pinned so lastmod means "the content changed", not "the site rebuilt".
    Bump it when the page copy changes. */
-const LAST_MODIFIED = new Date("2026-08-21");
+const LAST_MODIFIED = new Date("2026-10-06");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -16,11 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
          makes it discoverable to image search, which never sees an og: tag. */
       images: [`${SITE.domain}/opengraph-image`],
     },
-    ...["privacy", "terms"].map((page) => ({
-      url: `${SITE.domain}/${page}`,
-      lastModified: new Date("2026-10-04"),
+    ...PAGES.map((page) => ({
+      url: `${SITE.domain}${page.path}`,
+      lastModified: new Date(page.updated),
       changeFrequency: "yearly" as const,
-      priority: 0.2,
+      priority: 0.3,
     })),
   ];
 }

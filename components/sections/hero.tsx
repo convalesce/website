@@ -2,7 +2,6 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { Section } from "@/components/frame";
 import { Button } from "@/components/ui/button";
-import { LineageBackdrop } from "@/components/ui/lineage-backdrop";
 import { Reveal, SplitText } from "@/components/ui/reveal";
 import { RotatingWord } from "@/components/ui/rotating-word";
 import { CTA, HERO } from "@/lib/content";
@@ -15,10 +14,15 @@ export function Hero() {
 
   return (
     <Section id="top" index="01" label="Overview" pad="none">
-      {/* one centred column over the graph the product watches; the graph
-          thins out behind the words so they are read first */}
-      <div className="relative overflow-hidden px-5 pt-20 pb-24 text-center sm:px-8 sm:pt-28 sm:pb-32 lg:px-10 lg:pt-40 lg:pb-48">
-        <LineageBackdrop className="[mask-image:radial-gradient(ellipse_62%_58%_at_50%_44%,rgb(0_0_0/0.18),black)] max-sm:opacity-70" />
+      {/* one centred column, with nothing moving behind it: a low light on the
+          horizon, so the words and the two actions are all there is to read */}
+      {/* with the nav and the frame's label row above it, the hero ends
+          exactly at the bottom of the first screen */}
+      <div className="relative flex min-h-[calc(100svh-6.875rem)] flex-col justify-center overflow-hidden px-5 py-20 text-center sm:px-8 sm:py-24 lg:px-10">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 [background:radial-gradient(ellipse_70%_60%_at_50%_118%,rgb(52_211_153/0.3),transparent_70%)]"
+        />
 
         <div className="relative">
           <Reveal mode="words">
@@ -26,13 +30,19 @@ export function Hero() {
             <h1 className="font-display text-hero">
               <SplitText text={HERO.headStem} />{" "}
               <span className="block">
-                <RotatingWord words={HERO.rotating} from={stemWords} className="text-accent-text" />
+                <RotatingWord
+                  words={HERO.rotating}
+                  from={stemWords}
+                  className="text-accent-text"
+                />
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={120}>
-            <p className="text-muted mx-auto mt-7 max-w-[56ch] text-pretty lg:mt-8">{HERO.body}</p>
+            <p className="text-muted mx-auto mt-7 max-w-[56ch] text-pretty lg:mt-8">
+              {HERO.body}
+            </p>
           </Reveal>
 
           <Reveal delay={200}>

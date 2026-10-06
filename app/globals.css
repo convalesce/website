@@ -166,40 +166,172 @@ body {
   background-color: var(--accent-text);
 }
 
-/* The backdrop graph. It is faint by default; one failure travels downstream
-   in red, then heals in green along the same path, and the loop rests before
-   it comes round. With motion reduced it is a still graph. */
+/* The backdrop graph behind the closing line: still, and faint. */
 .lineage-wire {
   color: rgb(var(--ink-c) / 0.1);
   stroke-width: 1;
+  /* The sheet is scaled to cover the hero, so a hairline would thicken on a
+     wide screen and thin on a phone. Lines stay one pixel at any size. */
+  vector-effect: non-scaling-stroke;
 }
 
 .lineage-node {
-  color: rgb(var(--ink-c) / 0.24);
+  color: rgb(var(--ink-c) / 0.26);
   stroke-width: 1;
+  vector-effect: non-scaling-stroke;
 }
 
-@keyframes lineage-wire {
-  0%, 5% { color: rgb(var(--ink-c) / 0.1); }
-  9%, 40% { color: var(--fail); }
-  48%, 80% { color: var(--accent); }
-  100% { color: rgb(var(--ink-c) / 0.1); }
+/* The mark on a node's tile, drawn a touch stronger than the tile so the
+   kind of asset reads before the box does. */
+.lineage-mark {
+  color: rgb(var(--ink-c) / 0.6);
 }
 
-@keyframes lineage-node {
-  0%, 5% { color: rgb(var(--ink-c) / 0.24); fill: var(--bg); }
-  9%, 40% { color: var(--fail); fill: var(--fail); }
-  48%, 80% { color: var(--accent); fill: var(--accent); }
-  100% { color: rgb(var(--ink-c) / 0.24); fill: var(--bg); }
+.lineage-mark * {
+  stroke-width: 1.15px;
+  vector-effect: non-scaling-stroke;
 }
 
-.lineage-wire.lineage-hot {
-  animation: lineage-wire 11s ease-in-out infinite;
+/* The stack map. Links between tools, and the taps down to the layer. The
+   sheet is stretched to fit, so every line is held at one pixel. */
+.stack-wire,
+.stack-tap {
+  stroke: rgb(var(--ink-c) / 0.16);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.5s;
 }
 
-.lineage-node.lineage-hot {
-  animation: lineage-node 11s ease-in-out infinite;
+.stack-tap {
+  stroke: rgb(var(--ink-c) / 0.1);
+  stroke-dasharray: 3 5;
 }
+
+.stack-wire-hit {
+  stroke: rgb(248 113 113 / 0.6);
+  stroke-dasharray: 4 5;
+}
+
+.stack-wire-ok {
+  stroke: rgb(52 211 153 / 0.45);
+}
+
+/* The low light under the layer. Two of them, one per colour, so the turn
+   from red to green is a cross-fade and not a jump. */
+.stack-ambient {
+  position: absolute;
+  inset: 34% 0 -22%;
+  pointer-events: none;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stack-ambient-ok {
+  background: radial-gradient(ellipse 56% 42% at 50% 57%, rgb(52 211 153 / 0.18), transparent 100%);
+}
+
+.stack-ambient-fail {
+  background: radial-gradient(ellipse 44% 42% at 30% 57%, rgb(248 113 113 / 0.11), transparent 100%);
+}
+
+/* The alarm on the tool that failed: a ring leaves it, twice. */
+@keyframes stack-alarm {
+  from { opacity: 0.75; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.2, 1.6); }
+}
+
+.stack-alarm {
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--fail);
+  border-radius: inherit;
+  pointer-events: none;
+  animation: stack-alarm 1.1s cubic-bezier(0.22, 1, 0.36, 1) 2 both;
+}
+
+/* A light passing along the layer, once per moment. */
+@keyframes stack-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.stack-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent 36%, rgb(110 231 183 / 0.16) 50%, transparent 64%);
+  animation: stack-sweep 1.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.stack-sweep-fail {
+  background: linear-gradient(100deg, transparent 36%, rgb(248 113 113 / 0.2) 50%, transparent 64%);
+}
+
+/* A short stroke travelling each link, left to right. */
+@keyframes stack-flow {
+  to { stroke-dashoffset: -156; }
+}
+
+.stack-flow {
+  stroke: rgb(var(--ink-c) / 0.5);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-dasharray: 6 150;
+  vector-effect: non-scaling-stroke;
+  animation: stack-flow 2.6s linear infinite;
+  transition: opacity 0.5s, stroke 0.5s;
+}
+
+.stack-flow-ok {
+  stroke: var(--accent);
+}
+
+.stack-flow-off {
+  opacity: 0;
+}
+
+@keyframes stack-tap {
+  to { stroke-dashoffset: -16; }
+}
+
+.stack-tap-fail,
+.stack-tap-read,
+.stack-tap-ok {
+  stroke-dasharray: 3 5;
+  animation: stack-tap 0.9s linear infinite;
+}
+
+.stack-tap-fail {
+  stroke: var(--fail);
+}
+
+.stack-tap-read {
+  stroke: rgb(52 211 153 / 0.7);
+}
+
+.stack-tap-ok {
+  stroke: rgb(52 211 153 / 0.35);
+  animation-duration: 2.4s;
+}
+
+/* A new tool taking a place on the map: it rises in, already readable. */
+@keyframes stack-swap {
+  from { opacity: 0; transform: translateY(6px); filter: blur(3px); }
+}
+
+.stack-swap {
+  animation: stack-swap 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* The line under the current moment's name fills while that moment is held:
+   3.6s, the same as HOLD in stack-map.tsx. */
+@keyframes stack-progress {
+  from { transform: scaleX(0); }
+}
+
+.stack-progress {
+  animation: stack-progress 3.6s linear both;
+}
+
 /* Uppercase mono furniture: frame corners, footer headings, status chips. */
 .mono-label {
   font-family: var(--font-mono);
@@ -344,8 +476,18 @@ body {
 
   .marquee-track,
   .ticker-track,
-  .lineage-hot {
+  .stack-tap-fail,
+  .stack-tap-read,
+  .stack-tap-ok {
     animation: none;
     transform: none;
+  }
+
+  /* with motion reduced a travelling stroke would be a stray dash, and a ring or a
+     passing light a frozen smear: hide them */
+  .stack-flow,
+  .stack-alarm,
+  .stack-sweep {
+    display: none;
   }
 }

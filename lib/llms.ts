@@ -6,6 +6,7 @@ import {
   HERO,
   INTEGRATIONS,
   LINEAGE,
+  PAGES,
   PRINCIPLES,
   SITE,
   STEPS,
@@ -17,6 +18,10 @@ import {
 
 const live = INTEGRATIONS.filter((i) => i.status === "live").map((i) => i.name);
 const soon = INTEGRATIONS.filter((i) => i.status === "soon").map((i) => i.name);
+
+const pages = PAGES.map(
+  (p) => `- [${p.title}](${SITE.domain}${p.path}): ${p.description}`,
+).join("\n");
 
 export function llmsIndex() {
   return `# ${SITE.company}
@@ -31,12 +36,18 @@ ${SITE.company} is a developer tool for data teams. Its agents pick up a failed 
 - [How it works](${SITE.domain}/#how-it-works): ${STEPS.map((s) => s.title).join(", then ")}
 - [Context](${SITE.domain}/#context): what the agent can see
 - [Integrations](${SITE.domain}/#integrations): live: ${live.join(", ")}; coming: ${soon.join(", ")}
+- [Docs](${SITE.docs}): how to connect each tool
 - [Full text](${SITE.domain}/llms-full.txt): every section of the site as plain text
+
+## Legal
+
+${pages}
 
 ## Contact
 
 - App: ${CTA.primary.href}
 - Email: ${SITE.email}
+- Privacy questions: ${SITE.privacyEmail}
 `;
 }
 
@@ -53,12 +64,13 @@ export function llmsFull() {
   ).join("\n");
 
   const integrations = INTEGRATIONS.map(
-    (i) => `- ${i.name} (${i.kind}): ${i.status === "live" ? "live" : "coming soon"}`,
+    (i) =>
+      `- ${i.name} (${i.kind}): ${i.status === "live" ? "live" : "coming soon"}`,
   ).join("\n");
 
-  const principles = PRINCIPLES.map((p) => `- **${p.name}**: ${p.body} (${p.proof})`).join(
-    "\n",
-  );
+  const principles = PRINCIPLES.map(
+    (p) => `- **${p.name}**: ${p.body} (${p.proof})`,
+  ).join("\n");
 
   const faq = FAQ.map((f) => `**Q: ${f.q}**\n\n${f.a}`).join("\n\n");
 
@@ -102,6 +114,13 @@ ${faq}
 ${CLOSER.head} ${CLOSER.body}
 
 Sign in: ${CTA.primary.href}
+Docs: ${SITE.docs}
+
+## Legal
+
+${pages}
+
+Privacy questions: ${SITE.privacyEmail}
 `;
 }
 

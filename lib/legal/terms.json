@@ -1,0 +1,4033 @@
+{
+  "title": "Convalesce Free Beta Terms of Service",
+  "blocks": [
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Effective Date: 05-10-2026 ",
+          "bold": true
+        },
+        {
+          "text": "Last Updated: 05-10-2026",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These Free Beta Terms of Service (the "
+        },
+        {
+          "text": "“Terms”",
+          "bold": true
+        },
+        {
+          "text": ") govern your access to and use of Convalesce, including our website, software, applications, APIs, integrations, interfaces, and related services (collectively, the "
+        },
+        {
+          "text": "“Service”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is currently an unincorporated project operated by "
+        },
+        {
+          "text": "Samarth KaPatel and ",
+          "bold": true
+        },
+        {
+          "text": "Vedanshu Joshi",
+          "bold": true
+        },
+        {
+          "text": " (“"
+        },
+        {
+          "text": "Convalesce",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "we",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "us",
+          "bold": true
+        },
+        {
+          "text": ",” or “"
+        },
+        {
+          "text": "our",
+          "bold": true
+        },
+        {
+          "text": "”)."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "By creating an account, clicking to accept these Terms, connecting a system to the Service, or otherwise accessing or using the Service, you agree to these Terms."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Our "
+        },
+        {
+          "text": "Privacy Policy",
+          "bold": true
+        },
+        {
+          "text": " describes how Convalesce collects, uses, discloses, retains, and otherwise handles Personal Data when Convalesce determines the purposes and means of that Processing."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce processes Customer Personal Data on your behalf, the "
+        },
+        {
+          "text": "Convalesce Free Beta ",
+          "bold": true
+        },
+        {
+          "text": "Data Processing Addendum (“DPA”)",
+          "bold": true
+        },
+        {
+          "text": " also forms part of your agreement with us and applies to that Processing."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "By accepting these Terms, you also acknowledge the Privacy Policy and accept the DPA where the DPA applies."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you do not agree to these Terms, do not access or use the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you use the Service on behalf of an employer, company, organization, or other entity, you represent that you are authorized to use the Service on its behalf, accept these Terms and any applicable DPA on its behalf, and grant the permissions described in these Terms."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "1. Eligibility"
+    },
+    {
+      "type": "h4",
+      "text": "1.1 Age"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You must be at least "
+        },
+        {
+          "text": "18 years old",
+          "bold": true
+        },
+        {
+          "text": " to use the Service."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.2 Intended Use"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Service is intended for business, professional, technical, research, development, or similar legitimate purposes."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Service is not intended primarily as a consumer product."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.3 Authority"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may only use the Service with systems, data, infrastructure, accounts, environments, repositories, and Third-Party Services that you are legally and contractually authorized to access."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you use Convalesce through your employer or another organization, you are responsible for ensuring that your use is permitted by that organization."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "2. Free Beta Service"
+    },
+    {
+      "type": "h4",
+      "text": "2.1 Beta Status"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is currently an experimental, early-access "
+        },
+        {
+          "text": "beta product",
+          "bold": true
+        },
+        {
+          "text": " that is actively being developed."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Service may:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "contain bugs, errors, or incomplete functionality;"
+          }
+        ],
+        [
+          {
+            "text": "produce inaccurate or incomplete information;"
+          }
+        ],
+        [
+          {
+            "text": "fail to identify the cause of an incident;"
+          }
+        ],
+        [
+          {
+            "text": "become temporarily or permanently unavailable;"
+          }
+        ],
+        [
+          {
+            "text": "experience delays or interruptions;"
+          }
+        ],
+        [
+          {
+            "text": "change materially without notice;"
+          }
+        ],
+        [
+          {
+            "text": "have integrations added, modified, restricted, or removed; or"
+          }
+        ],
+        [
+          {
+            "text": "behave differently as the product evolves."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You acknowledge that the Beta Service has not been designed or tested to the same standards that may apply to a generally available production service."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "2.2 No Service-Level Commitment"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Beta Service is provided without any guaranteed:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "uptime;"
+          }
+        ],
+        [
+          {
+            "text": "availability;"
+          }
+        ],
+        [
+          {
+            "text": "response time;"
+          }
+        ],
+        [
+          {
+            "text": "support level;"
+          }
+        ],
+        [
+          {
+            "text": "investigation time;"
+          }
+        ],
+        [
+          {
+            "text": "incident resolution time;"
+          }
+        ],
+        [
+          {
+            "text": "data-retrieval frequency; or"
+          }
+        ],
+        [
+          {
+            "text": "service-level agreement."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "2.3 No Guarantee of Continued Access"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Participation in the Free Beta does not create a right to continued access to the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may change, limit, suspend, discontinue, or terminate all or part of the Beta Service at any time, subject to applicable law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "3. Current Scope of Convalesce"
+    },
+    {
+      "type": "h4",
+      "text": "3.1 Investigation Service"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The current Beta is designed primarily to help users investigate, analyze, understand, and diagnose issues involving data infrastructure, workflows, pipelines, and related systems."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To provide the Service, Convalesce may retrieve and process information from systems you authorize us to access."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This may include information such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "logs;"
+          }
+        ],
+        [
+          {
+            "text": "workflow metadata;"
+          }
+        ],
+        [
+          {
+            "text": "execution history;"
+          }
+        ],
+        [
+          {
+            "text": "job status;"
+          }
+        ],
+        [
+          {
+            "text": "errors;"
+          }
+        ],
+        [
+          {
+            "text": "schemas;"
+          }
+        ],
+        [
+          {
+            "text": "lineage;"
+          }
+        ],
+        [
+          {
+            "text": "queries;"
+          }
+        ],
+        [
+          {
+            "text": "configuration information;"
+          }
+        ],
+        [
+          {
+            "text": "system metadata;"
+          }
+        ],
+        [
+          {
+            "text": "code-related context;"
+          }
+        ],
+        [
+          {
+            "text": "infrastructure metadata;"
+          }
+        ],
+        [
+          {
+            "text": "monitoring information;"
+          }
+        ],
+        [
+          {
+            "text": "historical incident information; and"
+          }
+        ],
+        [
+          {
+            "text": "other technical information relevant to an investigation."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "3.2 Read-Oriented Beta"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The current Beta is intended to be "
+        },
+        {
+          "text": "read-oriented",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may make requests or perform operations necessary to retrieve authorized data from connected systems."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The current Beta is "
+        },
+        {
+          "text": "not intended to autonomously modify, repair, reconfigure, delete, ",
+          "bold": true
+        },
+        {
+          "text": "restart, rerun, or otherwise remediate your production infrastructure or workflows",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "3.3 Future Functionality"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Future versions of Convalesce may include capabilities that can take actions or perform remediation in connected environments."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Such functionality may require:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "additional authorization;"
+          }
+        ],
+        [
+          {
+            "text": "additional technical permissions;"
+          }
+        ],
+        [
+          {
+            "text": "updated Terms;"
+          }
+        ],
+        [
+          {
+            "text": "separate agreements; or"
+          }
+        ],
+        [
+          {
+            "text": "additional user approval."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Your acceptance of these Terms does not automatically authorize Convalesce to perform future autonomous remediation functionality."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "4. Free Access and Usage Limits"
+    },
+    {
+      "type": "h4",
+      "text": "4.1 Free Beta"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Beta Service is currently provided without charge."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may introduce paid plans or functionality in the future."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We will not charge you for paid services unless you affirmatively agree to applicable pricing or paid terms."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "4.2 Usage Limits"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may impose limits on use of the Service, including limits based on:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "investigations;"
+          }
+        ],
+        [
+          {
+            "text": "workflows;"
+          }
+        ],
+        [
+          {
+            "text": "connected systems;"
+          }
+        ],
+        [
+          {
+            "text": "integrations;"
+          }
+        ],
+        [
+          {
+            "text": "environments;"
+          }
+        ],
+        [
+          {
+            "text": "API requests;"
+          }
+        ],
+        [
+          {
+            "text": "tokens;"
+          }
+        ],
+        [
+          {
+            "text": "AI processing;"
+          }
+        ],
+        [
+          {
+            "text": "model usage;"
+          }
+        ],
+        [
+          {
+            "text": "compute;"
+          }
+        ],
+        [
+          {
+            "text": "storage;"
+          }
+        ],
+        [
+          {
+            "text": "retrieved data;"
+          }
+        ],
+        [
+          {
+            "text": "data-processing volume;"
+          }
+        ],
+        [
+          {
+            "text": "frequency of requests; or"
+          }
+        ],
+        [
+          {
+            "text": "other operational resources."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Usage limits may vary between users and may change from time to time."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "4.3 Enforcement of Limits"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may throttle, restrict, reject, suspend, or terminate usage where:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "applicable usage limits are reached;"
+          }
+        ],
+        [
+          {
+            "text": "use materially exceeds expected usage patterns;"
+          }
+        ],
+        [
+          {
+            "text": "activity threatens the stability or security of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "usage creates unreasonable cost or resource consumption;"
+          }
+        ],
+        [
+          {
+            "text": "activity appears automated or abusive; or"
+          }
+        ],
+        [
+          {
+            "text": "we reasonably suspect an attempt to circumvent technical restrictions."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not bypass, evade, manipulate, interfere with, or circumvent usage limits, quotas, rate limits, access controls, or other technical restrictions."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "5. Accounts and Security"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for maintaining the security and confidentiality of your account and authentication credentials."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "share credentials with unauthorized parties;"
+          }
+        ],
+        [
+          {
+            "text": "permit unauthorized access through your account;"
+          }
+        ],
+        [
+          {
+            "text": "misrepresent your identity;"
+          }
+        ],
+        [
+          {
+            "text": "create accounts for abusive purposes; or"
+          }
+        ],
+        [
+          {
+            "text": "attempt to conceal prohibited activity."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You must promptly notify us if you reasonably believe that:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "your account has been compromised;"
+          }
+        ],
+        [
+          {
+            "text": "credentials associated with Convalesce have been compromised;"
+          }
+        ],
+        [
+          {
+            "text": "unauthorized activity has occurred; or"
+          }
+        ],
+        [
+          {
+            "text": "you discover a security issue affecting the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "6. Authorization to Access Connected"
+    },
+    {
+      "type": "h2",
+      "text": "Systems"
+    },
+    {
+      "type": "h4",
+      "text": "6.1 Your Authorization"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may only connect Convalesce to systems that:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "1. you are authorized to access; and 2. you are authorized to permit Convalesce to access."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "6.2 Permission Granted to Convalesce"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "When you connect an account, environment, service, repository, database, data platform, infrastructure system, API, or other integration to Convalesce, you authorize us to access and retrieve information from that system within the scope of the permissions you provide."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You authorize Convalesce to process such information as reasonably necessary to provide the Service and as further described in these Terms and, where applicable, the DPA."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "6.3 Your Responsibility"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You represent and warrant that you have all rights, permissions, approvals, and authority required for us to access and process information obtained through your connected systems."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for ensuring that connecting Convalesce does not violate:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "your employer's policies;"
+          }
+        ],
+        [
+          {
+            "text": "contractual restrictions;"
+          }
+        ],
+        [
+          {
+            "text": "confidentiality obligations;"
+          }
+        ],
+        [
+          {
+            "text": "third-party terms;"
+          }
+        ],
+        [
+          {
+            "text": "applicable law; or"
+          }
+        ],
+        [
+          {
+            "text": "security requirements applicable to your environment."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "6.4 Least Privilege"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where technically possible, users should provide only the minimum permissions reasonably necessary for Convalesce to perform its intended functions."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for configuring permissions appropriately within Third-Party Services."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "7. Prohibited Activities"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not, directly or indirectly, use the Service to perform or assist with any activity described below."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.1 Unauthorized Access"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not attempt to access:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "another user's account;"
+          }
+        ],
+        [
+          {
+            "text": "another user's Customer Data;"
+          }
+        ],
+        [
+          {
+            "text": "systems you are not authorized to access;"
+          }
+        ],
+        [
+          {
+            "text": "non-public areas of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "administrative interfaces without authorization;"
+          }
+        ],
+        [
+          {
+            "text": "credentials belonging to another person; or"
+          }
+        ],
+        [
+          {
+            "text": "infrastructure, networks, databases, repositories, or environments without authorization."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.2 Hacking and Security Testing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Unless we have provided prior written authorization, you may not use the Service or target the Service for:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "penetration testing;"
+          }
+        ],
+        [
+          {
+            "text": "vulnerability scanning;"
+          }
+        ],
+        [
+          {
+            "text": "security assessments;"
+          }
+        ],
+        [
+          {
+            "text": "exploitation;"
+          }
+        ],
+        [
+          {
+            "text": "fuzzing;"
+          }
+        ],
+        [
+          {
+            "text": "intrusion attempts;"
+          }
+        ],
+        [
+          {
+            "text": "authentication testing;"
+          }
+        ],
+        [
+          {
+            "text": "credential stuffing;"
+          }
+        ],
+        [
+          {
+            "text": "brute-force attacks;"
+          }
+        ],
+        [
+          {
+            "text": "privilege escalation;"
+          }
+        ],
+        [
+          {
+            "text": "denial-of-service attacks;"
+          }
+        ],
+        [
+          {
+            "text": "resource-exhaustion attacks; or"
+          }
+        ],
+        [
+          {
+            "text": "similar security-testing activity."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.3 Exploiting Vulnerabilities"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "knowingly exploit a vulnerability in Convalesce;"
+          }
+        ],
+        [
+          {
+            "text": "attempt to use a vulnerability to obtain unauthorized access;"
+          }
+        ],
+        [
+          {
+            "text": "access information beyond what is reasonably necessary to demonstrate a suspected vulnerability;"
+          }
+        ],
+        [
+          {
+            "text": "retain or disclose Customer Data obtained through a vulnerability; or"
+          }
+        ],
+        [
+          {
+            "text": "use discovered vulnerabilities to interfere with the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you identify a potential security vulnerability, you should report it to us."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.4 Malicious Code"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not introduce or attempt to introduce:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "malware;"
+          }
+        ],
+        [
+          {
+            "text": "ransomware;"
+          }
+        ],
+        [
+          {
+            "text": "viruses;"
+          }
+        ],
+        [
+          {
+            "text": "worms;"
+          }
+        ],
+        [
+          {
+            "text": "malicious scripts;"
+          }
+        ],
+        [
+          {
+            "text": "backdoors;"
+          }
+        ],
+        [
+          {
+            "text": "destructive payloads;"
+          }
+        ],
+        [
+          {
+            "text": "logic bombs;"
+          }
+        ],
+        [
+          {
+            "text": "credential-stealing software;"
+          }
+        ],
+        [
+          {
+            "text": "unauthorized cryptomining software; or"
+          }
+        ],
+        [
+          {
+            "text": "other malicious or harmful code."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.5 Extraction of Protected Information"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not attempt to improperly obtain or extract:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "authentication credentials;"
+          }
+        ],
+        [
+          {
+            "text": "access tokens;"
+          }
+        ],
+        [
+          {
+            "text": "API keys;"
+          }
+        ],
+        [
+          {
+            "text": "encryption keys;"
+          }
+        ],
+        [
+          {
+            "text": "secrets;"
+          }
+        ],
+        [
+          {
+            "text": "private system configuration;"
+          }
+        ],
+        [
+          {
+            "text": "another user's information;"
+          }
+        ],
+        [
+          {
+            "text": "non-public system instructions;"
+          }
+        ],
+        [
+          {
+            "text": "proprietary prompts;"
+          }
+        ],
+        [
+          {
+            "text": "model weights; or"
+          }
+        ],
+        [
+          {
+            "text": "other protected or confidential information."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.6 Reverse Engineering"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Except where applicable law expressly prohibits such restrictions, you may not:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "reverse engineer;"
+          }
+        ],
+        [
+          {
+            "text": "decompile;"
+          }
+        ],
+        [
+          {
+            "text": "disassemble;"
+          }
+        ],
+        [
+          {
+            "text": "decode;"
+          }
+        ],
+        [
+          {
+            "text": "reconstruct;"
+          }
+        ],
+        [
+          {
+            "text": "derive source code from; or"
+          }
+        ],
+        [
+          {
+            "text": "attempt to discover the internal implementation of"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "the Service or any proprietary portion of it."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.7 Competitive and Commercial Exploitation"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Without our prior written authorization, you may not:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "sell or resell the Service;"
+          }
+        ],
+        [
+          {
+            "text": "sublicense the Service;"
+          }
+        ],
+        [
+          {
+            "text": "provide the Service as a service bureau;"
+          }
+        ],
+        [
+          {
+            "text": "rent or lease access;"
+          }
+        ],
+        [
+          {
+            "text": "distribute the Service;"
+          }
+        ],
+        [
+          {
+            "text": "commercially exploit access to the Service for third parties;"
+          }
+        ],
+        [
+          {
+            "text": "systematically copy material portions of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "use the Service primarily to recreate a substantially similar competing product; or"
+          }
+        ],
+        [
+          {
+            "text": "use automated systems to benchmark the Service for competitive purposes."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.8 Abuse of Resources"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not intentionally cause:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "excessive compute consumption;"
+          }
+        ],
+        [
+          {
+            "text": "excessive AI usage;"
+          }
+        ],
+        [
+          {
+            "text": "excessive storage consumption;"
+          }
+        ],
+        [
+          {
+            "text": "excessive network traffic;"
+          }
+        ],
+        [
+          {
+            "text": "unreasonable API activity;"
+          }
+        ],
+        [
+          {
+            "text": "automated abuse; or"
+          }
+        ],
+        [
+          {
+            "text": "other activity designed to impose unreasonable costs or operational burdens on Convalesce."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "7.9 Illegal Use"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not use the Service in violation of applicable law or regulation or to facilitate unlawful activity."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "8. Third-Party Services"
+    },
+    {
+      "type": "h4",
+      "text": "8.1 Integrations"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may connect with or depend upon third-party:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "data platforms;"
+          }
+        ],
+        [
+          {
+            "text": "cloud services;"
+          }
+        ],
+        [
+          {
+            "text": "orchestration platforms;"
+          }
+        ],
+        [
+          {
+            "text": "databases;"
+          }
+        ],
+        [
+          {
+            "text": "warehouses;"
+          }
+        ],
+        [
+          {
+            "text": "lakehouses;"
+          }
+        ],
+        [
+          {
+            "text": "code repositories;"
+          }
+        ],
+        [
+          {
+            "text": "monitoring platforms;"
+          }
+        ],
+        [
+          {
+            "text": "observability platforms;"
+          }
+        ],
+        [
+          {
+            "text": "AI providers;"
+          }
+        ],
+        [
+          {
+            "text": "APIs;"
+          }
+        ],
+        [
+          {
+            "text": "infrastructure providers; and"
+          }
+        ],
+        [
+          {
+            "text": "other software and services"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "(collectively, "
+        },
+        {
+          "text": "“Third-Party Services”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "8.2 Third Parties Are Independent"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Third-Party Services are operated independently from Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do not control and are not responsible for their:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "availability;"
+          }
+        ],
+        [
+          {
+            "text": "uptime;"
+          }
+        ],
+        [
+          {
+            "text": "security;"
+          }
+        ],
+        [
+          {
+            "text": "accuracy;"
+          }
+        ],
+        [
+          {
+            "text": "functionality;"
+          }
+        ],
+        [
+          {
+            "text": "policies;"
+          }
+        ],
+        [
+          {
+            "text": "APIs;"
+          }
+        ],
+        [
+          {
+            "text": "data;"
+          }
+        ],
+        [
+          {
+            "text": "performance; or"
+          }
+        ],
+        [
+          {
+            "text": "continued compatibility with Convalesce."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "8.3 Third-Party Failures"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We are not responsible for the inability to provide all or part of the Service where such inability results from or relates to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "failures of Third-Party Services;"
+          }
+        ],
+        [
+          {
+            "text": "API changes;"
+          }
+        ],
+        [
+          {
+            "text": "access revocation;"
+          }
+        ],
+        [
+          {
+            "text": "service outages;"
+          }
+        ],
+        [
+          {
+            "text": "authentication failures;"
+          }
+        ],
+        [
+          {
+            "text": "incorrect information returned by Third-Party Services;"
+          }
+        ],
+        [
+          {
+            "text": "changes in third-party products; or"
+          }
+        ],
+        [
+          {
+            "text": "third-party restrictions."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "8.4 Your Agreements With Third Parties"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for complying with agreements between you and applicable Third-Party Services."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These Terms do not modify your relationship with a Third-Party Service provider."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "9. Customer Data"
+    },
+    {
+      "type": "h3",
+      "text": "9.1 Ownership"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You retain all right, title, and interest in data and materials that you or systems you authorize make available to Convalesce ("
+        },
+        {
+          "text": "“Customer Data”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer Data may include:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "logs;"
+          }
+        ],
+        [
+          {
+            "text": "metadata;"
+          }
+        ],
+        [
+          {
+            "text": "code;"
+          }
+        ],
+        [
+          {
+            "text": "queries;"
+          }
+        ],
+        [
+          {
+            "text": "workflow information;"
+          }
+        ],
+        [
+          {
+            "text": "files;"
+          }
+        ],
+        [
+          {
+            "text": "schemas;"
+          }
+        ],
+        [
+          {
+            "text": "execution history;"
+          }
+        ],
+        [
+          {
+            "text": "configurations;"
+          }
+        ],
+        [
+          {
+            "text": "prompts;"
+          }
+        ],
+        [
+          {
+            "text": "incident information;"
+          }
+        ],
+        [
+          {
+            "text": "infrastructure information; and"
+          }
+        ],
+        [
+          {
+            "text": "information obtained through authorized integrations."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We do not acquire ownership of Customer Data merely because you use the Service."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.2 Limited License"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You grant Convalesce a limited, non-exclusive license to host, copy, transmit, retrieve, process, analyze, and otherwise use Customer Data only as reasonably necessary to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "provide the Service;"
+          }
+        ],
+        [
+          {
+            "text": "perform requested investigations;"
+          }
+        ],
+        [
+          {
+            "text": "generate analyses;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshoot the Service;"
+          }
+        ],
+        [
+          {
+            "text": "maintain the Service;"
+          }
+        ],
+        [
+          {
+            "text": "secure the Service;"
+          }
+        ],
+        [
+          {
+            "text": "detect or prevent fraud and abuse;"
+          }
+        ],
+        [
+          {
+            "text": "provide support;"
+          }
+        ],
+        [
+          {
+            "text": "comply with legal obligations; and"
+          }
+        ],
+        [
+          {
+            "text": "enforce these Terms."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Customer Data contains Customer Personal Data that Convalesce processes on your behalf, that Processing is additionally governed by the DPA."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.3 No Generalized Model Training During Beta"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "During the current Beta, "
+        },
+        {
+          "text": "Convalesce will not use Customer Data to train generalized ",
+          "bold": true
+        },
+        {
+          "text": "artificial-intelligence or machine-learning models",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not instruct its AI subprocessors to use Customer Personal Data to train generalized models."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This does not prohibit us from using:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "service-performance metrics;"
+          }
+        ],
+        [
+          {
+            "text": "security information;"
+          }
+        ],
+        [
+          {
+            "text": "operational telemetry;"
+          }
+        ],
+        [
+          {
+            "text": "technical analytics;"
+          }
+        ],
+        [
+          {
+            "text": "Feedback;"
+          }
+        ],
+        [
+          {
+            "text": "aggregated statistics; or"
+          }
+        ],
+        [
+          {
+            "text": "de-identified information that does not reasonably identify you, your organization, a Data Subject, or your underlying Customer Data"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "to operate, evaluate, secure, or improve Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.4 Your Responsibility for Customer Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for ensuring that you have the legal and contractual right to provide or make Customer Data accessible to the Service."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.5 Privacy, Account Information, and Service Usage Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may collect and Process Personal Data directly from users of the Service for purposes such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "account administration;"
+          }
+        ],
+        [
+          {
+            "text": "authentication;"
+          }
+        ],
+        [
+          {
+            "text": "security;"
+          }
+        ],
+        [
+          {
+            "text": "fraud and abuse prevention;"
+          }
+        ],
+        [
+          {
+            "text": "support;"
+          }
+        ],
+        [
+          {
+            "text": "product analytics;"
+          }
+        ],
+        [
+          {
+            "text": "usage measurement;"
+          }
+        ],
+        [
+          {
+            "text": "understanding how users interact with the Service;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshooting;"
+          }
+        ],
+        [
+          {
+            "text": "product development; and"
+          }
+        ],
+        [
+          {
+            "text": "improving the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Convalesce independently determines the purposes and means of this Processing, Convalesce acts as an independent Controller or equivalent role under Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Such Processing is governed by the "
+        },
+        {
+          "text": "Convalesce Privacy Policy",
+          "bold": true
+        },
+        {
+          "text": ", rather than the DPA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Privacy Policy provides additional information regarding the categories of Personal Data Convalesce collects, the purposes for which it is used, applicable disclosures, retention, and rights available to users."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "10. Sensitive and Regulated Information"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Unless we have expressly agreed otherwise in writing, the Free Beta Service is not designed or offered specifically for storage or processing of information subject to specialized legal or regulatory requirements."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You should not intentionally provide Convalesce with:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "protected health information regulated by HIPAA;"
+          }
+        ],
+        [
+          {
+            "text": "complete payment-card information;"
+          }
+        ],
+        [
+          {
+            "text": "Social Security numbers or equivalent government identification numbers;"
+          }
+        ],
+        [
+          {
+            "text": "biometric identifiers used for unique identification;"
+          }
+        ],
+        [
+          {
+            "text": "passwords in plaintext;"
+          }
+        ],
+        [
+          {
+            "text": "private cryptographic keys;"
+          }
+        ],
+        [
+          {
+            "text": "highly sensitive authentication secrets;"
+          }
+        ],
+        [
+          {
+            "text": "information concerning children where specialized children's privacy requirements apply; or"
+          }
+        ],
+        [
+          {
+            "text": "other information requiring specialized regulated-data handling"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "unless Convalesce has expressly agreed in writing to support the relevant use."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We recognize that such information may appear incidentally within Customer-controlled systems. Additional terms relating to such incidental Processing are described in the DPA where applicable."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "11. Data Retention and Deletion"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may request deletion of your account and Customer Data."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Following termination of your account or a valid deletion request, we will take commercially reasonable steps to delete Customer Data from Convalesce-controlled active systems within "
+        },
+        {
+          "text": "60 ",
+          "bold": true
+        },
+        {
+          "text": "days",
+          "bold": true
+        },
+        {
+          "text": ", unless continued retention is:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "required by law;"
+          }
+        ],
+        [
+          {
+            "text": "reasonably necessary for security or fraud prevention;"
+          }
+        ],
+        [
+          {
+            "text": "reasonably necessary to investigate abuse;"
+          }
+        ],
+        [
+          {
+            "text": "necessary to resolve an active dispute;"
+          }
+        ],
+        [
+          {
+            "text": "necessary to exercise or defend legal claims; or"
+          }
+        ],
+        [
+          {
+            "text": "otherwise permitted under the DPA or applicable law."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce does not currently create separate application-level backups of Customer Data as part of the Free Beta Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Underlying cloud infrastructure may implement technical redundancy, replication, or resilience mechanisms according to applicable provider terms."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Additional requirements relating to deletion of Customer Personal Data processed on your behalf are set out in the DPA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Retention of Personal Data that Convalesce Processes for its own purposes is described in the Privacy Policy."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "12. Data Processing Addendum"
+    },
+    {
+      "type": "h3",
+      "text": "12.1 Incorporation of DPA"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The "
+        },
+        {
+          "text": "Convalesce Free Beta Data Processing Addendum",
+          "bold": true
+        },
+        {
+          "text": " is incorporated into these Terms by reference and forms part of the Agreement "
+        },
+        {
+          "text": "to the extent Convalesce Processes Customer ",
+          "bold": true
+        },
+        {
+          "text": "Personal Data on your behalf",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You do not need to separately execute the DPA for it to apply where applicable."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Your acceptance of these Terms constitutes acceptance of the DPA where the DPA applies."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "12.2 Roles"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Depending on the circumstances:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "you may act as a Controller and Convalesce as your Processor; or"
+          }
+        ],
+        [
+          {
+            "text": "you may act as a Processor and Convalesce as your Subprocessor."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The applicable roles, Processing instructions, international-transfer terms, security measures, Subprocessor arrangements, and other data-processing obligations are described in the DPA."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "12.3 International Transfers"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where required by Applicable Data Protection Law, the DPA incorporates applicable international data-transfer mechanisms, including the European Commission's Standard Contractual Clauses and applicable United Kingdom transfer provisions."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "12.4 Subprocessors"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The DPA identifies the Subprocessors currently used by Convalesce to Process Customer Personal Data and explains how changes to Subprocessors are handled."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "12.5 Relationship With Privacy Policy"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The DPA applies when Convalesce Processes Customer Personal Data on your behalf."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Privacy Policy applies to Personal Data that Convalesce Processes in its capacity as an independent Controller or equivalent role, including certain account, security, support, and Service usage information."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "12.6 Conflict"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If these Terms and the DPA conflict with respect to the Processing of Customer Personal Data, the "
+        },
+        {
+          "text": "DPA controls",
+          "bold": true
+        },
+        {
+          "text": " to the extent of that conflict."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If applicable mandatory international-transfer terms conflict with either these Terms or the DPA, those mandatory international-transfer terms control to the extent required by law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "13. Intellectual Property"
+    },
+    {
+      "type": "h3",
+      "text": "13.1 Convalesce Ownership"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Except for Customer Data, open-source software, and third-party materials, all right, title, and interest in Convalesce and its proprietary technology are retained by "
+        },
+        {
+          "text": "Samarth KaPatel and ",
+          "bold": true
+        },
+        {
+          "text": "Vedanshu Joshi",
+          "bold": true
+        },
+        {
+          "text": ", or their applicable licensors."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This includes proprietary rights relating to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "software;"
+          }
+        ],
+        [
+          {
+            "text": "source code;"
+          }
+        ],
+        [
+          {
+            "text": "systems;"
+          }
+        ],
+        [
+          {
+            "text": "architecture;"
+          }
+        ],
+        [
+          {
+            "text": "workflows;"
+          }
+        ],
+        [
+          {
+            "text": "interfaces;"
+          }
+        ],
+        [
+          {
+            "text": "algorithms;"
+          }
+        ],
+        [
+          {
+            "text": "documentation;"
+          }
+        ],
+        [
+          {
+            "text": "designs;"
+          }
+        ],
+        [
+          {
+            "text": "technology;"
+          }
+        ],
+        [
+          {
+            "text": "methods;"
+          }
+        ],
+        [
+          {
+            "text": "branding;"
+          }
+        ],
+        [
+          {
+            "text": "trademarks;"
+          }
+        ],
+        [
+          {
+            "text": "trade names;"
+          }
+        ],
+        [
+          {
+            "text": "know-how; and"
+          }
+        ],
+        [
+          {
+            "text": "other intellectual property."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "13.2 Limited License to You"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Subject to these Terms, you receive a limited, revocable, non-exclusive, non-transferable, and non-sublicensable right to access and use the Beta Service for its intended purposes."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "No other rights are granted."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "13.3 No Ownership Representation"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not represent that you own or possess proprietary rights in Convalesce or its proprietary technology."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "13.4 Branding"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not use Convalesce's name, trademarks, logos, or branding in a way that suggests a partnership, endorsement, sponsorship, or affiliation without our prior written consent."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "14. Feedback"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may voluntarily provide us with suggestions, ideas, recommendations, comments, feature requests, bug reports, or other feedback ("
+        },
+        {
+          "text": "“Feedback”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You grant Convalesce a worldwide, perpetual, irrevocable, non-exclusive, royalty-free, transferable, and sublicensable license to use, reproduce, implement, modify, commercialize, and otherwise use Feedback for any lawful purpose without compensation or obligation to you."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Feedback does not include Customer Data or your independently owned intellectual property merely because it is discussed while providing Feedback."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "15. Marketing and Publicity"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We will not publicly identify you or your organization as a Convalesce customer, design partner, user, or supporter, or use your organization's name or logo in public marketing materials, without appropriate authorization."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Nothing prevents us from describing the Service generally or publishing aggregated or de-identified information that does not reasonably identify you or your organization."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "16. Suspension and Abuse Prevention"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may immediately restrict, throttle, disable integrations, suspend, or terminate access to all or part of the Service if we reasonably believe:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "your account has been compromised;"
+          }
+        ],
+        [
+          {
+            "text": "you violated these Terms;"
+          }
+        ],
+        [
+          {
+            "text": "you are attempting unauthorized access;"
+          }
+        ],
+        [
+          {
+            "text": "your activity poses a security risk;"
+          }
+        ],
+        [
+          {
+            "text": "your use may harm another user or third party;"
+          }
+        ],
+        [
+          {
+            "text": "your activity threatens Service availability;"
+          }
+        ],
+        [
+          {
+            "text": "your activity imposes unreasonable resource costs;"
+          }
+        ],
+        [
+          {
+            "text": "you are circumventing usage restrictions;"
+          }
+        ],
+        [
+          {
+            "text": "your activity may violate law;"
+          }
+        ],
+        [
+          {
+            "text": "suspension is requested by an applicable Third-Party Service;"
+          }
+        ],
+        [
+          {
+            "text": "continued access creates material legal, operational, or security risk; or"
+          }
+        ],
+        [
+          {
+            "text": "suspension is necessary to investigate suspected abuse."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We are not required to provide advance notice where immediate action is reasonably necessary to protect systems, users, data, or third parties."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where reasonably practicable, we may provide notice of suspension and may restore access after the underlying issue has been resolved."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "17. User Responsibility and Reliance"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is an investigative and analytical tool."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You remain responsible for decisions concerning your infrastructure, systems, applications, data, and workflows."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You should independently evaluate results produced by Convalesce before relying upon them for material operational, engineering, security, financial, or business decisions."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for maintaining appropriate:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "backups;"
+          }
+        ],
+        [
+          {
+            "text": "disaster-recovery procedures;"
+          }
+        ],
+        [
+          {
+            "text": "monitoring;"
+          }
+        ],
+        [
+          {
+            "text": "security controls;"
+          }
+        ],
+        [
+          {
+            "text": "access controls;"
+          }
+        ],
+        [
+          {
+            "text": "audit mechanisms;"
+          }
+        ],
+        [
+          {
+            "text": "change-management procedures; and"
+          }
+        ],
+        [
+          {
+            "text": "recovery processes."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is not a replacement for appropriate engineering, operational, security, or backup procedures."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "18. Security"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We use reasonable measures intended to protect the Service and information processed through it."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Technical and organizational measures applicable to Customer Personal Data are further described in the DPA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "However, no software, network, cloud service, data-storage system, security mechanism, or method of electronic transmission can be guaranteed to be completely secure."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You acknowledge that use of an internet-connected software service involves inherent security risks."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You are responsible for appropriately managing credentials and permissions associated with systems you connect to Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "19. Disclaimer of Warranties"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE FREE BETA ",
+          "bold": true
+        },
+        {
+          "text": "SERVICE IS PROVIDED “AS IS,” “AS AVAILABLE,” AND “WITH ALL FAULTS.” ",
+          "bold": true
+        },
+        {
+          "text": "CONVALESCE DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "MERCHANTABILITY;"
+          }
+        ],
+        [
+          {
+            "text": "FITNESS FOR A PARTICULAR PURPOSE;"
+          }
+        ],
+        [
+          {
+            "text": "TITLE;"
+          }
+        ],
+        [
+          {
+            "text": "NON-INFRINGEMENT;"
+          }
+        ],
+        [
+          {
+            "text": "ACCURACY;"
+          }
+        ],
+        [
+          {
+            "text": "RELIABILITY;"
+          }
+        ],
+        [
+          {
+            "text": "SECURITY;"
+          }
+        ],
+        [
+          {
+            "text": "AVAILABILITY; AND"
+          }
+        ],
+        [
+          {
+            "text": "ERROR-FREE OPERATION."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "WITHOUT LIMITING THE FOREGOING, WE DO NOT WARRANT THAT:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "THE SERVICE WILL ALWAYS BE AVAILABLE;"
+          }
+        ],
+        [
+          {
+            "text": "THE SERVICE WILL BE UNINTERRUPTED;"
+          }
+        ],
+        [
+          {
+            "text": "THE SERVICE WILL BE ERROR-FREE;"
+          }
+        ],
+        [
+          {
+            "text": "ALL DATA WILL BE RETRIEVED CORRECTLY;"
+          }
+        ],
+        [
+          {
+            "text": "AN INVESTIGATION WILL BE ACCURATE;"
+          }
+        ],
+        [
+          {
+            "text": "THE SERVICE WILL IDENTIFY EVERY FAILURE;"
+          }
+        ],
+        [
+          {
+            "text": "THE SERVICE WILL IDENTIFY THE CORRECT ROOT CAUSE;"
+          }
+        ],
+        [
+          {
+            "text": "INFORMATION PROVIDED BY THE SERVICE WILL BE COMPLETE;"
+          }
+        ],
+        [
+          {
+            "text": "RESULTS WILL BE SUITABLE FOR YOUR PARTICULAR ENVIRONMENT;"
+          }
+        ],
+        [
+          {
+            "text": "THIRD-PARTY INTEGRATIONS WILL CONTINUE TO FUNCTION; OR"
+          }
+        ],
+        [
+          {
+            "text": "USE OF THE SERVICE WILL PREVENT DATA LOSS, DOWNTIME, OR OTHER INCIDENTS."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "THE SERVICE IS AN EXPERIMENTAL BETA PRODUCT AND SHOULD NOT BE USED AS THE SOLE BASIS FOR CRITICAL PRODUCTION OR INFRASTRUCTURE DECISIONS."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "20. Limitation of Liability"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CONVALESCE, ",
+          "bold": true
+        },
+        {
+          "text": "SAMARTH KAPATEL, VEDANSHU JOSHI, AND THEIR RESPECTIVE CONTRIBUTORS, ",
+          "bold": true
+        },
+        {
+          "text": "CONTRACTORS, SERVICE PROVIDERS, AGENTS, AND AFFILIATES WILL NOT BE ",
+          "bold": true
+        },
+        {
+          "text": "LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, ",
+          "bold": true
+        },
+        {
+          "text": "OR PUNITIVE DAMAGES.",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "THIS INCLUDES DAMAGES ARISING FROM OR RELATED TO:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "LOSS OF DATA;"
+          }
+        ],
+        [
+          {
+            "text": "CORRUPTION OF DATA;"
+          }
+        ],
+        [
+          {
+            "text": "LOSS OF PROFITS;"
+          }
+        ],
+        [
+          {
+            "text": "LOSS OF REVENUE;"
+          }
+        ],
+        [
+          {
+            "text": "LOSS OF BUSINESS;"
+          }
+        ],
+        [
+          {
+            "text": "LOSS OF BUSINESS OPPORTUNITIES;"
+          }
+        ],
+        [
+          {
+            "text": "BUSINESS INTERRUPTION;"
+          }
+        ],
+        [
+          {
+            "text": "LOSS OF GOODWILL;"
+          }
+        ],
+        [
+          {
+            "text": "INFRASTRUCTURE OUTAGES;"
+          }
+        ],
+        [
+          {
+            "text": "WORKFLOW FAILURES;"
+          }
+        ],
+        [
+          {
+            "text": "SECURITY INCIDENTS;"
+          }
+        ],
+        [
+          {
+            "text": "THIRD-PARTY SERVICES;"
+          }
+        ],
+        [
+          {
+            "text": "INACCURATE INVESTIGATIONS;"
+          }
+        ],
+        [
+          {
+            "text": "INCORRECT DIAGNOSES;"
+          }
+        ],
+        [
+          {
+            "text": "RELIANCE ON SERVICE OUTPUTS; OR"
+          }
+        ],
+        [
+          {
+            "text": "COSTS OF SUBSTITUTE SERVICES."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE TOTAL AGGREGATE LIABILITY OF CONVALESCE, SAMARTH KAPATEL, AND VEDANSHU JOSHI ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE WILL NOT EXCEED THE GREATER OF:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "(A) THE TOTAL AMOUNT YOU PAID TO CONVALESCE DURING THE TWELVE MONTHS ",
+          "bold": true
+        },
+        {
+          "text": "BEFORE THE EVENT GIVING RISE TO THE CLAIM; OR",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "(B) US $100.",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "YOU ACKNOWLEDGE THAT THE SERVICE IS CURRENTLY PROVIDED WITHOUT CHARGE AND THAT THESE LIMITATIONS ARE AN IMPORTANT BASIS UPON WHICH WE ARE WILLING TO PROVIDE ACCESS TO THE FREE BETA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Some jurisdictions do not permit certain exclusions or limitations. In those jurisdictions, these provisions apply only to the maximum extent permitted by law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Liability relating specifically to Processing of Customer Personal Data is also subject to the applicable provisions of the DPA and mandatory Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "21. Indemnification"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the maximum extent permitted by applicable law, you agree to defend, indemnify, and hold harmless Convalesce, Samarth KaPatel, Vedanshu Joshi, and their respective contributors, contractors, service providers, and agents from and against third-party claims, liabilities, damages, losses, judgments, costs, and reasonable expenses arising from or related to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "your violation of these Terms;"
+          }
+        ],
+        [
+          {
+            "text": "your unlawful use of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "your unauthorized use of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "your violation of another person's rights;"
+          }
+        ],
+        [
+          {
+            "text": "Customer Data you were not authorized to provide;"
+          }
+        ],
+        [
+          {
+            "text": "your connection of Convalesce to a system you were not authorized to connect;"
+          }
+        ],
+        [
+          {
+            "text": "your violation of obligations owed to your employer or another organization;"
+          }
+        ],
+        [
+          {
+            "text": "your misuse of credentials;"
+          }
+        ],
+        [
+          {
+            "text": "your violation of applicable Third-Party Service terms; or"
+          }
+        ],
+        [
+          {
+            "text": "your intentional abuse of the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Nothing in this section requires you to indemnify a person for liability to the extent that applicable law prohibits such indemnification."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "22. Termination"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may stop using Convalesce at any time."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may terminate your access if:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "you violate these Terms;"
+          }
+        ],
+        [
+          {
+            "text": "continued use creates material security, legal, operational, or financial risk;"
+          }
+        ],
+        [
+          {
+            "text": "we discontinue the Free Beta; or"
+          }
+        ],
+        [
+          {
+            "text": "we otherwise determine that continued Beta access should end."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Upon termination, your right to use the Service ends."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Termination does not eliminate obligations relating to Customer Personal Data that must survive under the DPA or Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Provisions that by their nature should survive termination will survive, including provisions concerning:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer Data retention and deletion;"
+          }
+        ],
+        [
+          {
+            "text": "data-processing obligations where applicable;"
+          }
+        ],
+        [
+          {
+            "text": "intellectual property;"
+          }
+        ],
+        [
+          {
+            "text": "Feedback;"
+          }
+        ],
+        [
+          {
+            "text": "disclaimers;"
+          }
+        ],
+        [
+          {
+            "text": "limitation of liability;"
+          }
+        ],
+        [
+          {
+            "text": "indemnification;"
+          }
+        ],
+        [
+          {
+            "text": "governing law; and"
+          }
+        ],
+        [
+          {
+            "text": "general legal terms."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "23. Changes to the Service, Terms, DPA, and"
+    },
+    {
+      "type": "h2",
+      "text": "Privacy Policy"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Because Convalesce is an evolving Beta product, we may change the Service frequently."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We may also modify these Terms, the DPA, or the Privacy Policy."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If we make material changes, we may provide notice by:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "email;"
+          }
+        ],
+        [
+          {
+            "text": "a notice within the Service;"
+          }
+        ],
+        [
+          {
+            "text": "a notice on our website; or"
+          }
+        ],
+        [
+          {
+            "text": "another reasonable method."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Updated Terms, DPA, or Privacy Policy will state the applicable effective or last-updated date."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where appropriate, we may require you to affirmatively accept materially updated Terms before continuing to use the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Changes to Subprocessors will be handled as described in the DPA where applicable."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you do not agree to updated Terms or an applicable updated DPA, you must stop using the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Your rights regarding changes to the Privacy Policy will be governed by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "24. Future Incorporation and Assignment"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You acknowledge that Convalesce is currently an unincorporated project operated by "
+        },
+        {
+          "text": "Samarth ",
+          "bold": true
+        },
+        {
+          "text": "KaPatel and Vedanshu Joshi",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may subsequently be incorporated or transferred to a corporation or other legal entity."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the extent permitted by law, we may assign or transfer:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "these Terms;"
+          }
+        ],
+        [
+          {
+            "text": "the DPA;"
+          }
+        ],
+        [
+          {
+            "text": "the Service;"
+          }
+        ],
+        [
+          {
+            "text": "associated rights and obligations; and"
+          }
+        ],
+        [
+          {
+            "text": "the business and assets associated with Convalesce"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "a subsequently formed corporation;"
+          }
+        ],
+        [
+          {
+            "text": "an affiliate;"
+          }
+        ],
+        [
+          {
+            "text": "a successor entity;"
+          }
+        ],
+        [
+          {
+            "text": "an acquirer;"
+          }
+        ],
+        [
+          {
+            "text": "an entity resulting from a merger or restructuring; or"
+          }
+        ],
+        [
+          {
+            "text": "a purchaser of substantially all assets associated with Convalesce."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Any successor assuming the DPA will become responsible for the applicable data-processing obligations from the effective date of the assignment."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You may not assign or transfer these Terms without our prior written consent."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "25. Governing Law and Venue"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Except where different governing-law or dispute provisions are required under the DPA, applicable international-transfer terms, or mandatory law, these Terms and disputes arising from or relating to these Terms or the Service will be governed by the laws of the "
+        },
+        {
+          "text": "State of North ",
+          "bold": true
+        },
+        {
+          "text": "Carolina",
+          "bold": true
+        },
+        {
+          "text": ", without regard to conflict-of-laws principles."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the extent permitted by applicable law, disputes arising from or relating to these Terms or the Service will be brought in a court of competent jurisdiction located in North Carolina."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Applicable international-transfer provisions incorporated through the DPA may specify different governing law, supervisory authorities, or courts for matters governed by those provisions."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "26. Force Majeure"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "We will not be liable for delays, interruptions, or failures caused by circumstances reasonably beyond our control, including:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "natural disasters;"
+          }
+        ],
+        [
+          {
+            "text": "fire;"
+          }
+        ],
+        [
+          {
+            "text": "flood;"
+          }
+        ],
+        [
+          {
+            "text": "severe weather;"
+          }
+        ],
+        [
+          {
+            "text": "war;"
+          }
+        ],
+        [
+          {
+            "text": "terrorism;"
+          }
+        ],
+        [
+          {
+            "text": "civil unrest;"
+          }
+        ],
+        [
+          {
+            "text": "labor disputes;"
+          }
+        ],
+        [
+          {
+            "text": "government actions;"
+          }
+        ],
+        [
+          {
+            "text": "internet failures;"
+          }
+        ],
+        [
+          {
+            "text": "telecommunications failures;"
+          }
+        ],
+        [
+          {
+            "text": "power failures;"
+          }
+        ],
+        [
+          {
+            "text": "cyberattacks;"
+          }
+        ],
+        [
+          {
+            "text": "cloud-provider outages;"
+          }
+        ],
+        [
+          {
+            "text": "AI-provider outages;"
+          }
+        ],
+        [
+          {
+            "text": "failures of Third-Party Services; or"
+          }
+        ],
+        [
+          {
+            "text": "other similar events beyond our reasonable control."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "27. General Terms"
+    },
+    {
+      "type": "h4",
+      "text": "27.1 Severability"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If a provision of these Terms is determined to be invalid or unenforceable, the remaining provisions remain in effect."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where legally permitted, the invalid provision will be modified only to the minimum extent necessary to make it enforceable."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "27.2 No Waiver"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Our failure to enforce a provision of these Terms does not waive our right to enforce it later."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "27.3 No Partnership With Users"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These Terms do not create a partnership, joint venture, franchise, employment, fiduciary, or agency relationship between you and Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "27.4 Entire Agreement and Privacy Policy"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "These Terms, together with:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "the "
+          },
+          {
+            "text": "Convalesce Free Beta Data Processing Addendum",
+            "bold": true
+          },
+          {
+            "text": ", where applicable; and"
+          }
+        ],
+        [
+          {
+            "text": "any additional contractual terms expressly incorporated into these Terms"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "constitute the agreement between you and Convalesce regarding your use of the Free Beta Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The "
+        },
+        {
+          "text": "Privacy Policy",
+          "bold": true
+        },
+        {
+          "text": " describes Convalesce's privacy practices and is acknowledged by you when you accept these Terms."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Except where expressly stated or required by Applicable Data Protection Law, the Privacy Policy is a privacy notice and does not independently create contractual rights or obligations beyond those contained in these Terms, the DPA, or applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If you and Convalesce later enter into a separately executed written agreement that expressly conflicts with these Terms, the separately executed agreement will control to the extent of the conflict, except that mandatory provisions of the DPA or applicable international-transfer mechanisms will continue to control where required by law."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "27.5 Electronic Communications"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "You consent to receiving agreements, disclosures, notices, and other communications relating to the Service electronically."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "28. Contact"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Questions about these Terms, the DPA, the Privacy Policy, security issues, account deletion, or Customer Data requests may be submitted through the contact information provided on the Convalesce website."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce ",
+          "bold": true
+        },
+        {
+          "text": "https://convalesce.io/",
+          "href": "https://convalesce.io/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Legal / Privacy Contact:",
+          "bold": true
+        },
+        {
+          "text": " privacy@convalesce.io",
+          "href": "mailto:privacy@convalesce.io"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "There are "
+        },
+        {
+          "text": "four things I would implement alongside this document",
+          "bold": true
+        },
+        {
+          "text": ", because they materially improve the protection rather than just adding legal language:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "1. At signup, use an "
+        },
+        {
+          "text": "unchecked checkbox",
+          "bold": true
+        },
+        {
+          "text": " saying: “I agree to the Terms of Service and acknowledge the Privacy Policy.” Store the user ID/email, timestamp, Terms version, and ideally the exact version of the Terms they accepted. 2. Make permissions technically read-only wherever possible. The legal Terms saying “read-oriented” are much less useful if Convalesce actually receives broad administrative credentials. 3. Keep a "
+        },
+        {
+          "text": "kill switch",
+          "bold": true
+        },
+        {
+          "text": " so you can immediately revoke a user's access and disable integrations if you detect abuse, unusual cost, compromised credentials, or security testing. 4. Once the Delaware C-Corp exists, update the Terms so the corporation becomes the provider and execute separate "
+        },
+        {
+          "text": "founder IP assignment agreements",
+          "bold": true
+        },
+        {
+          "text": " transferring the relevant Convalesce IP from Samarth and Vedanshu to the company. The “Future Incorporation” section helps with continuity, but it does not replace the actual corporate/IP paperwork."
+        }
+      ]
+    }
+  ]
+}

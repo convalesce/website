@@ -1,0 +1,3060 @@
+{
+  "title": "Convalesce Free Beta Data Processing Addendum",
+  "blocks": [
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Effective Date:",
+          "bold": true
+        },
+        {
+          "text": " The date Customer accepts the Convalesce Free Beta Terms of Service or otherwise begins using the Service, whichever occurs first."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This Data Processing Addendum ("
+        },
+        {
+          "text": "“DPA”",
+          "bold": true
+        },
+        {
+          "text": ") forms part of the Convalesce Free Beta Terms of Service or other written agreement governing Customer's use of Convalesce (the "
+        },
+        {
+          "text": "“Agreement”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This DPA is between:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce",
+          "bold": true
+        },
+        {
+          "text": ", currently an unincorporated project operated by "
+        },
+        {
+          "text": "Samarth KaPatel and Vedanshu ",
+          "bold": true
+        },
+        {
+          "text": "Joshi",
+          "bold": true
+        },
+        {
+          "text": " (“"
+        },
+        {
+          "text": "Convalesce",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "we",
+          "bold": true
+        },
+        {
+          "text": ",” “"
+        },
+        {
+          "text": "us",
+          "bold": true
+        },
+        {
+          "text": ",” or “"
+        },
+        {
+          "text": "Processor",
+          "bold": true
+        },
+        {
+          "text": "”);"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "and"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "the individual or entity accepting the Agreement or using the Service ("
+        },
+        {
+          "text": "“Customer”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This DPA applies only to the extent Convalesce processes Customer Personal Data on behalf of Customer in connection with the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "By accepting the Agreement, Customer also accepts this DPA where applicable."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "1. Definitions"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For purposes of this DPA:"
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.1 “Applicable Data Protection Law”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means privacy, data-protection, and data-security laws applicable to the processing of Customer Personal Data under this DPA, including, where applicable:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "the EU General Data Protection Regulation, Regulation (EU) 2016/679 ("
+          },
+          {
+            "text": "“GDPR”",
+            "bold": true
+          },
+          {
+            "text": ");"
+          }
+        ],
+        [
+          {
+            "text": "the United Kingdom GDPR and Data Protection Act 2018 ("
+          },
+          {
+            "text": "“UK Data Protection Law”",
+            "bold": true
+          },
+          {
+            "text": ");"
+          }
+        ],
+        [
+          {
+            "text": "the Swiss Federal Act on Data Protection ("
+          },
+          {
+            "text": "“Swiss FADP”",
+            "bold": true
+          },
+          {
+            "text": ");"
+          }
+        ],
+        [
+          {
+            "text": "applicable United States state privacy laws; and"
+          }
+        ],
+        [
+          {
+            "text": "other applicable privacy or data-protection laws."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.2 “Customer Data”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "has the meaning given in the Agreement and includes data, information, logs, metadata, queries, code, workflow information, execution history, configurations, infrastructure information, records, and other information made available to Convalesce through Customer or Customer-authorized systems."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.3 “Customer Personal Data”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means any Personal Data contained in Customer Data that Convalesce processes on behalf of Customer."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.4 “Data Subject”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means an identified or identifiable individual to whom Customer Personal Data relates."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.5 “Personal Data”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means “personal data,” “personal information,” “personally identifiable information,” or an equivalent term under Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.6 “Process” or “Processing”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "has the meaning assigned under Applicable Data Protection Law and includes accessing, retrieving, collecting, storing, organizing, correlating, analyzing, transmitting, redacting, deleting, or otherwise handling Customer Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.7 “Security Incident”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means a confirmed breach of security resulting in accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or unauthorized access to Customer Personal Data processed by Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Security Incident does not include unsuccessful attempts or activities that do not result in compromise of Customer Personal Data, such as unsuccessful login attempts, scans, pings, denial-of-service attempts that do not result in unauthorized access, or other unsuccessful attacks."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1.8 “Subprocessor”"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "means a third party engaged by Convalesce to Process Customer Personal Data on behalf of Customer in connection with the Service."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "2. Scope and Roles"
+    },
+    {
+      "type": "h3",
+      "text": "2.1 Customer as Controller"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Customer determines the purposes and means of Processing Customer Personal Data, Customer is the "
+        },
+        {
+          "text": "Controller",
+          "bold": true
+        },
+        {
+          "text": " or equivalent term under Applicable Data Protection Law, and Convalesce acts as Customer's "
+        },
+        {
+          "text": "Processor",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "2.2 Customer as Processor"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Customer processes Customer Personal Data on behalf of another Controller, Customer acts as a Processor and Convalesce acts as Customer's "
+        },
+        {
+          "text": "Subprocessor",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer represents that it is authorized by the applicable Controller to appoint Convalesce as a Subprocessor."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "2.3 Processing Instructions"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will Process Customer Personal Data only:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "to provide the Service;"
+          }
+        ],
+        [
+          {
+            "text": "as described in the Agreement, this DPA, and Schedule 1;"
+          }
+        ],
+        [
+          {
+            "text": "according to Customer's documented instructions provided through Customer's configuration and use of the Service;"
+          }
+        ],
+        [
+          {
+            "text": "as otherwise reasonably necessary to perform an investigation requested by Customer; or"
+          }
+        ],
+        [
+          {
+            "text": "as required by applicable law."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Agreement, this DPA, Customer's configuration of the Service, Customer's connection of Third-Party Services, and Customer's requests submitted through the Service constitute Customer's documented instructions to Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce is required by law to Process Customer Personal Data other than according to Customer's instructions, Convalesce will notify Customer before such Processing unless applicable law prohibits such notice."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "3. Processing of Customer Personal Data"
+    },
+    {
+      "type": "h3",
+      "text": "3.1 Customer Personal Data Processed on Customer's"
+    },
+    {
+      "type": "h3",
+      "text": "Behalf"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The subject matter, nature, purpose, duration, categories of Data Subjects, categories of Personal Data, and frequency of Processing are described in "
+        },
+        {
+          "text": "Schedule 1",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce does not intentionally seek Personal Data as a primary purpose of the Service. Customer Personal Data may nevertheless appear within Customer-controlled systems connected to Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will seek to Process only Customer Personal Data reasonably necessary to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "provide the Service;"
+          }
+        ],
+        [
+          {
+            "text": "perform Customer-requested investigations;"
+          }
+        ],
+        [
+          {
+            "text": "operate and secure the Service;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshoot technical issues;"
+          }
+        ],
+        [
+          {
+            "text": "provide support; or"
+          }
+        ],
+        [
+          {
+            "text": "comply with applicable law."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "3.2 Service Usage and Analytics Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This DPA governs Customer Personal Data that Convalesce Processes "
+        },
+        {
+          "text": "on behalf of ",
+          "bold": true
+        },
+        {
+          "text": "Customer",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "It does not govern Personal Data that Convalesce collects and Processes for its own purposes where Convalesce independently determines the purposes and means of Processing."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Such information may include Personal Data collected directly from users of the Service for purposes such as:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "account administration;"
+          }
+        ],
+        [
+          {
+            "text": "authentication;"
+          }
+        ],
+        [
+          {
+            "text": "Service security;"
+          }
+        ],
+        [
+          {
+            "text": "fraud and abuse prevention;"
+          }
+        ],
+        [
+          {
+            "text": "product analytics;"
+          }
+        ],
+        [
+          {
+            "text": "feature usage measurement;"
+          }
+        ],
+        [
+          {
+            "text": "understanding how users interact with the Service;"
+          }
+        ],
+        [
+          {
+            "text": "session and application activity analysis;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshooting;"
+          }
+        ],
+        [
+          {
+            "text": "product development; and"
+          }
+        ],
+        [
+          {
+            "text": "improving the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the extent Convalesce independently determines the purposes and means of such Processing, Convalesce acts as an independent Controller or equivalent role under Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce's collection and use of such Personal Data is described in the "
+        },
+        {
+          "text": "Convalesce Privacy ",
+          "bold": true
+        },
+        {
+          "text": "Policy",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For clarity, the use of product analytics or similar technologies by Convalesce for its own purposes does not, by itself, cause such information to become Customer Personal Data governed by this DPA."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "4. Customer Responsibilities"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer is responsible for complying with Applicable Data Protection Law in connection with Customer's use of the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer represents and warrants that:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "1. Customer has a lawful basis and all necessary rights, permissions, notices, and authorizations to provide or make Customer Personal Data accessible to Convalesce; 2. Customer is authorized to connect each system, account, environment, warehouse, database, repository, API, or other service connected to Convalesce; 3. Customer's instructions to Convalesce comply with Applicable Data Protection Law; 4. Customer has provided any notices to Data Subjects required by applicable law; and 5. Customer will not instruct Convalesce to Process Customer Personal Data in violation of applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer is responsible for determining whether Convalesce is appropriate for Customer's particular legal, regulatory, security, and contractual requirements."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "5. Specially Regulated and Sensitive Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Free Beta Service is "
+        },
+        {
+          "text": "not designed or offered specifically for the processing of ",
+          "bold": true
+        },
+        {
+          "text": "information subject to specialized regulatory requirements",
+          "bold": true
+        },
+        {
+          "text": " unless Convalesce expressly agrees otherwise in writing."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Unless expressly authorized by Convalesce in writing, Customer will not intentionally use the Service to provide Convalesce with:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "protected health information subject to HIPAA;"
+          }
+        ],
+        [
+          {
+            "text": "complete payment-card information subject to PCI DSS requirements;"
+          }
+        ],
+        [
+          {
+            "text": "Social Security numbers or equivalent government identification numbers;"
+          }
+        ],
+        [
+          {
+            "text": "biometric identifiers used for unique identification;"
+          }
+        ],
+        [
+          {
+            "text": "passwords in plaintext;"
+          }
+        ],
+        [
+          {
+            "text": "private cryptographic keys;"
+          }
+        ],
+        [
+          {
+            "text": "highly sensitive authentication secrets;"
+          }
+        ],
+        [
+          {
+            "text": "information concerning children where specialized children's privacy requirements apply; or"
+          }
+        ],
+        [
+          {
+            "text": "other information requiring specialized regulatory handling beyond the protections described in this DPA."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce recognizes that such information may nevertheless appear incidentally within Customer-controlled systems."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Convalesce incidentally encounters such information, Convalesce will Process it only as reasonably necessary to provide the Service and subject to this DPA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer remains responsible for determining whether Customer's use of Convalesce is appropriate for such information."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "6. Data Minimization and AI Processing"
+    },
+    {
+      "type": "h3",
+      "text": "6.1 Investigation-Based Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will seek to access and retain Customer Personal Data only where reasonably necessary to provide the Service, perform an investigation, maintain security, troubleshoot the Service, or comply with applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Row-level information may be retrieved where reasonably necessary for an investigation."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "6.2 PII Redaction"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Before investigation context is submitted by Convalesce to its external AI model provider, Convalesce applies processing within its own cloud environment intended to identify and redact or mask personally identifying information."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer acknowledges that automated redaction technologies cannot be guaranteed to identify or remove every possible item of Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Accordingly, redaction reduces but does not eliminate the possibility that Personal Data may appear in information submitted to an AI Subprocessor."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "6.3 No Generalized Model Training"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "During the Free Beta, Convalesce will not use Customer Personal Data to train generalized artificial-intelligence or machine-learning models."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not instruct its AI Subprocessors to use Customer Personal Data to train generalized models."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This restriction does not prevent Convalesce from using:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "operational metrics;"
+          }
+        ],
+        [
+          {
+            "text": "security information;"
+          }
+        ],
+        [
+          {
+            "text": "service-performance information;"
+          }
+        ],
+        [
+          {
+            "text": "technical telemetry;"
+          }
+        ],
+        [
+          {
+            "text": "Feedback;"
+          }
+        ],
+        [
+          {
+            "text": "aggregated information; or"
+          }
+        ],
+        [
+          {
+            "text": "de-identified information that cannot reasonably be used to identify a Data Subject, Customer, or Customer's underlying Customer Data"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "to operate, secure, evaluate, or improve the Service."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "7. Security Measures"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will maintain reasonable technical and organizational measures intended to protect Customer Personal Data against unauthorized access, acquisition, use, disclosure, alteration, or destruction."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The technical and organizational measures currently implemented for the Free Beta are described in "
+        },
+        {
+          "text": "Schedule 2",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Because Convalesce is a Beta Service, these measures may evolve as the Service develops."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may replace a security control with an alternative control provided that the overall level of protection is not materially reduced where prohibited by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "8. Confidentiality and Access"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will limit access to Customer Personal Data to individuals and service providers who reasonably require such access to operate, maintain, secure, troubleshoot, or support the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Persons authorized by Convalesce to access Customer Personal Data will be subject to appropriate confidentiality obligations."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not disclose Customer Personal Data to third parties except:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "according to Customer's instructions;"
+          }
+        ],
+        [
+          {
+            "text": "to authorized Subprocessors;"
+          }
+        ],
+        [
+          {
+            "text": "as reasonably necessary to provide the Service;"
+          }
+        ],
+        [
+          {
+            "text": "as required by law; or"
+          }
+        ],
+        [
+          {
+            "text": "as otherwise permitted by the Agreement and Applicable Data Protection Law."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "9. Subprocessors"
+    },
+    {
+      "type": "h3",
+      "text": "9.1 General Authorization"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer provides Convalesce with general authorization to engage Subprocessors as reasonably necessary to provide the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will require each Subprocessor that Processes Customer Personal Data on Convalesce's behalf to be subject to contractual data-protection obligations appropriate to the services performed and the requirements of Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce remains responsible for its obligations under this DPA notwithstanding its use of Subprocessors, to the extent required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.2 Current Subprocessors"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "As of the Effective Date, Convalesce uses the following Subprocessor:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        [
+          {
+            "text": "Subprocessor",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Services and ",
+            "bold": true
+          },
+          {
+            "text": "Purpose",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Customer ",
+            "bold": true
+          },
+          {
+            "text": "Information ",
+            "bold": true
+          },
+          {
+            "text": "Processed",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Primary Processing / ",
+            "bold": true
+          },
+          {
+            "text": "Hosting Information",
+            "bold": true
+          }
+        ]
+      ],
+      "rows": [
+        [
+          [
+            {
+              "text": "Google LLC / ",
+              "bold": true
+            },
+            {
+              "text": "Google Cloud ",
+              "bold": true
+            },
+            {
+              "text": "Platform, ",
+              "bold": true
+            },
+            {
+              "text": "including Vertex ",
+              "bold": true
+            },
+            {
+              "text": "AI / Gemini",
+              "bold": true
+            }
+          ],
+          [
+            {
+              "text": "Cloud infrastructure, compute, storage, networking, secrets management, service logging, and AI inference used in Convalesce investigations"
+            }
+          ],
+          [
+            {
+              "text": "Customer Data required to operate Convalesce. Investigation context submitted to Vertex AI/Gemini is subject to Convalesce's PII-redaction process before submission."
+            }
+          ],
+          [
+            {
+              "text": "Convalesce's primary configured Google Cloud hosting region is "
+            },
+            {
+              "text": "us-central1 (Iowa, United ",
+              "bold": true
+            },
+            {
+              "text": "States)",
+              "bold": true
+            },
+            {
+              "text": ". Google may Process information in other locations as permitted under its applicable Google Cloud data-processing and service terms."
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Google may engage its own subprocessors in accordance with Google's applicable contractual terms."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "9.3 Changes to Subprocessors"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "During the Free Beta, the current Subprocessor list will be maintained directly in this DPA."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce intends to add or replace a Subprocessor that will Process Customer Personal Data, Convalesce will provide Customer with reasonable notice where required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Notice may be provided through:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "email;"
+          }
+        ],
+        [
+          {
+            "text": "the Service;"
+          }
+        ],
+        [
+          {
+            "text": "an update to this DPA or the Agreement; or"
+          }
+        ],
+        [
+          {
+            "text": "another reasonable electronic method."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Applicable Data Protection Law requires an opportunity to object, Customer may object on reasonable data-protection grounds."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce and Customer will attempt in good faith to address a valid objection."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If a reasonable solution is not available, Convalesce may:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "elect not to use the relevant Subprocessor for Customer;"
+          }
+        ],
+        [
+          {
+            "text": "discontinue the affected functionality; or"
+          }
+        ],
+        [
+          {
+            "text": "permit Customer to stop using the affected Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Because the Service is currently provided as a Free Beta, Convalesce is not required to redesign the Service or provide an alternative Subprocessor where doing so would be technically or commercially unreasonable, except to the extent required by applicable law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "10. Data Subject Requests"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer is responsible for responding to requests from Data Subjects exercising rights under Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Taking into account the nature of the Processing and the information reasonably available to Convalesce, Convalesce will provide reasonable assistance to Customer where required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Such assistance may currently be performed "
+        },
+        {
+          "text": "manually",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If a Data Subject submits a request directly to Convalesce concerning Customer Personal Data for which Customer is the Controller, Convalesce may direct the Data Subject to Customer unless Convalesce is legally required to respond directly."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not independently respond to a Data Subject request concerning Customer-controlled Personal Data except:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "at Customer's documented direction; or"
+          }
+        ],
+        [
+          {
+            "text": "where required by applicable law."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Requests concerning Personal Data that Convalesce Processes as an independent Controller will be handled as described in the Privacy Policy and Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "11. Security Incidents"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will notify Customer "
+        },
+        {
+          "text": "without undue delay after becoming aware of a confirmed ",
+          "bold": true
+        },
+        {
+          "text": "Security Incident",
+          "bold": true
+        },
+        {
+          "text": " affecting Customer Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the extent information is reasonably available, notification may include:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "the nature of the Security Incident;"
+          }
+        ],
+        [
+          {
+            "text": "categories of Customer Personal Data affected;"
+          }
+        ],
+        [
+          {
+            "text": "categories of Data Subjects potentially affected;"
+          }
+        ],
+        [
+          {
+            "text": "known or reasonably anticipated consequences;"
+          }
+        ],
+        [
+          {
+            "text": "measures taken or proposed to address the Security Incident; and"
+          }
+        ],
+        [
+          {
+            "text": "available contact information for follow-up."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Information may be provided in phases as an investigation develops."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce's notification of a Security Incident does not constitute an admission of fault, liability, or violation of law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer is responsible for determining whether notice must be provided to regulators, Data Subjects, or other persons, except where applicable law places that obligation directly on Convalesce."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "12. Data Protection Impact Assessments"
+    },
+    {
+      "type": "h2",
+      "text": "and Regulatory Assistance"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Taking into account the nature of Processing and information available to Convalesce, Convalesce will provide reasonable information and assistance to Customer where required by Applicable Data Protection Law concerning:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "data-protection impact assessments;"
+          }
+        ],
+        [
+          {
+            "text": "consultations with supervisory authorities; and"
+          }
+        ],
+        [
+          {
+            "text": "Customer's compliance obligations relating directly to Convalesce's Processing of Customer Personal Data."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce is not responsible for Customer's overall compliance program or for conducting Customer's data-protection impact assessment on Customer's behalf."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "13. Verification of Compliance"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Upon reasonable request, Convalesce will make available information reasonably necessary to demonstrate compliance with its obligations under this DPA to the extent required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce may first satisfy such requests through:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "this DPA;"
+          }
+        ],
+        [
+          {
+            "text": "security documentation;"
+          }
+        ],
+        [
+          {
+            "text": "written responses;"
+          }
+        ],
+        [
+          {
+            "text": "applicable Subprocessor documentation; and"
+          }
+        ],
+        [
+          {
+            "text": "other reasonably available compliance information."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Applicable Data Protection Law requires Customer to conduct an additional audit or inspection and the information provided by Convalesce is insufficient to satisfy that requirement, Convalesce will permit or contribute to an appropriately limited audit."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Any such audit must, unless prohibited by applicable law:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "be limited to matters directly relevant to Convalesce's Processing of Customer Personal Data;"
+          }
+        ],
+        [
+          {
+            "text": "be coordinated with reasonable advance notice;"
+          }
+        ],
+        [
+          {
+            "text": "occur during normal business hours;"
+          }
+        ],
+        [
+          {
+            "text": "minimize disruption to Convalesce;"
+          }
+        ],
+        [
+          {
+            "text": "protect confidential information belonging to Convalesce and other customers;"
+          }
+        ],
+        [
+          {
+            "text": "comply with reasonable security requirements;"
+          }
+        ],
+        [
+          {
+            "text": "not involve penetration testing, vulnerability exploitation, destructive testing, or access to other customers' environments; and"
+          }
+        ],
+        [
+          {
+            "text": "not provide Customer with access to proprietary source code, model weights, security secrets, credentials, or information unrelated to Customer's own data."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer will bear its own costs associated with an audit and, to the extent permitted by applicable law, reasonable costs incurred by Convalesce in providing extraordinary audit assistance."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Nothing in this Section grants Customer broader audit rights than required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "14. Government and Legal Requests"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce receives a legally binding request from a public authority for Customer Personal Data, Convalesce will, unless legally prohibited:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "review the request;"
+          }
+        ],
+        [
+          {
+            "text": "seek to limit disclosure to information legally required;"
+          }
+        ],
+        [
+          {
+            "text": "notify Customer where permitted; and"
+          }
+        ],
+        [
+          {
+            "text": "provide reasonable information concerning the request where legally permitted."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not voluntarily provide Customer Personal Data to a government authority except where authorized by Customer or required by law."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "15. Return and Deletion of Customer"
+    },
+    {
+      "type": "h2",
+      "text": "Personal Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Upon:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer's valid deletion request;"
+          }
+        ],
+        [
+          {
+            "text": "termination of Customer's account; or"
+          }
+        ],
+        [
+          {
+            "text": "termination of the Agreement,"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will delete Customer Personal Data from Convalesce-controlled active systems within "
+        },
+        {
+          "text": "60 days",
+          "bold": true
+        },
+        {
+          "text": ", unless retention is required by applicable law or reasonably necessary to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "investigate security incidents;"
+          }
+        ],
+        [
+          {
+            "text": "prevent fraud or abuse;"
+          }
+        ],
+        [
+          {
+            "text": "resolve an active legal dispute;"
+          }
+        ],
+        [
+          {
+            "text": "exercise or defend legal claims; or"
+          }
+        ],
+        [
+          {
+            "text": "comply with a lawful obligation."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce does "
+        },
+        {
+          "text": "not currently create separate application-level backups of Customer ",
+          "bold": true
+        },
+        {
+          "text": "Data as part of the Free Beta Service",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Underlying cloud infrastructure may implement technical redundancy, replication, or other resilience mechanisms according to the applicable Subprocessor's services and contractual terms."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Information retained solely because of such infrastructure mechanisms will remain protected under applicable contractual and security requirements and will not be intentionally restored for ordinary Service use after a valid deletion request except where reasonably necessary for disaster recovery, security, or legal compliance."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This Section applies to Customer Personal Data processed on Customer's behalf. Retention of Personal Data that Convalesce Processes as an independent Controller is described separately in the Privacy Policy."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "16. Sale, Advertising, and Independent"
+    },
+    {
+      "type": "h2",
+      "text": "Commercial Use"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "sell Customer Personal Data;"
+          }
+        ],
+        [
+          {
+            "text": "rent Customer Personal Data;"
+          }
+        ],
+        [
+          {
+            "text": "use Customer Personal Data for cross-context behavioral advertising;"
+          }
+        ],
+        [
+          {
+            "text": "disclose Customer Personal Data for targeted advertising unrelated to providing the Service; or"
+          }
+        ],
+        [
+          {
+            "text": "monetize Customer Personal Data independently from providing and improving the Service as permitted under this DPA."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the extent an Applicable U.S. Data Protection Law defines Convalesce as a “service provider,” “contractor,” or “processor,” Convalesce will Process Customer Personal Data only for the limited and specified purposes described in the Agreement and this DPA and will comply with applicable restrictions imposed on such service providers, contractors, or processors."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce will not combine Customer Personal Data with Personal Data obtained from unrelated third parties or from Convalesce's independent interactions with Data Subjects except where permitted by Applicable Data Protection Law and reasonably necessary to provide or secure the Service."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Personal Data that Convalesce collects and Processes as an independent Controller is governed by the Privacy Policy and Applicable Data Protection Law rather than this Section."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "17. International Data Transfers"
+    },
+    {
+      "type": "h3",
+      "text": "17.1 General"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer acknowledges that Convalesce's primary hosting infrastructure is located in the "
+        },
+        {
+          "text": "United States",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Customer Personal Data is transferred internationally, the parties will use a lawful transfer mechanism where required by Applicable Data Protection Law."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "17.2 European Economic Area"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where Customer transfers Personal Data subject to the GDPR to Convalesce in a country that does not benefit from an applicable adequacy decision, the parties incorporate the European Commission's Standard Contractual Clauses for international transfers adopted under "
+        },
+        {
+          "text": "Commission Implementing Decision (EU) 2021/914",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "“EU SCCs”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The applicable module will be:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Module Two – Controller to Processor",
+            "bold": true
+          },
+          {
+            "text": ", where Customer is a Controller and Convalesce is a Processor; or"
+          }
+        ],
+        [
+          {
+            "text": "Module Three – Processor to Processor",
+            "bold": true
+          },
+          {
+            "text": ", where Customer is a Processor and Convalesce is a Subprocessor."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For purposes of the EU SCCs:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer is the "
+          },
+          {
+            "text": "data exporter",
+            "bold": true
+          },
+          {
+            "text": ";"
+          }
+        ],
+        [
+          {
+            "text": "Convalesce is the "
+          },
+          {
+            "text": "data importer",
+            "bold": true
+          },
+          {
+            "text": ";"
+          }
+        ],
+        [
+          {
+            "text": "the docking clause in Clause 7 applies;"
+          }
+        ],
+        [
+          {
+            "text": "for Clause 9, general written authorization for Subprocessors applies;"
+          }
+        ],
+        [
+          {
+            "text": "the Subprocessor process described in Section 9 applies;"
+          }
+        ],
+        [
+          {
+            "text": "the optional language in Clause 11 does not apply unless otherwise required;"
+          }
+        ],
+        [
+          {
+            "text": "Annex I is completed using the information contained in "
+          },
+          {
+            "text": "Schedule 1",
+            "bold": true
+          },
+          {
+            "text": ";"
+          }
+        ],
+        [
+          {
+            "text": "Annex II is completed using the information contained in "
+          },
+          {
+            "text": "Schedule 2",
+            "bold": true
+          },
+          {
+            "text": "; and"
+          }
+        ],
+        [
+          {
+            "text": "Annex III is completed using the Subprocessor information contained in "
+          },
+          {
+            "text": "Section 9.2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For Clause 17, the EU SCCs will be governed by the law of the EU Member State in which Customer is established where that law permits third-party beneficiary rights under the SCCs."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Customer is not established in an EU Member State, or the relevant law does not permit such rights, the laws of "
+        },
+        {
+          "text": "Ireland",
+          "bold": true
+        },
+        {
+          "text": " will apply."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For Clause 18, disputes under the EU SCCs will be resolved by the courts corresponding to the law selected under Clause 17."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The competent supervisory authority will be determined in accordance with Clause 13 of the EU SCCs."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "17.3 United Kingdom"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where a transfer is subject to UK Data Protection Law and requires an international-transfer safeguard, the parties incorporate the then-current "
+        },
+        {
+          "text": "International Data Transfer Addendum to ",
+          "bold": true
+        },
+        {
+          "text": "the EU Commission Standard Contractual Clauses",
+          "bold": true
+        },
+        {
+          "text": " issued by the UK Information Commissioner's Office ("
+        },
+        {
+          "text": "“UK Addendum”",
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For purposes of the UK Addendum:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer is the exporter;"
+          }
+        ],
+        [
+          {
+            "text": "Convalesce is the importer;"
+          }
+        ],
+        [
+          {
+            "text": "the EU SCC selections specified in Section 17.2 apply as appropriate;"
+          }
+        ],
+        [
+          {
+            "text": "the information in this DPA and its Schedules supplies the relevant information required by the UK Addendum; and"
+          }
+        ],
+        [
+          {
+            "text": "Part 2, Mandatory Clauses of the applicable Approved Addendum are incorporated by reference as permitted by the UK Addendum."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If the UK Addendum is replaced or revised by the competent UK authority, the parties will apply the successor mechanism to the extent required by applicable law."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "17.4 Switzerland"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where a transfer is governed by the Swiss FADP and requires an international-transfer safeguard, the EU SCCs described above will apply with the modifications necessary for them to address transfers governed by Swiss law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "References to the GDPR will be interpreted to include the Swiss FADP where applicable, references to EU Member States will be interpreted to include Switzerland where necessary, and the competent Swiss supervisory authority will be the "
+        },
+        {
+          "text": "Federal Data Protection and ",
+          "bold": true
+        },
+        {
+          "text": "Information Commissioner",
+          "bold": true
+        },
+        {
+          "text": " where required."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "17.5 Other Jurisdictions"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Where another Applicable Data Protection Law requires a specific international-transfer mechanism, the parties will cooperate in good faith to implement a legally valid mechanism where reasonably necessary for Customer's continued use of the Service."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "18. Conflict and Order of Precedence"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If there is a conflict between this DPA and the Agreement concerning the Processing of Customer Personal Data, this DPA will control to the extent of that conflict."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If there is a conflict between:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "1. applicable mandatory international-transfer clauses; 2. this DPA; and 3. the Agreement,"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "the documents will control in that order solely to the extent necessary to resolve the conflict. Nothing in the Agreement or this DPA modifies the EU SCCs or UK Addendum in a manner prohibited by their terms."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Privacy Policy governs Convalesce's Processing of Personal Data in its capacity as an independent Controller and does not modify Convalesce's obligations as a Processor or Subprocessor under this DPA."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "19. Liability"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To the maximum extent permitted by Applicable Data Protection Law, each party's liability arising from or relating to this DPA is subject to the exclusions and limitations of liability contained in the Agreement."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Nothing in this Section limits rights or liabilities that cannot lawfully be limited under:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Applicable Data Protection Law;"
+          }
+        ],
+        [
+          {
+            "text": "the EU SCCs;"
+          }
+        ],
+        [
+          {
+            "text": "the UK Addendum; or"
+          }
+        ],
+        [
+          {
+            "text": "another mandatory international-transfer mechanism."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "20. Term and Termination"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "This DPA remains in effect for as long as Convalesce Processes Customer Personal Data on behalf of Customer."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Termination of the Agreement will terminate this DPA, except provisions that by their nature must survive termination, including requirements relating to:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "confidentiality;"
+          }
+        ],
+        [
+          {
+            "text": "deletion;"
+          }
+        ],
+        [
+          {
+            "text": "international transfers;"
+          }
+        ],
+        [
+          {
+            "text": "liability; and"
+          }
+        ],
+        [
+          {
+            "text": "legal compliance."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "21. Future Incorporation and Assignment"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer acknowledges that Convalesce is currently an unincorporated project operated by "
+        },
+        {
+          "text": "Samarth KaPatel and Vedanshu Joshi",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "If Convalesce is subsequently incorporated or its business or assets are transferred to a corporation or other legal entity, Convalesce may assign this DPA and the associated Processing responsibilities to that entity to the extent permitted by applicable law."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Any successor that assumes this DPA will become responsible for Convalesce's obligations under this DPA from the effective date of the assignment."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "22. Contact"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Questions concerning this DPA or Convalesce's Processing of Customer Personal Data may be directed to:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce ",
+          "bold": true
+        },
+        {
+          "text": "Operated by Samarth KaPatel and Vedanshu Joshi"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Privacy Contact:",
+          "bold": true
+        },
+        {
+          "text": " privacy@convalesce.io",
+          "href": "mailto:privacy@convalesce.io"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Schedule 1"
+    },
+    {
+      "type": "h2",
+      "text": "Details of Processing"
+    },
+    {
+      "type": "h3",
+      "text": "A. Parties"
+    },
+    {
+      "type": "h4",
+      "text": "Data Exporter"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Customer identified through the Convalesce account, Agreement, signup information, or other applicable service records."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Role:",
+          "bold": true
+        },
+        {
+          "text": " Controller or Processor, depending on Customer's relationship to the Customer Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "Data Importer"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce",
+          "bold": true
+        },
+        {
+          "text": ", an unincorporated project operated by Samarth KaPatel and Vedanshu Joshi."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Role:",
+          "bold": true
+        },
+        {
+          "text": " Processor or Subprocessor."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Contact:",
+          "bold": true
+        },
+        {
+          "text": " [PRIVACY EMAIL]"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "B. Subject Matter of Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Processing Customer Personal Data as reasonably necessary to provide Convalesce's data-infrastructure investigation and analytical functionality."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "C. Duration"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "For the period Customer uses the Service and for up to "
+        },
+        {
+          "text": "60 days following termination or a ",
+          "bold": true
+        },
+        {
+          "text": "valid deletion request",
+          "bold": true
+        },
+        {
+          "text": ", subject to the limited exceptions described in this DPA."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "D. Nature of Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Processing may include:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "accessing;"
+          }
+        ],
+        [
+          {
+            "text": "retrieving;"
+          }
+        ],
+        [
+          {
+            "text": "transmitting;"
+          }
+        ],
+        [
+          {
+            "text": "temporarily storing;"
+          }
+        ],
+        [
+          {
+            "text": "organizing;"
+          }
+        ],
+        [
+          {
+            "text": "correlating;"
+          }
+        ],
+        [
+          {
+            "text": "querying;"
+          }
+        ],
+        [
+          {
+            "text": "analyzing;"
+          }
+        ],
+        [
+          {
+            "text": "redacting;"
+          }
+        ],
+        [
+          {
+            "text": "masking;"
+          }
+        ],
+        [
+          {
+            "text": "generating investigation context;"
+          }
+        ],
+        [
+          {
+            "text": "submitting redacted context for AI inference;"
+          }
+        ],
+        [
+          {
+            "text": "generating investigation outputs;"
+          }
+        ],
+        [
+          {
+            "text": "securing;"
+          }
+        ],
+        [
+          {
+            "text": "troubleshooting; and"
+          }
+        ],
+        [
+          {
+            "text": "deleting"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "E. Purpose of Processing"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "To provide, operate, secure, troubleshoot, and support Convalesce's investigation functionality for Customer-authorized data infrastructure and workflows."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "F. Categories of Data Subjects"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Because Convalesce does not determine the contents of Customer-controlled systems, Data Subjects may include any individuals whose information appears in a connected system, including:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer employees;"
+          }
+        ],
+        [
+          {
+            "text": "contractors;"
+          }
+        ],
+        [
+          {
+            "text": "consultants;"
+          }
+        ],
+        [
+          {
+            "text": "users;"
+          }
+        ],
+        [
+          {
+            "text": "customers;"
+          }
+        ],
+        [
+          {
+            "text": "end users;"
+          }
+        ],
+        [
+          {
+            "text": "business contacts;"
+          }
+        ],
+        [
+          {
+            "text": "vendors;"
+          }
+        ],
+        [
+          {
+            "text": "partners; and"
+          }
+        ],
+        [
+          {
+            "text": "other individuals whose information appears in Customer-controlled infrastructure."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "G. Categories of Personal Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce does not intentionally require specific categories of Personal Data to provide its core investigation functionality."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Depending on Customer's systems, Customer Personal Data may include:"
+        }
+      ]
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "names;"
+          }
+        ],
+        [
+          {
+            "text": "business contact information;"
+          }
+        ],
+        [
+          {
+            "text": "email addresses;"
+          }
+        ],
+        [
+          {
+            "text": "usernames;"
+          }
+        ],
+        [
+          {
+            "text": "user identifiers;"
+          }
+        ],
+        [
+          {
+            "text": "IP addresses;"
+          }
+        ],
+        [
+          {
+            "text": "device or system identifiers;"
+          }
+        ],
+        [
+          {
+            "text": "log information;"
+          }
+        ],
+        [
+          {
+            "text": "authentication-related metadata;"
+          }
+        ],
+        [
+          {
+            "text": "database records;"
+          }
+        ],
+        [
+          {
+            "text": "query contents;"
+          }
+        ],
+        [
+          {
+            "text": "workflow information;"
+          }
+        ],
+        [
+          {
+            "text": "execution history;"
+          }
+        ],
+        [
+          {
+            "text": "infrastructure metadata;"
+          }
+        ],
+        [
+          {
+            "text": "application information;"
+          }
+        ],
+        [
+          {
+            "text": "source-code-related context;"
+          }
+        ],
+        [
+          {
+            "text": "configuration information;"
+          }
+        ],
+        [
+          {
+            "text": "incident-related information; and"
+          }
+        ],
+        [
+          {
+            "text": "other Personal Data contained in Customer-controlled systems."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Row-level data may be processed where reasonably necessary for a Customer-requested investigation."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "H. Sensitive Personal Data"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "The Free Beta Service is not designed specifically for intentionally submitted Sensitive or Special Category Personal Data."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Customer must not intentionally provide specially regulated information described in Section 5 without Convalesce's express authorization."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Such information may nevertheless be encountered incidentally within Customer-controlled systems."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "I. Processing Frequency"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Processing occurs as initiated by Customer, triggered by Customer-authorized investigations, or otherwise reasonably necessary to operate and secure the Service."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Schedule 2"
+    },
+    {
+      "type": "h2",
+      "text": "Technical and Organizational Measures"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce currently maintains the following technical and organizational measures for the Free Beta:"
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "1. Encryption"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Encryption of information in transit."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "2. Authentication"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Multi-factor authentication for internal and administrative access."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "3. Authorization"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Role-based access controls."
+          }
+        ],
+        [
+          {
+            "text": "Least-privilege service accounts."
+          }
+        ],
+        [
+          {
+            "text": "Restrictions on founder and employee access to Customer Data."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "4. Secrets Management"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Integration credentials and secrets are managed through "
+          },
+          {
+            "text": "Google Secret Manager",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "5. Environment Controls"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Separation of relevant development and production environments."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "6. Logging"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Audit logging appropriate to the operation and security of the Service."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "7. AI Data Controls"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "PII-redaction processing occurs within Convalesce's Google Cloud environment before investigation context is submitted to Vertex AI/Gemini."
+          }
+        ],
+        [
+          {
+            "text": "Convalesce does not use Customer Personal Data to train generalized models during the Free Beta."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "8. Integration Controls"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customers may revoke connected integrations."
+          }
+        ],
+        [
+          {
+            "text": "Following successful revocation, Convalesce stops initiating new requests using the revoked authorization."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "9. Data Retention Controls"
+    },
+    {
+      "type": "ul",
+      "items": [
+        [
+          {
+            "text": "Customer Personal Data is retained only as reasonably necessary for the Service."
+          }
+        ],
+        [
+          {
+            "text": "Customer Data is scheduled for deletion within 60 days following a valid deletion request or account termination, subject to the limited exceptions described in this DPA."
+          }
+        ],
+        [
+          {
+            "text": "Convalesce does not currently create separate application-level backups of Customer Data as part of the Free Beta."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "h4",
+      "text": "10. Primary Hosting"
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Convalesce's primary Google Cloud deployment is configured in:"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Google Cloud region:",
+          "bold": true
+        },
+        {
+          "text": " us-central1 "
+        },
+        {
+          "text": "Primary location:",
+          "bold": true
+        },
+        {
+          "text": " Iowa, United States"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "runs": [
+        {
+          "text": "Use of Google Cloud remains subject to Google's applicable infrastructure, data-processing, security, resilience, and subprocessor arrangements."
+        }
+      ]
+    }
+  ]
+}

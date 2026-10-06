@@ -12,7 +12,6 @@ export function Closer() {
       {/* the page ends the way it opened: one centred line and one action */}
       <div className="relative overflow-hidden px-5 pt-14 pb-20 text-center sm:px-8 sm:pt-20 sm:pb-24 lg:px-10 lg:pt-24 lg:pb-32">
         <LineageBackdrop
-          still
           className="[mask-image:radial-gradient(ellipse_60%_70%_at_50%_50%,transparent,black)] opacity-70"
         />
         <div className="relative">

@@ -1,14 +1,19 @@
-import type { Metadata } from "next";
-
 import { Legal } from "@/components/legal";
 import { TERMS } from "@/lib/legal";
+import { pageJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of service",
-  description: "The terms that cover your use of Convalesce.",
-  alternates: { canonical: "/terms" },
-};
+export const metadata = pageMetadata("/terms");
 
 export default function Page() {
-  return <Legal page={TERMS} index="T" />;
+  return (
+    <>
+      <Legal page={TERMS} index="T" label="Terms of service" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageJsonLd("/terms")),
+        }}
+      />
+    </>
+  );
 }

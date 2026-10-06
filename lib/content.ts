@@ -5,14 +5,48 @@ export const SITE = {
   tagline: "Self-healing data infrastructure.",
   description:
     "Convalesce self-heals your data infrastructure. Agents pick up a failed run, trace its blast radius, and return a fix with the evidence behind it.",
-  email: "v.joshi@convalesce.io",
+  /** Where a question about the product or an account goes. */
+  email: "support@convalesce.io",
+  /** Where a question about personal data goes; the legal pages name it too. */
+  privacyEmail: "privacy@convalesce.io",
   app: "https://app.convalesce.io",
   docs: "https://docs.convalesce.io",
 } as const;
 
+/* Every page besides the home page, listed once. The sitemap, the LLM index
+   and each page's own metadata all read this, so a new page is added here and
+   nowhere else. `updated` is the day its content last changed. */
+export const PAGES = [
+  {
+    path: "/privacy",
+    title: "Privacy policy",
+    description:
+      "What personal data Convalesce collects, why, how long it is kept, who it is shared with, and the rights you have over it.",
+    updated: "2026-10-05",
+  },
+  {
+    path: "/terms",
+    title: "Terms of service",
+    description:
+      "The terms that cover your use of Convalesce during the free beta: accounts, acceptable use, your data, and liability.",
+    updated: "2026-10-05",
+  },
+  {
+    path: "/dpa",
+    title: "Data processing addendum",
+    description:
+      "How Convalesce processes personal data on a customer's behalf: roles, subprocessors, security measures, transfers, and deletion.",
+    updated: "2026-10-05",
+  },
+] as const;
+
+export type PagePath = (typeof PAGES)[number]["path"];
+
 /** A link that leaves the site opens beside it, so the page being read stays. */
 export const outside = (href: string) =>
-  href.startsWith("http") ? ({ target: "_blank", rel: "noopener noreferrer" } as const) : {};
+  href.startsWith("http")
+    ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
+    : {};
 
 export const mailto = (subject: string) =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
@@ -64,7 +98,10 @@ export type Artifact = {
   caption: string;
   rows: readonly (readonly [string, string])[];
   /** the change itself, where the stage ends in one */
-  diff?: { file: string; lines: readonly { kind: "same" | "cut" | "add"; code: string }[] };
+  diff?: {
+    file: string;
+    lines: readonly { kind: "same" | "cut" | "add"; code: string }[];
+  };
   /** how the stage ends, in a few words */
   outcome: string;
 };
@@ -114,7 +151,10 @@ export const STEPS: readonly Step[] = [
     artifact: {
       caption: "Pull request",
       rows: [
-        ["cause", "order_total went from NUMBER to VARCHAR in raw.shopify_orders"],
+        [
+          "cause",
+          "order_total went from NUMBER to VARCHAR in raw.shopify_orders",
+        ],
         ["reaches", "stg_orders, daily_orders, finance.daily_revenue"],
       ],
       diff: {
@@ -122,7 +162,10 @@ export const STEPS: readonly Step[] = [
         lines: [
           { kind: "same", code: "  order_id," },
           { kind: "cut", code: "  order_total," },
-          { kind: "add", code: "  cast(order_total as number) as order_total," },
+          {
+            kind: "add",
+            code: "  cast(order_total as number) as order_total,",
+          },
           { kind: "same", code: "  customer_id," },
         ],
       },
