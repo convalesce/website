@@ -4,7 +4,6 @@ import { Closer } from "@/components/sections/closer";
 import { Faq } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { Integrations } from "@/components/sections/integrations";
-import { Marquee } from "@/components/sections/marquee";
 import { Principles } from "@/components/sections/principles";
 import { Process } from "@/components/sections/process";
 import { WhyConvalesce } from "@/components/sections/why-convalesce";
@@ -23,7 +22,6 @@ export default function Page() {
 
       <main id="main">
         <Hero />
-        <Marquee />
         <Process />
         <WhyConvalesce />
         <Integrations />

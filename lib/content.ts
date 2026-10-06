@@ -81,18 +81,6 @@ export const HERO = {
   sub: "Agents pick up the failed run, trace its blast radius, and return a fix with the evidence behind it.",
 } as const;
 
-export const STACK = [
-  "Airflow",
-  "Snowflake",
-  "dbt",
-  "Databricks",
-  "Spark",
-  "Prefect",
-  "Postgres",
-  "Kafka",
-  "OpenLineage",
-] as const;
-
 /* What the product actually holds at this stage, shown as key/value mono. */
 export type Artifact = {
   caption: string;
@@ -188,7 +176,7 @@ export const CONTEXT_SOURCES: readonly ContextSource[] = [
     reads: "task state, exceptions, retries",
   },
   {
-    name: "OpenLineage",
+    name: "Lineage",
     question: "What data is connected and impacted?",
     reads: "inputs, outputs, job runs",
   },
@@ -257,7 +245,7 @@ export const TOOL_LOGOS: Record<string, string> = {
   Fivetran: "fivetran.png",
   "Great Expectations": "great-expectations.png",
   Tableau: "tableau.png",
-  OpenLineage: "openlineage.svg",
+  Lineage: "openlineage.svg",
   BigQuery: "bigquery.svg",
   "Google Cloud Storage": "gcs.svg",
   Dataplex: "dataplex.svg",
@@ -286,7 +274,7 @@ export const INTEGRATIONS: readonly Integration[] = [
   { name: "Great Expectations", kind: "Data quality", status: "live" },
   { name: "Tableau", kind: "Dashboards", status: "live" },
   { name: "GitHub", kind: "Code and pull requests", status: "live" },
-  { name: "OpenLineage", kind: "Lineage", status: "live" },
+  { name: "Lineage", kind: "Inputs, outputs and runs", status: "live" },
   { name: "BigQuery", kind: "Warehouse", status: "soon" },
   { name: "Google Cloud Storage", kind: "Storage", status: "soon" },
   { name: "Dataplex", kind: "Catalogue", status: "soon" },

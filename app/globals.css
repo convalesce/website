@@ -357,14 +357,6 @@ body {
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 @keyframes ticker {
   from {
@@ -399,10 +391,6 @@ body {
 [data-reveal-words][data-shown="true"] .split-word {
   animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(var(--reveal-delay, 0) * 1ms + var(--i, 0) * 45ms);
-}
-
-.marquee-track {
-  animation: marquee 38s linear infinite;
 }
 
 .ticker-track {
@@ -474,7 +462,6 @@ body {
     opacity: 1;
   }
 
-  .marquee-track,
   .ticker-track,
   .stack-tap-fail,
   .stack-tap-read,

@@ -6,7 +6,7 @@ import { FAQ as ITEMS } from "@/lib/content";
 
 export function Faq() {
   return (
-    <Section index="07" label="Questions" pad="tight">
+    <Section index="06" label="Questions" pad="tight">
       {/* the heading stays beside the list as it scrolls, so the questions
           start at the top of the section instead of a screen below it */}
       <div className="grid gap-8 pt-10 sm:pt-12 lg:grid-cols-12 lg:gap-6 lg:pt-16">

@@ -6,7 +6,7 @@ import { CONTEXT_SOURCES, TICKER_ITEMS } from "@/lib/content";
 
 export function WhyConvalesce() {
   return (
-    <Section id="context" index="04" label="Context">
+    <Section id="context" index="03" label="Context">
       <SectionHeader
         heading="What Convalesce reads before it answers."
         body="An error message rarely says why. Convalesce also reads the run that produced it, the tables it touched, and the code behind it."
