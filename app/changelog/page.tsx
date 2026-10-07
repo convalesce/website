@@ -1,6 +1,7 @@
 import { JsonLd, PageShell } from "@/components/page-shell";
 import { CHANGELOG, PACKAGES, releaseUrl } from "@/lib/changelog";
 import { pageJsonLd, pageMetadata } from "@/lib/seo";
+import { latestVersion } from "@/lib/versions";
 
 export const metadata = pageMetadata("/changelog");
 
@@ -8,7 +9,8 @@ const link = "text-ink underline underline-offset-4 hover:text-accent-text trans
 
 const day = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
-export default function Page() {
+export default async function Page() {
+  const versions = await Promise.all(PACKAGES.map((pkg) => latestVersion(pkg.source)));
   return (
     <>
       <PageShell
@@ -20,12 +22,14 @@ export default function Page() {
         <section aria-labelledby="packages" className="border-line border-t pt-10">
           <h2 id="packages" className="font-display text-h3">Packages</h2>
           <ul className="mt-5 max-w-[72ch]">
-            {PACKAGES.map((pkg) => (
+            {PACKAGES.map((pkg, i) => (
               <li key={pkg.name} className="border-line grid gap-x-6 gap-y-0.5 border-b py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-baseline">
                 <a href={pkg.href} target="_blank" rel="noopener noreferrer" className={`${link} font-mono text-mono-sm break-all sm:text-mono`}>
                   {pkg.name}
                 </a>
-                <span className="text-faint text-small">{pkg.for}</span>
+                <span className="text-faint text-small">
+                  {pkg.for} <span className="text-muted tabular-nums">v{versions[i]}</span>
+                </span>
               </li>
             ))}
           </ul>

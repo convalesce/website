@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/page-shell";
 import { Nav } from "@/components/nav";
 import { ToolLogo } from "@/components/ui/tool-logo";
 import { SITE } from "@/lib/content";
+import { latestVersion } from "@/lib/versions";
 import {
   DEFAULT_BOUNDARY,
   DEFAULT_STEPS,
@@ -39,15 +40,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
-/* The Spark listener is attached by configuration, not installed with pip. */
-const SPARK_VERSION = "0.1.6";
-
 type Line = { text: string; tone?: "ink" | "faint" | "accent" };
 
 /* The connection, as the person will actually do it: the panel on the right
    of the page is the one place the page shows the product rather than
    describing it. */
-function connection(tool: IntegrationPage): { title: string; lines: Line[] } {
+function connection(tool: IntegrationPage, sparkVersion: string): { title: string; lines: Line[] } {
   if (tool.status === "soon") {
     return {
       title: `${tool.slug} · not yet`,
@@ -61,7 +59,7 @@ function connection(tool: IntegrationPage): { title: string; lines: Line[] } {
     return {
       title: "spark-defaults.conf",
       lines: [
-        { text: `spark.jars.packages   io.convalesce:convalesce-emit-spark:${SPARK_VERSION}` },
+        { text: `spark.jars.packages   io.convalesce:convalesce-emit-spark:${sparkVersion}` },
         { text: "spark.extraListeners  io.convalesce.emit.spark.ConvalesceSparkListener" },
         { text: "CONVALESCE_INGEST_KEY=<your key>", tone: "faint" },
         { text: "first run reports itself", tone: "accent" },
@@ -91,8 +89,8 @@ function connection(tool: IntegrationPage): { title: string; lines: Line[] } {
 
 const toneClass = { ink: "text-ink", faint: "text-faint", accent: "text-accent-text" } as const;
 
-function ConnectionPanel({ tool }: { tool: IntegrationPage }) {
-  const { title, lines } = connection(tool);
+function ConnectionPanel({ tool, sparkVersion }: { tool: IntegrationPage; sparkVersion: string }) {
+  const { title, lines } = connection(tool, sparkVersion);
   return (
     <figure className="border-line bg-surface overflow-hidden rounded-lg border">
       <figcaption className="border-line flex items-center justify-between border-b px-4 py-3">
@@ -127,6 +125,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const tool = byOne((await params).slug);
   if (!tool) notFound();
 
+  const sparkVersion = tool.name === "Spark" ? await latestVersion({ kind: "maven", id: "convalesce-emit-spark" }) : "";
   const live = tool.status === "live";
   const way = tool.pip ? "plugin" : "read";
   const steps = tool.steps ?? DEFAULT_STEPS[way];
@@ -210,7 +209,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             </div>
 
             <div className="min-w-0 lg:col-span-5 lg:self-center">
-              <ConnectionPanel tool={tool} />
+              <ConnectionPanel tool={tool} sparkVersion={sparkVersion} />
             </div>
           </div>
 

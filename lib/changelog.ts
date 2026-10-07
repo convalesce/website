@@ -7,20 +7,22 @@ export type Release = {
   changes: readonly string[];
 };
 
-export type Package = { name: string; href: string; for: string };
+import type { Source } from "@/lib/versions";
 
-const pypi = (name: string) => `https://pypi.org/project/${name}/`;
+export type Package = { name: string; href: string; for: string; source: Source };
+
+const pypiUrl = (name: string) => `https://pypi.org/project/${name}/`;
 const central = (artifact: string) =>
   `https://central.sonatype.com/artifact/io.convalesce/${artifact}`;
 
 export const PACKAGES: readonly Package[] = [
-  { name: "convalesce-emit", href: pypi("convalesce-emit"), for: "Core client (Python)" },
-  { name: "convalesce-emit-airflow", href: pypi("convalesce-emit-airflow"), for: "Airflow" },
-  { name: "convalesce-emit-dagster", href: pypi("convalesce-emit-dagster"), for: "Dagster" },
-  { name: "convalesce-emit-prefect", href: pypi("convalesce-emit-prefect"), for: "Prefect" },
-  { name: "convalesce-emit-gx", href: pypi("convalesce-emit-gx"), for: "Great Expectations" },
-  { name: "io.convalesce:convalesce-emit-spark", href: central("convalesce-emit-spark"), for: "Spark listener (Maven Central)" },
-  { name: "io.convalesce:convalesce-emit-core", href: central("convalesce-emit-core"), for: "Core client (Java)" },
+  { name: "convalesce-emit", href: pypiUrl("convalesce-emit"), source: { kind: "pypi", id: "convalesce-emit" }, for: "Core client (Python)" },
+  { name: "convalesce-emit-airflow", href: pypiUrl("convalesce-emit-airflow"), source: { kind: "pypi", id: "convalesce-emit-airflow" }, for: "Airflow" },
+  { name: "convalesce-emit-dagster", href: pypiUrl("convalesce-emit-dagster"), source: { kind: "pypi", id: "convalesce-emit-dagster" }, for: "Dagster" },
+  { name: "convalesce-emit-prefect", href: pypiUrl("convalesce-emit-prefect"), source: { kind: "pypi", id: "convalesce-emit-prefect" }, for: "Prefect" },
+  { name: "convalesce-emit-gx", href: pypiUrl("convalesce-emit-gx"), source: { kind: "pypi", id: "convalesce-emit-gx" }, for: "Great Expectations" },
+  { name: "io.convalesce:convalesce-emit-spark", href: central("convalesce-emit-spark"), source: { kind: "maven", id: "convalesce-emit-spark" }, for: "Spark listener (Maven Central)" },
+  { name: "io.convalesce:convalesce-emit-core", href: central("convalesce-emit-core"), source: { kind: "maven", id: "convalesce-emit-core" }, for: "Core client (Java)" },
 ];
 
 export const releaseUrl = (version: string) =>
