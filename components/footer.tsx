@@ -1,14 +1,14 @@
 import { FrameWidth } from "@/components/frame";
 import { Logo } from "@/components/logo";
-import { HERO, SITE, mailto, outside } from "@/lib/content";
+import { HERO, SITE, outside } from "@/lib/content";
 
 const COLUMNS = [
   {
     heading: "Product",
     links: [
       { label: "How it works", href: "/#how-it-works" },
-      { label: "Context", href: "/#context" },
-      { label: "Integrations", href: "/#integrations" },
+      { label: "Integrations", href: "/integrations" },
+      { label: "Changelog", href: "/changelog" },
       { label: "Docs", href: SITE.docs },
       { label: "Sign in", href: SITE.app },
     ],
@@ -16,7 +16,8 @@ const COLUMNS = [
   {
     heading: "Company",
     links: [
-      { label: "Contact", href: mailto("Hello from your site") },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
       { label: "DPA", href: "/dpa" },

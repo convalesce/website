@@ -26,6 +26,7 @@ export function Closer() {
             </p>
             <Button
               href={CLOSER.cta.href}
+              beta
               event="open_app"
               trailing={<ArrowUpRight className="size-4" />}
               className="mt-8"

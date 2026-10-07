@@ -19,9 +19,10 @@ import {
 const live = INTEGRATIONS.filter((i) => i.status === "live").map((i) => i.name);
 const soon = INTEGRATIONS.filter((i) => i.status === "soon").map((i) => i.name);
 
-const pages = PAGES.map(
-  (p) => `- [${p.title}](${SITE.domain}${p.path}): ${p.description}`,
-).join("\n");
+const line = (p: (typeof PAGES)[number]) =>
+  `- [${p.title}](${SITE.domain}${p.path}): ${p.description}`;
+const sitePages = PAGES.filter((p) => p.priority > 0.3).map(line).join("\n");
+const pages = PAGES.filter((p) => p.priority <= 0.3).map(line).join("\n");
 
 export function llmsIndex() {
   return `# ${SITE.company}
@@ -35,7 +36,8 @@ ${SITE.company} is a developer tool for data teams. Its agents pick up a failed 
 - [Home](${SITE.domain}): ${HERO.head}
 - [How it works](${SITE.domain}/#how-it-works): ${STEPS.map((s) => s.title).join(", then ")}
 - [Context](${SITE.domain}/#context): what the agent can see
-- [Integrations](${SITE.domain}/#integrations): live: ${live.join(", ")}; coming: ${soon.join(", ")}
+- Live integrations: ${live.join(", ")}; coming: ${soon.join(", ")}
+${sitePages}
 - [Docs](${SITE.docs}): how to connect each tool
 - [Full text](${SITE.domain}/llms-full.txt): every section of the site as plain text
 

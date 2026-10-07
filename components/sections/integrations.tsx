@@ -1,4 +1,5 @@
-import { Circle } from "lucide-react";
+import { ArrowUpRight, Circle } from "lucide-react";
+import Link from "next/link";
 import { Section } from "@/components/frame";
 import { Cell, Grid } from "@/components/ui/grid";
 import { Reveal } from "@/components/ui/reveal";
@@ -53,6 +54,13 @@ export function Integrations() {
             </Cell>
           ))}
         </Grid>
+        <Link
+          href="/integrations"
+          className="text-ink text-small mt-6 inline-flex min-h-11 items-center gap-1.5 underline underline-offset-4"
+        >
+          See every integration and its setup guide
+          <ArrowUpRight aria-hidden="true" className="size-4" />
+        </Link>
       </Reveal>
     </Section>
   );

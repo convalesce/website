@@ -18,11 +18,44 @@ export const SITE = {
    nowhere else. `updated` is the day its content last changed. */
 export const PAGES = [
   {
+    path: "/integrations",
+    title: "Integrations",
+    description:
+      "The orchestrators, warehouses, lakes, streams and dashboards Convalesce connects to, with a setup guide for each.",
+    updated: "2026-10-06",
+    priority: 0.8,
+  },
+  {
+    path: "/changelog",
+    title: "Changelog",
+    description:
+      "What changed in each release of the Convalesce plugins for Airflow, Dagster, Prefect, Great Expectations and Spark.",
+    updated: "2026-10-06",
+    priority: 0.6,
+  },
+  {
+    path: "/about",
+    title: "About",
+    description:
+      "Why Convalesce exists, what it believes about incidents and evidence, and how it handles your data.",
+    updated: "2026-10-06",
+    priority: 0.6,
+  },
+  {
+    path: "/contact",
+    title: "Contact",
+    description:
+      "Ask about the product, request an integration, get help with an account, or make a privacy request.",
+    updated: "2026-10-06",
+    priority: 0.7,
+  },
+  {
     path: "/privacy",
     title: "Privacy policy",
     description:
       "What personal data Convalesce collects, why, how long it is kept, who it is shared with, and the rights you have over it.",
     updated: "2026-10-05",
+    priority: 0.3,
   },
   {
     path: "/terms",
@@ -30,6 +63,7 @@ export const PAGES = [
     description:
       "The terms that cover your use of Convalesce during the free beta: accounts, acceptable use, your data, and liability.",
     updated: "2026-10-05",
+    priority: 0.3,
   },
   {
     path: "/dpa",
@@ -37,6 +71,7 @@ export const PAGES = [
     description:
       "How Convalesce processes personal data on a customer's behalf: roles, subprocessors, security measures, transfers, and deletion.",
     updated: "2026-10-05",
+    priority: 0.3,
   },
 ] as const;
 
@@ -58,9 +93,10 @@ export const CTA = {
 
 export const NAV_LINKS = [
   { label: "How it works", href: "/#how-it-works" },
-  { label: "Context", href: "/#context" },
-  { label: "Integrations", href: "/#integrations" },
-  { label: "Docs", href: SITE.docs },
+  { label: "Integrations", href: "/integrations" },
+  { label: "Changelog", href: "/changelog" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const HERO = {
@@ -257,23 +293,25 @@ export type Integration = {
   name: string;
   kind: string;
   status: "live" | "soon";
+  /** Its setup guide's path under SITE.docs; absent where the docs have no page for it. */
+  docs?: string;
 };
 
 export const INTEGRATIONS: readonly Integration[] = [
-  { name: "Airflow", kind: "Orchestrator", status: "live" },
-  { name: "Dagster", kind: "Orchestrator", status: "live" },
-  { name: "Prefect", kind: "Orchestrator", status: "live" },
-  { name: "dbt", kind: "Transformation", status: "live" },
-  { name: "Spark", kind: "Processing", status: "live" },
-  { name: "Snowflake", kind: "Warehouse", status: "live" },
-  { name: "Databricks", kind: "Lakehouse", status: "live" },
-  { name: "Postgres", kind: "Database", status: "live" },
-  { name: "AWS Glue", kind: "Catalogue and jobs", status: "live" },
-  { name: "Amazon S3", kind: "Storage", status: "live" },
-  { name: "Kafka", kind: "Streaming", status: "live" },
-  { name: "Great Expectations", kind: "Data quality", status: "live" },
-  { name: "Tableau", kind: "Dashboards", status: "live" },
-  { name: "GitHub", kind: "Code and pull requests", status: "live" },
+  { name: "Airflow", kind: "Orchestrator", status: "live", docs: "transformation/airflow" },
+  { name: "Dagster", kind: "Orchestrator", status: "live", docs: "transformation/dagster" },
+  { name: "Prefect", kind: "Orchestrator", status: "live", docs: "transformation/prefect" },
+  { name: "dbt", kind: "Transformation", status: "live", docs: "transformation/dbt" },
+  { name: "Spark", kind: "Processing", status: "live", docs: "transformation/spark" },
+  { name: "Snowflake", kind: "Warehouse", status: "live", docs: "data-warehouses/snowflake" },
+  { name: "Databricks", kind: "Lakehouse", status: "live", docs: "data-warehouses/databricks" },
+  { name: "Postgres", kind: "Database", status: "live", docs: "transactional-databases/postgres" },
+  { name: "AWS Glue", kind: "Catalogue and jobs", status: "live", docs: "catalogs-and-metadata/glue" },
+  { name: "Amazon S3", kind: "Storage", status: "live", docs: "data-lakes/s3" },
+  { name: "Kafka", kind: "Streaming", status: "live", docs: "streaming/kafka" },
+  { name: "Great Expectations", kind: "Data quality", status: "live", docs: "transformation/great-expectations" },
+  { name: "Tableau", kind: "Dashboards", status: "live", docs: "business-intelligence/tableau" },
+  { name: "GitHub", kind: "Code and pull requests", status: "live", docs: "collaboration/github" },
   { name: "Lineage", kind: "Inputs, outputs and runs", status: "live" },
   { name: "BigQuery", kind: "Warehouse", status: "soon" },
   { name: "Google Cloud Storage", kind: "Storage", status: "soon" },

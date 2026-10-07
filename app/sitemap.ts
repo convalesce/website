@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PAGES, SITE } from "@/lib/content";
+import { INTEGRATION_PAGES } from "@/lib/integrations";
 
 /* Pinned so lastmod means "the content changed", not "the site rebuilt".
    Bump it when the page copy changes. */
@@ -19,8 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...PAGES.map((page) => ({
       url: `${SITE.domain}${page.path}`,
       lastModified: new Date(page.updated),
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
+      changeFrequency: page.priority > 0.3 ? ("monthly" as const) : ("yearly" as const),
+      priority: page.priority,
+    })),
+    ...INTEGRATION_PAGES.map((tool) => ({
+      url: `${SITE.domain}/integrations/${tool.slug}`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
     })),
   ];
 }

@@ -49,6 +49,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-9">
               <Button
                 href={CTA.primary.href}
+                beta
                 event="open_app"
                 trailing={<ArrowUpRight className="size-4" />}
                 className={pair}
