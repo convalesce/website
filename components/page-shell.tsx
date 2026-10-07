@@ -26,8 +26,8 @@ export function PageShell({
       <main id="main">
         <Section index={index} label={label} pad="tight">
           <div className="pt-12 sm:pt-16 lg:pt-24">
-            <h1 className="font-display text-h2 max-w-[22ch] text-balance">{title}</h1>
-            <p className="text-muted mt-5 max-w-[60ch]">{intro}</p>
+            <h1 className="font-display text-display max-w-[20ch] text-balance">{title}</h1>
+            <p className="text-muted mt-6 max-w-[62ch] text-pretty">{intro}</p>
           </div>
           <div className="mt-12 lg:mt-16">{children}</div>
         </Section>

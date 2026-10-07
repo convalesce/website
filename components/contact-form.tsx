@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import Link from "next/link";
+
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 declare global {
@@ -23,7 +25,7 @@ const TOPICS = [
 ] as const;
 
 const field =
-  "border-line bg-bg text-ink focus-visible:outline-accent w-full rounded-md border px-3.5 py-3 text-base";
+  "border-line bg-surface text-ink hover:border-ink/25 w-full rounded-md border px-3.5 py-3 text-base transition-colors";
 const label = "text-ink text-small mb-1.5 block font-medium";
 
 function getToken(): Promise<string> {
@@ -36,6 +38,7 @@ function getToken(): Promise<string> {
 
 export function ContactForm() {
   const topicRef = useRef<HTMLSelectElement>(null);
+  const thanksRef = useRef<HTMLHeadingElement>(null);
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
   const [error, setError] = useState("");
 
@@ -49,6 +52,10 @@ export function ContactForm() {
     document.head.appendChild(script);
     return () => script.remove();
   }, []);
+
+  useEffect(() => {
+    if (state === "sent") thanksRef.current?.focus();
+  }, [state]);
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -78,14 +85,16 @@ export function ContactForm() {
   if (state === "sent") {
     return (
       <div role="status" className="border-line rounded-lg border p-6">
-        <h2 className="font-display text-h3">Thanks, we have it.</h2>
-        <p className="text-muted mt-2">A person will reply to the email you gave.</p>
+        <h2 ref={thanksRef} tabIndex={-1} className="font-display text-h3 outline-none">
+          Thanks, we have it.
+        </h2>
+        <p className="text-muted mt-2">A person will reply to the email you gave. In the meantime, the <Link href="/integrations" className="text-ink underline underline-offset-4">integrations</Link> page shows what Convalesce connects to.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={submit} className="space-y-5" noValidate={false}>
+    <form onSubmit={submit} className="space-y-5" aria-describedby={error ? "form-error" : undefined}>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={label}>Name</label>
@@ -122,13 +131,13 @@ export function ContactForm() {
       </div>
 
       {error ? (
-        <p role="alert" className="text-small text-ink">{error}</p>
+        <p id="form-error" role="alert" className="text-small text-fail">{error}</p>
       ) : null}
 
       <button
         type="submit"
         disabled={state === "sending"}
-        className="bg-ink text-bg inline-flex min-h-11 items-center rounded-md px-5 py-2.5 font-medium disabled:opacity-60"
+        className="btn-primary inline-flex min-h-11 items-center rounded-md px-5 py-2.5 text-small font-medium transition-colors disabled:cursor-progress disabled:opacity-60"
       >
         {state === "sending" ? "Sending" : "Send message"}
       </button>

@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { JsonLd, PageShell } from "@/components/page-shell";
+import { Footer } from "@/components/footer";
+import { Section } from "@/components/frame";
+import { JsonLd } from "@/components/page-shell";
+import { Nav } from "@/components/nav";
 import { ToolLogo } from "@/components/ui/tool-logo";
 import { SITE } from "@/lib/content";
-import { INTEGRATION_PAGES, READ_ONLY, byOne } from "@/lib/integrations";
+import {
+  DEFAULT_BOUNDARY,
+  DEFAULT_STEPS,
+  INTEGRATION_PAGES,
+  byOne,
+  type IntegrationPage,
+} from "@/lib/integrations";
 
 type Params = { slug: string };
 
@@ -30,16 +39,103 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
-const link = "text-ink underline underline-offset-4";
-const button =
-  "bg-ink text-bg inline-flex min-h-11 items-center rounded-md px-5 py-2.5 font-medium";
+/* The Spark listener is attached by configuration, not installed with pip. */
+const SPARK_VERSION = "0.1.6";
+
+type Line = { text: string; tone?: "ink" | "faint" | "accent" };
+
+/* The connection, as the person will actually do it: the panel on the right
+   of the page is the one place the page shows the product rather than
+   describing it. */
+function connection(tool: IntegrationPage): { title: string; lines: Line[] } {
+  if (tool.status === "soon") {
+    return {
+      title: `${tool.slug} · not yet`,
+      lines: [
+        { text: "status      coming soon", tone: "faint" },
+        { text: "request     tell us what you would want it to show", tone: "ink" },
+      ],
+    };
+  }
+  if (tool.name === "Spark") {
+    return {
+      title: "spark-defaults.conf",
+      lines: [
+        { text: `spark.jars.packages   io.convalesce:convalesce-emit-spark:${SPARK_VERSION}` },
+        { text: "spark.extraListeners  io.convalesce.emit.spark.ConvalesceSparkListener" },
+        { text: "CONVALESCE_INGEST_KEY=<your key>", tone: "faint" },
+        { text: "first run reports itself", tone: "accent" },
+      ],
+    };
+  }
+  if (tool.pip) {
+    return {
+      title: `${tool.slug} · worker`,
+      lines: [
+        { text: `$ pip install ${tool.pip}` },
+        { text: "$ export CONVALESCE_INGEST_KEY=<your key>", tone: "faint" },
+        { text: "first run reports itself", tone: "accent" },
+      ],
+    };
+  }
+  return {
+    title: `${tool.slug} · connection`,
+    lines: [
+      { text: "access      read-only", tone: "ink" },
+      { text: "install     nothing on your side", tone: "ink" },
+      { text: "network     outbound HTTPS from Convalesce", tone: "faint" },
+      { text: "first read in minutes", tone: "accent" },
+    ],
+  };
+}
+
+const toneClass = { ink: "text-ink", faint: "text-faint", accent: "text-accent-text" } as const;
+
+function ConnectionPanel({ tool }: { tool: IntegrationPage }) {
+  const { title, lines } = connection(tool);
+  return (
+    <figure className="border-line bg-surface overflow-hidden rounded-lg border">
+      <figcaption className="border-line flex items-center justify-between border-b px-4 py-3">
+        <span className="mono-label">{title}</span>
+        <span className="mono-label inline-flex items-center gap-1.5">
+          <span
+            aria-hidden="true"
+            className={`size-1.5 rounded-full ${tool.status === "live" ? "bg-accent" : "bg-faint"}`}
+          />
+          {tool.status === "live" ? "Live" : "Coming soon"}
+        </span>
+      </figcaption>
+      <pre className="overflow-x-auto px-4 py-5 text-mono-sm sm:text-mono" tabIndex={0}>
+        <code className="grid gap-1.5 font-mono">
+          {lines.map((line) => (
+            <span key={line.text} className={toneClass[line.tone ?? "ink"]}>
+              {line.tone === "accent" ? "● " : ""}
+              {line.text}
+            </span>
+          ))}
+        </code>
+      </pre>
+    </figure>
+  );
+}
+
+const primary = "btn-primary inline-flex h-11 items-center gap-2 rounded-md px-5 text-small font-medium whitespace-nowrap";
+const secondary =
+  "border-ink/25 bg-bg/60 text-ink hover:border-ink/40 hover:bg-ink/[0.06] inline-flex h-11 items-center gap-2 rounded-md border px-5 text-small font-medium whitespace-nowrap transition-colors";
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const tool = byOne((await params).slug);
   if (!tool) notFound();
 
-  const url = `${SITE.domain}/integrations/${tool.slug}`;
+  const live = tool.status === "live";
+  const way = tool.pip ? "plugin" : "read";
+  const steps = tool.steps ?? DEFAULT_STEPS[way];
+  const boundary = tool.boundary ?? DEFAULT_BOUNDARY[way];
   const guide = tool.docs ? `${SITE.docs}/docs/${tool.docs}` : null;
+  const siblings = INTEGRATION_PAGES.filter((i) => i.kind === tool.kind && i.slug !== tool.slug);
+  const neighbours = (siblings.length > 0 ? siblings : INTEGRATION_PAGES.filter((i) => i.slug !== tool.slug && i.status === "live")).slice(0, 4);
+
+  const url = `${SITE.domain}/integrations/${tool.slug}`;
   const trail = {
     "@context": "https://schema.org",
     "@graph": [
@@ -67,74 +163,114 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   return (
     <>
-      <PageShell
-        index="I"
-        label={tool.kind}
-        title={`${tool.name} with Convalesce`}
-        intro={tool.summary}
-      >
-        <div className="max-w-[72ch]">
-          <div className="flex items-center gap-3.5">
-            <ToolLogo name={tool.name} className="size-8" />
-            <span className="mono-label border-line text-faint rounded-sm border px-2 py-1">
-              {tool.status === "live" ? "Live" : "Coming soon"}
-            </span>
+      <Nav />
+      <main id="main">
+        <Section index={`/integrations/${tool.slug}`} label={tool.kind} pad="tight">
+          <nav aria-label="Breadcrumb" className="text-small text-faint pt-8">
+            <Link href="/integrations" className="hover:text-ink transition-colors">
+              Integrations
+            </Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span className="text-muted">{tool.name}</span>
+          </nav>
+
+          <div className="grid gap-10 pt-8 pb-14 lg:grid-cols-12 lg:gap-12 lg:pt-12 lg:pb-20">
+            <div className="min-w-0 lg:col-span-7">
+              <div className="border-line bg-surface grid size-16 place-items-center rounded-lg border">
+                <ToolLogo name={tool.name} className="size-9" />
+              </div>
+              <h1 className="font-display text-display mt-7 text-balance">
+                {tool.name} <span className="text-muted">with Convalesce</span>
+              </h1>
+              <p className="text-muted mt-6 max-w-[56ch] text-pretty">{tool.summary}</p>
+
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                {live ? (
+                  <>
+                    {guide ? (
+                      <a href={guide} target="_blank" rel="noopener noreferrer" className={primary}>
+                        Read the setup guide
+                      </a>
+                    ) : null}
+                    <a
+                      href={SITE.app}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={guide ? secondary : primary}
+                    >
+                      Connect {tool.name}
+                    </a>
+                  </>
+                ) : (
+                  <Link href="/contact?topic=integration" className={primary}>
+                    Tell us you want {tool.name}
+                  </Link>
+                )}
+              </div>
+            </div>
+
+            <div className="min-w-0 lg:col-span-5 lg:self-center">
+              <ConnectionPanel tool={tool} />
+            </div>
           </div>
 
-          {tool.reads.length > 0 ? (
-            <>
-              <h2 className="font-display text-h3 mt-10">What Convalesce reads</h2>
-              <ul className="text-muted marker:text-faint mt-4 list-disc space-y-2 pl-5">
-                {tool.reads.map((r) => (
-                  <li key={r} className="pl-1">{r}</li>
-                ))}
-              </ul>
-            </>
+          {live ? (
+            <div className="border-line grid border-t lg:grid-cols-12">
+              <div className="border-line py-10 lg:col-span-5 lg:border-r lg:py-12 lg:pr-10">
+                <h2 className="font-display text-h2">What it reads</h2>
+                <ul className="mt-6 grid gap-3">
+                  {tool.reads.map((r) => (
+                    <li key={r} className="text-muted flex gap-3">
+                      <span aria-hidden="true" className="bg-accent mt-[0.62em] size-1.5 shrink-0 rounded-full" />
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-faint text-small mt-8 max-w-[46ch]">{boundary}</p>
+              </div>
+
+              <div className="py-10 lg:col-span-7 lg:py-12 lg:pl-10">
+                <h2 className="font-display text-h2">How it connects</h2>
+                <ol className="mt-6">
+                  {steps.map((step, i) => (
+                    <li key={step} className="border-line grid grid-cols-[2rem_1fr] gap-3 border-t py-4 first:border-t-0 first:pt-0">
+                      <span className="mono-label pt-1">{i + 1}</span>
+                      <span className="text-ink">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+                {tool.pip ? (
+                  <p className="text-faint text-small mt-6">
+                    Each release is listed in the{" "}
+                    <Link href="/changelog" className="text-ink underline underline-offset-4">
+                      changelog
+                    </Link>
+                    .
+                  </p>
+                ) : null}
+              </div>
+            </div>
           ) : null}
 
-          {tool.status === "live" ? (
-            <>
-              <h2 className="font-display text-h3 mt-10">How it connects</h2>
-              {tool.pip ? (
-                <>
-                  <p className="text-muted mt-4">
-                    Install the plugin where {tool.name} runs and set one key. Nothing is opened inbound on your side.
-                  </p>
-                  <pre className="border-line mt-4 overflow-x-auto rounded-md border p-4 text-small">
-                    <code>{tool.name === "Spark" ? "Attach the convalesce-emit-spark listener" : `pip install ${tool.pip}`}</code>
-                  </pre>
-                  <p className="text-muted mt-4">
-                    See every release in the <Link href="/changelog" className={link}>changelog</Link>.
-                  </p>
-                </>
-              ) : (
-                <p className="text-muted mt-4">{READ_ONLY}</p>
-              )}
-            </>
-          ) : null}
-
-          <div className="mt-12 flex flex-wrap gap-3">
-            {guide ? (
-              <a href={guide} target="_blank" rel="noopener noreferrer" className={button}>
-                Read the setup guide
-              </a>
-            ) : null}
-            {tool.status === "live" ? (
-              <a href={SITE.app} target="_blank" rel="noopener noreferrer" className={guide ? `${link} inline-flex min-h-11 items-center` : button}>
-                Connect {tool.name}
-              </a>
-            ) : (
-              <Link href="/contact?topic=integration" className={button}>
-                Tell us you want {tool.name}
-              </Link>
-            )}
+          <div className="border-line border-t pt-10 lg:pt-12">
+            <h2 className="font-display text-h3">{siblings.length > 0 ? `Other ${tool.kind.toLowerCase()} tools` : "Also connects"}</h2>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {neighbours.map((n) => (
+                <li key={n.slug}>
+                  <Link
+                    href={`/integrations/${n.slug}`}
+                    className="border-line hover:bg-ink/[0.03] flex items-center gap-3 rounded-lg border p-4 transition-colors"
+                  >
+                    <ToolLogo name={n.name} />
+                    <span className="text-h3 text-balance">{n.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <p className="text-muted mt-12">
-            <Link href="/integrations" className={link}>All integrations</Link>
-          </p>
-        </div>
-      </PageShell>
+        </Section>
+      </main>
+      <Footer />
       <JsonLd data={trail} />
     </>
   );

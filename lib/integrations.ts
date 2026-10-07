@@ -4,12 +4,31 @@ import { INTEGRATIONS, type Integration } from "@/lib/content";
    docs site for the same tool, so the two never disagree. `pip` is set for a
    tool that connects by a plugin you install; the rest are read from outside
    by one read-only credential and install nothing. */
-type Detail = { summary: string; reads: readonly string[]; pip?: string };
+type Detail = {
+  summary: string;
+  reads: readonly string[];
+  pip?: string;
+  /** what the connection does not do, in the tool's own terms; defaults by how it connects */
+  boundary?: string;
+  /** replaces the default three steps where the tool connects differently */
+  steps?: readonly [string, string, string];
+};
 
 export const slugOf = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 const READ_ONLY = "Connects over HTTPS with one read-only credential. Nothing is installed on your side.";
+
+export const DEFAULT_BOUNDARY = {
+  plugin:
+    "It forwards the tool's own output as it is. Secrets are redacted, and row values and parameters are withheld by default. A failed send never raises an error into your pipeline.",
+  read: "Read-only. It reads shape and run metadata. While investigating a failure it may run small read-only queries: capped, masked, never stored, and switchable off per connection.",
+} as const;
+
+export const DEFAULT_STEPS = {
+  plugin: ["Install the plugin where it runs", "Set your ingest key on every worker", "Run something and watch the first event arrive"],
+  read: ["Open Integrations in the console and choose it", "Create the read-only credential the screen writes for you", "Test the connection and choose how often it is read"],
+} as const;
 
 const DETAIL: Record<string, Detail> = {
   Airflow: {
@@ -34,11 +53,14 @@ const DETAIL: Record<string, Detail> = {
     summary:
       "Convalesce reads the artifact files dbt writes when it runs, from S3, Google Cloud Storage or an HTTPS URL. It never runs dbt and never touches your warehouse through this connection.",
     reads: ["Models and their dependencies (manifest.json)", "Columns and types (catalog.json)", "Run results"],
+    boundary: "It never runs dbt and never touches your warehouse through this connection.",
+    steps: ["Have dbt write its artifacts to S3, Google Cloud Storage or an HTTPS URL", "Point the connect screen at them", "Test the connection and choose how often they are read"],
   },
   Spark: {
     summary:
       "A listener that tells Convalesce about every application, job and SQL query as it runs, in Spark's own words. It reads none of your data and changes nothing about how a job runs.",
     reads: ["Applications, jobs and stages", "SQL queries", "Failures, including PySpark driver failures"],
+    boundary: "It reads none of your data and changes nothing about how a job runs.",
     pip: "convalesce-emit-spark",
   },
   Snowflake: {
@@ -86,6 +108,8 @@ const DETAIL: Record<string, Detail> = {
     summary:
       "Convalesce reads the code behind your pipelines to find the change that broke something. It opens an issue for the people who own that code and can propose a fix as a draft pull request. A person reviews and merges every one.",
     reads: ["Code in the repositories you choose", "Commits and pull requests"],
+    boundary: "A person reviews and merges every pull request, under your repository's own rules.",
+    steps: ["Install the Convalesce app on your GitHub account", "Choose all repositories or only the ones behind your pipelines", "Finish on GitHub and see them listed under Repositories"],
   },
   Lineage: {
     summary:

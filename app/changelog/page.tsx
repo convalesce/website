@@ -4,21 +4,25 @@ import { pageJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata("/changelog");
 
+const link = "text-ink underline underline-offset-4 hover:text-accent-text transition-colors";
+
+const day = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+
 export default function Page() {
   return (
     <>
       <PageShell
-        index="C"
-        label="Changelog"
+        index="/changelog"
+        label="Plugins"
         title="What changed in the plugins."
-        intro="Release notes for the Convalesce plugins that run beside your pipeline: Airflow, Dagster, Prefect, Great Expectations, and the Spark listener. Each Python plugin is one pip install; Spark is two lines of config."
+        intro="Release notes for the Convalesce plugins that run beside your pipeline: Airflow, Dagster, Prefect, Great Expectations and the Spark listener. Each Python plugin is one pip install; Spark is two lines of config."
       >
-        <section aria-labelledby="packages" className="mb-14 max-w-[72ch]">
+        <section aria-labelledby="packages" className="border-line border-t pt-10">
           <h2 id="packages" className="font-display text-h3">Packages</h2>
-          <ul className="border-line mt-5 rounded-lg border">
+          <ul className="mt-5 max-w-[72ch]">
             {PACKAGES.map((pkg) => (
-              <li key={pkg.name} className="border-line flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b px-4 py-3 last:border-b-0">
-                <a href={pkg.href} target="_blank" rel="noopener noreferrer" className="text-ink font-mono text-small underline underline-offset-4">
+              <li key={pkg.name} className="border-line grid gap-x-6 gap-y-0.5 border-b py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-baseline">
+                <a href={pkg.href} target="_blank" rel="noopener noreferrer" className={`${link} font-mono text-mono-sm break-all sm:text-mono`}>
                   {pkg.name}
                 </a>
                 <span className="text-faint text-small">{pkg.for}</span>
@@ -27,24 +31,32 @@ export default function Page() {
           </ul>
         </section>
 
-        <ol className="max-w-[72ch]">
+        <ol className="border-line mt-14 border-t">
           {CHANGELOG.map((release) => (
-            <li key={release.version} id={`v${release.version}`} className="border-line scroll-mt-24 border-t py-9 first:border-t-0 first:pt-0">
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <h2 className="font-display text-h3">{release.version}</h2>
-                <time dateTime={release.date} className="mono-label">{release.date}</time>
+            <li
+              key={release.version}
+              id={`v${release.version}`}
+              className="border-line grid scroll-mt-24 gap-x-10 gap-y-3 border-b py-9 lg:grid-cols-[11rem_minmax(0,1fr)]"
+            >
+              <div className="lg:sticky lg:top-24 lg:self-start">
+                <h2 className="font-display text-h2 tabular-nums">{release.version}</h2>
+                <time dateTime={release.date} className="text-faint text-small mt-1 block tabular-nums">
+                  {day.format(new Date(release.date))}
+                </time>
               </div>
-              <p className="text-ink mt-2">{release.summary}</p>
-              <ul className="text-muted marker:text-faint mt-4 list-disc space-y-2 pl-5">
-                {release.changes.map((change) => (
-                  <li key={change} className="pl-1">{change}</li>
-                ))}
-              </ul>
-              <p className="mt-4">
-                <a href={releaseUrl(release.version)} target="_blank" rel="noopener noreferrer" className="text-ink text-small underline underline-offset-4">
-                  Release {release.version} on GitHub
-                </a>
-              </p>
+              <div className="max-w-[68ch]">
+                <p className="text-ink text-pretty">{release.summary}</p>
+                <ul className="text-muted marker:text-faint mt-4 list-disc space-y-2 pl-5">
+                  {release.changes.map((change) => (
+                    <li key={change} className="pl-1 text-pretty">{change}</li>
+                  ))}
+                </ul>
+                <p className="mt-5">
+                  <a href={releaseUrl(release.version)} target="_blank" rel="noopener noreferrer" className={`${link} text-small`}>
+                    Release {release.version} on GitHub
+                  </a>
+                </p>
+              </div>
             </li>
           ))}
         </ol>
