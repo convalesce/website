@@ -29,7 +29,7 @@ const LISTS: Record<VariantSlug, (props: { data: Loaded }) => React.ReactNode> =
   lineage: LineageList,
   editorial: EditorialList,
   "field-manual": ManualList,
-  "field-report": (props) => <ManualList {...props} slug="field-report" report />,
+  "field-report": (props) => <ReportList {...props} slug="field-report" boxed />,
 };
 
 export default async function Page({ params }: { params: Promise<Params> }) {

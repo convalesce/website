@@ -22,7 +22,7 @@ import {
   measure,
   prose,
 } from "./shell";
-import { SAMPLES, listPath, postPath } from "./variants";
+import { SAMPLES, listPath, postPath, type VariantSlug } from "./variants";
 
 const SLUG = "incident-report";
 
@@ -382,7 +382,16 @@ export function ReportPost({ data }: { data: Loaded }) {
 const cols =
   "lg:grid lg:grid-cols-[7rem_minmax(0,1fr)_15rem_7rem_7.5rem] lg:gap-x-8";
 
-export function ReportList({ data }: { data: Loaded }) {
+export function ReportList({
+  data,
+  slug = SLUG,
+  boxed = false,
+}: {
+  data: Loaded;
+  slug?: VariantSlug;
+  /** the rows held in the site's rounded box, as the field report sets them */
+  boxed?: boolean;
+}) {
   const { post, facts: f } = data;
   return (
     <LabFrame list>
@@ -392,10 +401,12 @@ export function ReportList({ data }: { data: Loaded }) {
         </h1>
         <p className="text-muted mt-6 max-w-[62ch] text-pretty">{LIST.intro}</p>
       </header>
-      <div className="mt-12 lg:mt-16">
+      <div
+        className={`mt-12 lg:mt-16 ${boxed ? "border-line overflow-hidden rounded-lg border px-5 lg:px-6" : ""}`}
+      >
         <div
           aria-hidden="true"
-          className={`text-faint text-small border-line border-b pb-3 max-lg:hidden ${cols}`}
+          className={`text-faint text-small border-line border-b pb-3 max-lg:hidden ${boxed ? "pt-4" : ""} ${cols}`}
         >
           <span>Filed</span>
           <span>Report</span>
@@ -403,7 +414,7 @@ export function ReportList({ data }: { data: Loaded }) {
           <span>Wrong for</span>
           <span>Outcome</span>
         </div>
-        <ol>
+        <ol className={boxed ? "-mb-px" : ""}>
           <li className={`border-line border-b py-7 ${cols} max-lg:space-y-3`}>
             <time
               dateTime={post.date}
@@ -414,7 +425,7 @@ export function ReportList({ data }: { data: Loaded }) {
             <div>
               <h2 className="font-display text-h2 text-balance">
                 <Link
-                  href={postPath(SLUG)}
+                  href={postPath(slug)}
                   className="hover:text-accent-text transition-colors"
                 >
                   {post.title}
