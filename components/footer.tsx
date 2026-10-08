@@ -31,23 +31,8 @@ export function Footer() {
       <FrameWidth>
         <div className="on-brand rounded-lg p-7 sm:p-9 lg:p-10">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="flex flex-col lg:col-span-2">
+            <div className="lg:col-span-2">
               <Logo />
-              <a
-                href="https://smollaunch.com"
-                target="_blank"
-                rel="noopener"
-                className="mt-8 block w-fit sm:mt-auto"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element -- a badge served by its issuer */}
-                <img
-                  src="https://smollaunch.com/badges/featured.svg"
-                  alt="Convalesce — Featured on Smol Launch"
-                  loading="lazy"
-                  width={150}
-                  height={36}
-                />
-              </a>
             </div>
 
             {COLUMNS.map((column) => (
@@ -68,6 +53,24 @@ export function Footer() {
                 </ul>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 flex justify-end">
+            <a
+              href="https://smollaunch.com"
+              target="_blank"
+              rel="noopener"
+              className="block w-fit"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element -- a badge served by its issuer */}
+              <img
+                src="https://smollaunch.com/badges/featured.svg"
+                alt="Convalesce — Featured on Smol Launch"
+                loading="lazy"
+                width={150}
+                height={36}
+              />
+            </a>
           </div>
         </div>
 
