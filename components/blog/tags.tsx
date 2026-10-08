@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { TAGS, tagPath } from "@/lib/blog";
 
+import { ThemeToggle } from "./theme-toggle";
+
 /* On a touch screen a chip is tall enough for a finger; with a mouse it stays slim. */
 const chip = "mono-label inline-flex items-center gap-1.5 rounded-sm border px-3 py-2 transition-colors pointer-coarse:min-h-10";
 const idle = "border-line !text-muted hover:border-ink/40 hover:!text-ink";
@@ -23,7 +25,7 @@ export function TagList({ tags }: { tags: readonly string[] }) {
   );
 }
 
-/** Every tag in use, as a row of links, with the feed beside it; `active` is the tag being shown, or none for the full list. */
+/** Every tag in use, as a row of links, with the feed and the reading theme beside it; `active` is the tag being shown, or none for the full list. */
 export function TagFilter({ active }: { active?: string }) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
@@ -52,13 +54,16 @@ export function TagFilter({ active }: { active?: string }) {
           ))}
         </ul>
       </nav>
-      <a
-        href="/blog/rss.xml"
-        className="text-muted hover:text-ink text-small inline-flex min-h-11 items-center gap-1.5 transition-colors"
-      >
-        <Rss aria-hidden="true" className="size-4" />
-        RSS
-      </a>
+      <div className="flex items-center gap-4">
+        <a
+          href="/blog/rss.xml"
+          className="text-muted hover:text-ink text-small inline-flex min-h-11 items-center gap-1.5 transition-colors"
+        >
+          <Rss aria-hidden="true" className="size-4" />
+          RSS
+        </a>
+        <ThemeToggle className="border-line rounded-md border p-1" />
+      </div>
     </div>
   );
 }

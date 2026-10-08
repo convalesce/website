@@ -4,6 +4,7 @@ import { isValidElement, type ReactNode } from "react";
 
 import { ByHand } from "@/components/blog/by-hand";
 import { Callout } from "@/components/blog/callout";
+import { Checklist, Window } from "@/components/blog/marks";
 import { Timeline } from "@/components/blog/timeline";
 import { Trail } from "@/components/blog/trail";
 import { textLink } from "@/components/ui/text-link";
@@ -13,14 +14,14 @@ import { SITE, outside } from "@/lib/content";
 /* How a post's markdown is drawn, and the components a post may use without
    importing them. Every size and colour is a token from globals.css. */
 
-const textOf = (node: ReactNode): string => {
+export const textOf = (node: ReactNode): string => {
   if (typeof node === "string" || typeof node === "number") return String(node);
   if (Array.isArray(node)) return node.map(textOf).join("");
   if (isValidElement<{ children?: ReactNode }>(node)) return textOf(node.props.children);
   return "";
 };
 
-const components = {
+export const components = {
   /* The id is made from the heading's own words by the same function the
      table of contents uses on the source, so the two cannot drift. */
   h2: ({ children }) => (
@@ -78,8 +79,10 @@ const components = {
   img: ({ src, alt }) => <img src={src} alt={alt} loading="lazy" className="border-line my-8 h-auto max-w-full rounded-lg border" />,
   ByHand,
   Callout,
+  Checklist,
   Timeline,
   Trail,
+  Window,
 } satisfies MDXComponents;
 
 export function useMDXComponents(): MDXComponents {

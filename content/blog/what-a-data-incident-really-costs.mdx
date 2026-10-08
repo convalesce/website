@@ -3,6 +3,7 @@ title: "The hour nobody budgets for: what a data incident really costs"
 description: "A failed job costs more than the rerun. Most of the bill is the time one engineer spends finding out what happened, and the people who wait while they do."
 date: 2026-10-08
 tags: [incidents, on-call, data-teams]
+waited: [Analysts, dashboards, downstream jobs, a customer-facing number]
 ---
 
 A data incident rarely starts with an alarm. It starts with a message.
@@ -14,8 +15,8 @@ Someone in finance opens the morning dashboard and the revenue number looks low.
   events={[
     { time: "08:50", what: "The revenue number on the morning dashboard looks low.", state: "fail" },
     { time: "09:05", what: "Someone in finance asks in chat whether the number is right." },
-    { time: "09:10", what: "The engineer on call puts their own work down and starts looking." },
-    { time: "10:25", what: "The cause is found, 75 minutes after the engineer started." },
+    { time: "09:10", what: "The engineer on call puts their own work down and starts looking.", mark: "started" },
+    { time: "10:25", what: "The cause is found, 75 minutes after the engineer started.", mark: "found" },
     { time: "10:40", what: "The fix goes out and the dashboard is right again.", state: "ok" },
   ]}
 />
@@ -23,6 +24,8 @@ Someone in finance opens the morning dashboard and the revenue number looks low.
 This post is about what happens next, and what it costs. It is the first in a series. Each later post takes one real failure and walks through it step by step. This one sets out the problem they all share.
 
 ## What it looks like from the inside
+
+<Window from="08:50" to="09:10" />
 
 Incidents come in two common shapes.
 
@@ -33,6 +36,8 @@ In the second, nothing fails at all. Every job finishes and every status is gree
 Then the questions arrive. Is the dashboard safe to use? Should the weekly report wait? Did last night's export go out with the bad figures? One engineer, often whoever is on call, stops what they were doing and starts to dig.
 
 ## Where the time goes
+
+<Window from="09:10" to="10:25" />
 
 The fix itself is often small: a cast, a filter, a rerun. What takes the time is everything before the fix, which is working out what happened.
 
@@ -57,6 +62,8 @@ Two things stand out. Almost none of the work is typing a fix. And the steps are
 
 ## Who is waiting
 
+<Window from="08:50" to="10:40" />
+
 While one person digs, other people wait.
 
 - **Analysts** either stop work, or carry on and risk building on a wrong number.
@@ -68,6 +75,8 @@ The engineer's time is the part you can see. The waiting is wider, and it grows 
 
 ## Why the cost stays hidden
 
+<Window after />
+
 Nobody sends an invoice for a data incident. The cost is paid in engineer hours and in decisions that were made late, or made on a wrong number. Neither appears as a line in a budget.
 
 It hides because each incident looks small. No single one seems worth a meeting. The work that was planned for that morning slips quietly, and the slip is blamed on the plan.
@@ -78,11 +87,15 @@ It also hides because it is rarely written down. Once the job is green again, ev
 
 Most of the time in the list above goes on finding context that was never written down or kept. A good part of that context can be put in place with habits, and with tools you most likely have already.
 
+<Checklist>
+
 - **Give every table an owner.** A name, written where people will look. It turns "who knows about this?" from a search into a lookup.
 - **Check at the boundaries.** Test data where it enters your systems and where it leaves: row counts, types, empty values in columns that should never be empty. A check at the edge turns a silent wrong number into a loud failure, which is the cheaper kind.
 - **Keep lineage, even a rough one.** Knowing what feeds a table, and what that table feeds, removes most of the tracing.
 - **Keep run history.** If you can see when a job last succeeded and what was different about that run, the question "what changed?" has somewhere to start.
 - **Write down causes.** Two lines per incident will do: what broke, why, and what fixed it. The second time is then shorter than the first.
+
+</Checklist>
 
 None of this stops incidents from happening. It shortens the time each one takes.
 

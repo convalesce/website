@@ -6,7 +6,11 @@ This file is not rendered. One post is one file, `<slug>.mdx`, and the file name
 - Optional front matter: `updated` (the day the content last changed) and `scenario` (the test scenario a walkthrough follows; for our reference, never shown).
 - Quote a value that contains a colon. Reading time is worked out from the text; do not write it.
 - Start headings at `##`. The page supplies the `h1`, and the `##` headings become the table of contents.
-- `<Timeline events={[{ time, what, state? }]} />`: what went red, in order. `state` is `"fail"` or `"ok"`.
+- Optional front matter: `waited`, a list of who was held up, shown with the facts at the top of the post.
+- `<Timeline events={[{ time, what, state?, mark? }]} />`: what went red, in order, with times as `HH:MM`. `state` is `"fail"` or `"ok"`. `mark` is `"started"` on the moment someone started looking and `"found"` on the moment the cause was found. The facts box and the scale at the top of the post are worked out from these.
+- `<Window from="08:50" to="09:10" />` on its own line under a `##` heading: the part of the Timeline that section is about. `<Window after />` for what comes after the fix.
+- A list whose every item opens with a bold lead is drawn as a box of key points, and its leads appear in the outline. Put `<Checklist>` and `</Checklist>` around such a list, with a blank line inside each, to draw it as a list to tick.
+- The first paragraph of each section stays on the page and the rest folds under "The full account", so open each section with the line that matters most.
 - `<Trail steps={[{ step, finding }]} />`: numbered investigation steps, each with what it showed.
 - `<ByHand estimate="Our estimate for ..." steps={[{ step, minutes, note? }]} />`: the same work done by a person. The `estimate` label is required and must contain the word "estimate"; the total is added up for you.
 - `<Callout tone="note|warn" title="...">text</Callout>`: a short aside. Tables, code blocks, quotes, lists and images (with alt text) are plain markdown.

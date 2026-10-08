@@ -15,6 +15,8 @@ export type FrontMatter = {
   scenario?: string;
   /** the day its content last changed, as YYYY-MM-DD */
   updated?: string;
+  /** who was held up while the failure was traced, for the facts at the top of the post */
+  waited?: string[];
 };
 
 export type Heading = { id: string; text: string };
@@ -34,7 +36,7 @@ export type Source = {
 export const BLOG_DIR = join(process.cwd(), "content/blog");
 
 const REQUIRED = ["title", "description", "date", "tags"] as const;
-const KNOWN = [...REQUIRED, "scenario", "updated"];
+const KNOWN = [...REQUIRED, "scenario", "updated", "waited"];
 const WORDS_PER_MINUTE = 220;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -193,6 +195,7 @@ export function problems(sources: readonly Source[], today: string, reserved: re
       else if (typeof date === "string" && updated < date) say("updated is earlier than date");
     }
     if (tags !== undefined && !Array.isArray(tags)) say('"tags" must be a list');
+    if (post.data.waited !== undefined && !Array.isArray(post.data.waited)) say('"waited" must be a list');
     if (Array.isArray(tags)) {
       for (const tag of tags) if (!SLUG.test(tag)) say(`tag "${tag}" must be lowercase letters, digits and single hyphens`);
       if (new Set(tags).size !== tags.length) say("a tag is listed twice");

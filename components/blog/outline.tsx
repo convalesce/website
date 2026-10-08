@@ -1,12 +1,28 @@
 "use client";
 
-import { useReading } from "./reading";
+import { useEffect, useState } from "react";
 
 type Entry = { id: string; title: string; points: readonly string[] };
 
-/** The page's outline, with each section's key lines under it and the section being read marked. */
-export function ManualOutline({ entries }: { entries: readonly Entry[] }) {
-  const at = useReading(entries.map((e) => e.id));
+/* A section counts as being read once its top has passed this far down the window. */
+const LINE = 0.4;
+
+/** A post's sections as links, each with its key lines under it and the one being read marked. */
+export function Outline({ entries }: { entries: readonly Entry[] }) {
+  const [at, setAt] = useState(-1);
+
+  useEffect(() => {
+    const targets = entries.map(({ id }) => document.getElementById(id));
+    const mark = () => {
+      const line = window.innerHeight * LINE;
+      setAt(targets.findLastIndex((target) => target !== null && target.getBoundingClientRect().top <= line));
+    };
+    // fires as a section crosses the line in either direction, and once at the start
+    const observer = new IntersectionObserver(mark, { rootMargin: `0px 0px -${(1 - LINE) * 100}% 0px` });
+    targets.forEach((target) => target && observer.observe(target));
+    return () => observer.disconnect();
+  }, [entries]);
+
   return (
     <ol className="max-lg:flex max-lg:gap-x-5">
       {entries.map((entry, i) => (

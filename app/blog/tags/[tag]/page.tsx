@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { loadPost } from "@/components/blog/post-content";
 import { PostList } from "@/components/blog/post-list";
 import { TagFilter } from "@/components/blog/tags";
 import { PageShell } from "@/components/page-shell";
@@ -34,7 +35,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     >
       <TagFilter active={tag} />
       <div className="mt-10">
-        <PostList posts={posts} />
+        <PostList posts={posts} facts={(await loadPost(posts[0])).facts} />
       </div>
     </PageShell>
   );

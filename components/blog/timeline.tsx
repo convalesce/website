@@ -4,6 +4,8 @@ type Event = {
   what: string;
   /** "fail" marks what went red, "ok" what recovered; the rest are plain */
   state?: "fail" | "ok";
+  /** the moment someone started looking, and the moment the cause was found; the post's page draws its facts from them */
+  mark?: "started" | "found";
 };
 
 const dot = { fail: "bg-fail", ok: "bg-accent", plain: "bg-faint" } as const;
