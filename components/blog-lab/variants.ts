@@ -1,4 +1,4 @@
-/* The lab's register: six answers to "what is a Convalesce post, as an object?". */
+/* The lab's register: six answers, and one that joins two of them, to "what is a Convalesce post, as an object?". */
 export const VARIANTS = [
   {
     slug: "incident-report",
@@ -29,6 +29,11 @@ export const VARIANTS = [
     slug: "field-manual",
     name: "Dense field manual",
     idea: "The post is a reference page: an outline that never leaves, the key lines and checklists on the surface, the narrative folded under them.",
+  },
+  {
+    slug: "field-report",
+    name: "Field report",
+    idea: "Samples 6 and 1 together: the manual's permanent outline, folded narrative and checklist, opened by the report's facts and its morning drawn to scale, with each section placed on that morning.",
   },
 ] as const;
 

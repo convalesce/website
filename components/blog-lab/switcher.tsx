@@ -12,7 +12,7 @@ import { VARIANTS, listPath, postPath } from "./variants";
 const key = "text-muted hover:text-ink hover:bg-ink/[0.06] inline-flex size-11 shrink-0 items-center justify-center rounded-md transition-colors";
 const tab = "text-muted hover:text-ink aria-[current=page]:bg-ink/[0.1] aria-[current=page]:text-ink text-small inline-flex h-9 items-center rounded-sm px-3 transition-colors";
 
-/** Flips between the six samples, keeping to the post or the list, and between the two reading themes. Left and right arrow keys step through the samples. */
+/** Flips between the samples, keeping to the post or the list, and between the two reading themes. Left and right arrow keys step through the samples. */
 export function Switcher() {
   const router = useRouter();
   const [, slug, view] = usePathname().split("/").filter(Boolean);
@@ -64,7 +64,7 @@ export function Switcher() {
           List
         </Link>
         <span aria-hidden="true" className="bg-line mx-1 h-6 w-px" />
-        <Link href="/blog-lab" aria-label="All six samples" className={key}>
+        <Link href="/blog-lab" aria-label="All samples" className={key}>
           <LayoutGrid aria-hidden="true" className="size-4" />
         </Link>
         <span aria-hidden="true" className="bg-line mx-1 h-6 w-px max-sm:hidden" />

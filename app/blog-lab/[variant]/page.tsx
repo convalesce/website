@@ -29,6 +29,7 @@ const POST: Record<VariantSlug, (props: { data: Loaded }) => React.ReactNode> = 
   lineage: LineagePost,
   editorial: EditorialPost,
   "field-manual": ManualPost,
+  "field-report": (props) => <ManualPost {...props} slug="field-report" report />,
 };
 
 export default async function Page({ params }: { params: Promise<Params> }) {

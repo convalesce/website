@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { BlogTheme } from "@/components/blog/theme";
 import { Switcher } from "@/components/blog-lab/switcher";
 
-/* A design lab for the blog: six samples to choose between. Not part of the
+/* A design lab for the blog: samples to choose between. Not part of the
    site: no page links here, and nothing here is indexed. */
 export const metadata: Metadata = {
   title: "Blog design lab",

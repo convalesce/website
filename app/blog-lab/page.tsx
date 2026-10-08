@@ -15,7 +15,7 @@ export default function Page() {
       <main id="main">
         <Section index="/blog-lab" label="Design lab" pad="tight">
           <header className="pt-12 sm:pt-16 lg:pt-24">
-            <h1 className="font-display text-display max-w-[20ch] text-balance">Six ways a post could be built.</h1>
+            <h1 className="font-display text-display max-w-[20ch] text-balance">Seven ways a post could be built.</h1>
             <p className="text-muted mt-6 max-w-[62ch] text-pretty">
               Each sample sets the same post and the same list a different way. Open two side by side, or step through them with the left and right arrow keys. Rows marked Sample stand in for posts not yet written.
             </p>
