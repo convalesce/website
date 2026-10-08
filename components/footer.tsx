@@ -33,6 +33,21 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-2">
               <Logo />
+              <a
+                href="https://smollaunch.com"
+                target="_blank"
+                rel="noopener"
+                className="mt-6 block w-fit"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element -- a badge served by its issuer */}
+                <img
+                  src="https://smollaunch.com/badges/featured.svg"
+                  alt="Convalesce — Featured on Smol Launch"
+                  loading="lazy"
+                  width={250}
+                  height={60}
+                />
+              </a>
             </div>
 
             {COLUMNS.map((column) => (

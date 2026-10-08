@@ -34,7 +34,7 @@ export const config: VercelConfig = {
         {
           key: "Content-Security-Policy",
           value:
-            "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://va.vercel-scripts.com https://www.google.com; frame-src https://www.google.com https://recaptcha.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+            "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://smollaunch.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://va.vercel-scripts.com https://www.google.com; frame-src https://www.google.com https://recaptcha.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
         },
         // the site embeds nothing and should never be embedded
         { key: "X-Frame-Options", value: "DENY" },
