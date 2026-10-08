@@ -38,6 +38,59 @@
   --fail-soft: rgb(248 113 113 / 0.14);
 }
 
+/* The blog's light reading theme. Only an element carrying this attribute
+   takes it, and only components/blog/theme.tsx sets one, so no page outside
+   the blog can turn light. Dark stays the default above, untouched.
+   The page is warm paper, not white, and the ink is a green-black, so the
+   deep brand green still belongs on it. The bright greens and the red are
+   retuned darker: at their dark-theme values they fall under 2:1 on paper. */
+[data-blog-theme="light"] {
+  --ink-c: 22 27 24;
+
+  --bg: #f6f4ee;
+  --surface: #efece4;
+  --panel: #e8e4da;
+
+  --ink: rgb(var(--ink-c));
+  --soft: rgb(var(--ink-c) / 0.88);
+  --muted: rgb(var(--ink-c) / 0.72);
+  --faint: rgb(var(--ink-c) / 0.64);
+  --line: rgb(var(--ink-c) / 0.16);
+  --line-soft: rgb(var(--ink-c) / 0.09);
+
+  --brand: #142820;
+  --brand-hover: #1f3a30;
+  --brand-rim: rgb(15 122 85 / 0.4);
+  --on-brand: #f4f7f6;
+
+  --accent: #0f7a55;
+  --accent-text: #0b6345;
+  --accent-soft: rgb(15 122 85 / 0.1);
+  --on-accent: #ffffff;
+
+  --fail: #b42318;
+  --fail-soft: rgb(180 35 24 / 0.1);
+
+  color-scheme: light;
+}
+
+/* The brand panel is the same deep green in both themes, so what sits on it
+   keeps the bright greens that read against it. */
+[data-blog-theme="light"] .on-brand {
+  --accent: #34d399;
+  --accent-text: #6ee7b7;
+  --accent-soft: rgb(52 211 153 / 0.1);
+  --on-accent: #0a0a0a;
+  --fail: #f87171;
+}
+
+/* The page behind the wrapper, so nothing black shows at its edges. */
+html:has([data-blog-theme="light"]),
+body:has([data-blog-theme="light"]) {
+  background: #f6f4ee;
+  color-scheme: light;
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
