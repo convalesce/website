@@ -28,12 +28,12 @@ export function ByHand({
 }) {
   const total = steps.reduce((sum, item) => sum + item.minutes, 0);
   return (
-    <figure className="border-line bg-surface my-8 overflow-hidden rounded-lg border">
-      <figcaption className="border-line flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b px-4 py-3 sm:px-5">
+    <figure className="border-line my-10 border-y">
+      <figcaption className="border-line flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b py-3">
         <span className="mono-label">{title}</span>
-        <span className="mono-label border-line text-muted rounded-sm border px-2 py-1">{estimate}</span>
+        <span className="text-ink text-small">{estimate}</span>
       </figcaption>
-      <ol className="px-4 sm:px-5">
+      <ol>
         {steps.map((item, i) => (
           <li
             key={item.step}
@@ -54,9 +54,10 @@ export function ByHand({
           </li>
         ))}
       </ol>
-      <p className="border-line flex items-baseline justify-between gap-4 border-t px-4 py-3.5 sm:px-5">
-        <span className="text-ink text-small font-medium">Total, estimated</span>
-        <span className="text-accent-text text-mono font-mono whitespace-nowrap tabular-nums">
+      {/* the sum is what the figure is for, so it is set a full step above the rows */}
+      <p className="border-line flex items-baseline justify-between gap-4 border-t py-4">
+        <span className="text-ink font-medium">Total, estimated</span>
+        <span className="font-display text-h2 text-ink whitespace-nowrap tabular-nums">
           <span aria-hidden="true">~</span>
           <span className="sr-only">about </span>
           {span(total)}

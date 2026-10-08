@@ -1,11 +1,10 @@
 import { JsonLd, PageShell } from "@/components/page-shell";
+import { textLink } from "@/components/ui/text-link";
 import { CHANGELOG, PACKAGES, releaseUrl } from "@/lib/changelog";
 import { pageJsonLd, pageMetadata } from "@/lib/seo";
 import { latestVersion } from "@/lib/versions";
 
 export const metadata = pageMetadata("/changelog");
-
-const link = "text-ink underline underline-offset-4 hover:text-accent-text transition-colors";
 
 const day = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
@@ -24,7 +23,7 @@ export default async function Page() {
           <ul className="mt-5 max-w-[72ch]">
             {PACKAGES.map((pkg, i) => (
               <li key={pkg.name} className="border-line grid gap-x-6 gap-y-0.5 border-b py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-baseline">
-                <a href={pkg.href} target="_blank" rel="noopener noreferrer" className={`${link} font-mono text-mono-sm break-all sm:text-mono`}>
+                <a href={pkg.href} target="_blank" rel="noopener noreferrer" className={`${textLink} font-mono text-mono-sm break-all sm:text-mono`}>
                   {pkg.name}
                 </a>
                 <span className="text-faint text-small">
@@ -56,7 +55,7 @@ export default async function Page() {
                   ))}
                 </ul>
                 <p className="mt-5">
-                  <a href={releaseUrl(release.version)} target="_blank" rel="noopener noreferrer" className={`${link} text-small`}>
+                  <a href={releaseUrl(release.version)} target="_blank" rel="noopener noreferrer" className={`${textLink} text-small`}>
                     Release {release.version} on GitHub
                   </a>
                 </p>

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
+import { textLink } from "@/components/ui/text-link";
+
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 declare global {
@@ -88,7 +90,7 @@ export function ContactForm() {
         <h2 ref={thanksRef} tabIndex={-1} className="font-display text-h3 outline-none">
           Thanks, we have it.
         </h2>
-        <p className="text-muted mt-2">A person will reply to the email you gave. In the meantime, the <Link href="/integrations" className="text-ink underline underline-offset-4">integrations</Link> page shows what Convalesce connects to.</p>
+        <p className="text-muted mt-2">A person will reply to the email you gave. In the meantime, the <Link href="/integrations" className={textLink}>integrations</Link> page shows what Convalesce connects to.</p>
       </div>
     );
   }

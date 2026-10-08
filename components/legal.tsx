@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Section } from "@/components/frame";
 import { Nav } from "@/components/nav";
+import { textLink } from "@/components/ui/text-link";
 import { outside } from "@/lib/content";
 import type { Block, LegalPage, Run } from "@/lib/legal";
 
@@ -18,7 +19,7 @@ function Words({ runs }: { runs: readonly Run[] }) {
       {runs.map((run, i) => {
         const words = run.bold ? <strong className="text-ink font-semibold">{run.text}</strong> : run.text;
         return run.href ? (
-          <a key={i} href={run.href} {...outside(run.href)} className="text-ink underline underline-offset-4">
+          <a key={i} href={run.href} {...outside(run.href)} className={textLink}>
             {words}
           </a>
         ) : (

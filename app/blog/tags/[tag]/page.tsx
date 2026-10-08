@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       label="Blog"
       home={SITE.domain}
       title={`Posts tagged ${tag}.`}
-      intro={posts.length === 1 ? "One post carries this tag so far." : `${posts.length} posts carry this tag, newest first.`}
+      intro={posts.length > 1 ? `${posts.length} posts carry this tag, newest first.` : undefined}
     >
       <TagFilter active={tag} />
       <div className="mt-10">

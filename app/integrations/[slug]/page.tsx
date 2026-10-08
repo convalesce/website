@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { Section } from "@/components/frame";
 import { JsonLd } from "@/components/page-shell";
 import { Nav } from "@/components/nav";
+import { textLink } from "@/components/ui/text-link";
 import { ToolLogo } from "@/components/ui/tool-logo";
 import { SITE } from "@/lib/content";
 import { latestVersion } from "@/lib/versions";
@@ -176,7 +177,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   return (
     <>
-      <Nav />
+      <Nav current={`/integrations/${tool.slug}`} />
       <main id="main">
         <Section index={`/integrations/${tool.slug}`} label={tool.kind} pad="tight">
           <nav aria-label="Breadcrumb" className="text-small text-faint pt-8">
@@ -255,7 +256,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 {tool.pip ? (
                   <p className="text-faint text-small mt-6">
                     Each release is listed in the{" "}
-                    <Link href="/changelog" className="text-ink underline underline-offset-4">
+                    <Link href="/changelog" className={textLink}>
                       changelog
                     </Link>
                     .

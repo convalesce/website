@@ -12,9 +12,9 @@ const word = { fail: "Failed", ok: "Recovered" } as const;
 /** What happened, in the order it happened. */
 export function Timeline({ title = "Timeline", events }: { title?: string; events: readonly Event[] }) {
   return (
-    <figure className="border-line bg-surface my-8 overflow-hidden rounded-lg border">
-      <figcaption className="border-line mono-label border-b px-4 py-3 sm:px-5">{title}</figcaption>
-      <ol className="px-4 sm:px-5">
+    <figure className="border-line my-10 border-y">
+      <figcaption className="border-line mono-label border-b py-3">{title}</figcaption>
+      <ol>
         {events.map((event) => (
           <li
             key={`${event.time} ${event.what}`}

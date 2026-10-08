@@ -13,6 +13,8 @@
   --panel: #141414;
 
   --ink: rgb(var(--ink-c));
+  /* long-form reading text: under full ink so headings still lead, well over muted */
+  --soft: rgb(var(--ink-c) / 0.84);
   --muted: rgb(var(--ink-c) / 0.64);
   --faint: rgb(var(--ink-c) / 0.5);
   --line: rgb(var(--ink-c) / 0.1);
@@ -41,6 +43,7 @@
   --color-surface: var(--surface);
   --color-panel: var(--panel);
   --color-ink: var(--ink);
+  --color-soft: var(--soft);
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   --color-line: var(--line);
@@ -82,6 +85,16 @@
   --text-h3--line-height: 1.4;
   --text-h3--letter-spacing: -0.02em;
   --text-h3--font-weight: 600;
+
+  /* A standfirst: the one sentence under a title that says what the page holds. */
+  --text-lead: 1.25rem;
+  --text-lead--line-height: 1.45;
+  --text-lead--letter-spacing: -0.02em;
+
+  /* Long-form reading: a post's paragraphs and lists. */
+  --text-prose: 1.0625rem;
+  --text-prose--line-height: 1.65;
+  --text-prose--letter-spacing: -0.011em;
 
   --text-body: 1rem;
   --text-body--line-height: 1.6;
@@ -146,6 +159,7 @@ body {
 .on-brand {
   --ink-c: 244 247 246;
   --ink: rgb(var(--ink-c));
+  --soft: rgb(var(--ink-c) / 0.86);
   --muted: rgb(var(--ink-c) / 0.7);
   --faint: rgb(var(--ink-c) / 0.52);
   --line: rgb(var(--ink-c) / 0.16);

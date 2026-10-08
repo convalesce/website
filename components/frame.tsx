@@ -35,9 +35,10 @@ export function Section({
           its own panel and the next section's rails start beneath it; the first
           one's start beneath the nav, which is a panel of the same kind */}
       <div className="border-line mx-auto w-full max-w-[1230px] rounded-b-lg border-x border-b">
-        <div className="flex items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <span className="mono-label">{index}</span>
-          <span className="mono-label">{label}</span>
+        <div className="flex items-baseline justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
+          {/* a long path wraps on a phone and is never cut */}
+          <span className="mono-label min-w-0 wrap-anywhere">{index}</span>
+          <span className="mono-label shrink-0">{label}</span>
         </div>
         <div className={`${padding} ${className}`}>{children}</div>
       </div>

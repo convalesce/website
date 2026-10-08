@@ -7,9 +7,11 @@ import { CTA, NAV_LINKS, outside } from "@/lib/content";
 
 /* `home` is set on the blog's pages. They answer on the blog's own host,
    where "/" is the post list, so a link to a section of the home page has to
-   name the main site in full. */
-export function Nav({ home = "" }: { home?: string }) {
+   name the main site in full. `current` is the path of the page being shown,
+   as the app keeps it; the link to its section is marked. */
+export function Nav({ home = "", current = "" }: { home?: string; current?: string }) {
   const at = (href: string) => (href.startsWith("/#") ? `${home}${href}` : href);
+  const here = (href: string) => current === href || current.startsWith(`${href}/`);
   return (
     // the bar is the page's first panel: the same width, rails and rounded
     // foot as every section, so the first section's rails start beneath it
@@ -32,8 +34,8 @@ export function Nav({ home = "" }: { home?: string }) {
               key={link.href}
               href={at(link.href)}
               {...outside(link.href)}
-              // six links do not fit beside the button on a tablet, so the newest waits for a wider screen
-              className={`text-muted hover:text-ink text-small min-h-11 items-center transition-colors ${link.href === "/blog" ? "hidden lg:inline-flex" : "inline-flex"}`}
+              aria-current={here(link.href) ? "page" : undefined}
+              className="text-muted hover:text-ink aria-[current=page]:text-ink text-small inline-flex min-h-11 items-center transition-colors"
             >
               {link.label}
             </a>

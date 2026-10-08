@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { JsonLd, PageShell } from "@/components/page-shell";
 import { Grid } from "@/components/ui/grid";
+import { textLink } from "@/components/ui/text-link";
 import { ToolLogo } from "@/components/ui/tool-logo";
 import { SITE } from "@/lib/content";
 import { INTEGRATION_PAGES, type IntegrationPage } from "@/lib/integrations";
@@ -83,11 +84,11 @@ export default function Page() {
 
         <p className="text-muted mt-14 max-w-[60ch]">
           Do not see your tool?{" "}
-          <Link href="/contact?topic=integration" className="text-ink underline underline-offset-4">
+          <Link href="/contact?topic=integration" className={textLink}>
             Tell us which one you need next
           </Link>
           , or browse every connector in the{" "}
-          <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className="text-ink underline underline-offset-4">
+          <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className={textLink}>
             docs
           </a>
           .

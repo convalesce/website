@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 import { JsonLd, PageShell } from "@/components/page-shell";
+import { textLink } from "@/components/ui/text-link";
 import { HERO, PRINCIPLES, SITE } from "@/lib/content";
 import { pageJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata("/about");
 
-const link = "text-ink underline underline-offset-4 hover:text-accent-text transition-colors";
 const primary = "btn-primary inline-flex h-11 items-center rounded-md px-5 text-small font-medium whitespace-nowrap";
 
 export default function Page() {
@@ -35,9 +35,9 @@ export default function Page() {
           <h2 id="data" className="font-display text-h2 lg:col-span-4">Your data</h2>
           <p className="text-muted max-w-[60ch] text-pretty lg:col-span-8">
             The details are written down, not promised: the{" "}
-            <Link href="/privacy" className={link}>privacy policy</Link>, the{" "}
-            <Link href="/terms" className={link}>terms of service</Link> and the{" "}
-            <Link href="/dpa" className={link}>data processing addendum</Link>.
+            <Link href="/privacy" className={textLink}>privacy policy</Link>, the{" "}
+            <Link href="/terms" className={textLink}>terms of service</Link> and the{" "}
+            <Link href="/dpa" className={textLink}>data processing addendum</Link>.
           </p>
         </section>
 
@@ -46,7 +46,7 @@ export default function Page() {
           <div className="lg:col-span-8">
             <p className="text-muted max-w-[60ch] text-pretty">
               A question, a tool you need, or something to correct. A person reads every message, and the{" "}
-              <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className={link}>docs</a> cover setup.
+              <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className={textLink}>docs</a> cover setup.
             </p>
             <div className="mt-6">
               <Link href="/contact" className={primary}>Contact us</Link>

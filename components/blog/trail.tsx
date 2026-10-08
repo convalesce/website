@@ -8,9 +8,9 @@ type Step = {
 /** The investigation, one numbered step at a time, each with what it found. */
 export function Trail({ title = "Investigation", steps }: { title?: string; steps: readonly Step[] }) {
   return (
-    <figure className="border-line bg-surface my-8 overflow-hidden rounded-lg border">
-      <figcaption className="border-line mono-label border-b px-4 py-3 sm:px-5">{title}</figcaption>
-      <ol className="px-4 sm:px-5">
+    <figure className="border-line my-10 border-y">
+      <figcaption className="border-line mono-label border-b py-3">{title}</figcaption>
+      <ol>
         {steps.map((item, i) => (
           <li key={item.step} className="border-line grid grid-cols-[2rem_minmax(0,1fr)] gap-x-2 border-t py-4 first:border-t-0">
             <span aria-hidden="true" className="mono-label pt-1 tabular-nums">

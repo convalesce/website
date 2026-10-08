@@ -6,6 +6,7 @@ import { ByHand } from "@/components/blog/by-hand";
 import { Callout } from "@/components/blog/callout";
 import { Timeline } from "@/components/blog/timeline";
 import { Trail } from "@/components/blog/trail";
+import { textLink } from "@/components/ui/text-link";
 import { slugify } from "@/lib/blog-source";
 import { SITE, outside } from "@/lib/content";
 
@@ -18,8 +19,6 @@ const textOf = (node: ReactNode): string => {
   if (isValidElement<{ children?: ReactNode }>(node)) return textOf(node.props.children);
   return "";
 };
-
-const link = "text-ink decoration-ink/40 hover:text-accent-text hover:decoration-accent-text underline underline-offset-4 transition-colors";
 
 const components = {
   /* The id is made from the heading's own words by the same function the
@@ -34,21 +33,21 @@ const components = {
       {children}
     </h3>
   ),
-  p: ({ children }) => <p className="text-muted mt-5 text-pretty first:mt-0">{children}</p>,
+  p: ({ children }) => <p className="text-soft text-prose mt-5 text-pretty first:mt-0">{children}</p>,
   a: ({ href = "", children }) =>
     href.startsWith("/") ? (
-      <Link href={href} className={link}>
+      <Link href={href} className={textLink}>
         {children}
       </Link>
     ) : (
       // a link to the main site stays in the tab; any other address opens beside it
-      <a href={href} {...(href.startsWith(SITE.domain) ? {} : outside(href))} className={link}>
+      <a href={href} {...(href.startsWith(SITE.domain) ? {} : outside(href))} className={textLink}>
         {children}
       </a>
     ),
   strong: ({ children }) => <strong className="text-ink font-semibold">{children}</strong>,
-  ul: ({ children }) => <ul className="text-muted marker:text-faint mt-5 list-disc space-y-2 pl-5">{children}</ul>,
-  ol: ({ children }) => <ol className="text-muted marker:text-faint mt-5 list-decimal space-y-2 pl-5 marker:tabular-nums">{children}</ol>,
+  ul: ({ children }) => <ul className="text-soft text-prose marker:text-faint mt-5 list-disc space-y-2 pl-5">{children}</ul>,
+  ol: ({ children }) => <ol className="text-soft text-prose marker:text-faint mt-5 list-decimal space-y-2 pl-5 marker:tabular-nums">{children}</ol>,
   li: ({ children }) => <li className="pl-1 text-pretty">{children}</li>,
   blockquote: ({ children }) => (
     <blockquote className="border-line [&_p]:text-ink my-8 border-l-2 pl-5">{children}</blockquote>
