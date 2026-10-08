@@ -10,7 +10,9 @@ import {
   PRINCIPLES,
   SITE,
   STEPS,
+  pageUrl,
 } from "@/lib/content";
+import { POSTS } from "@/lib/blog";
 
 /* Both LLM index files are derived from the same copy the page renders. The
    full text adds one thing the page does not spell out: the example incident
@@ -20,9 +22,10 @@ const live = INTEGRATIONS.filter((i) => i.status === "live").map((i) => i.name);
 const soon = INTEGRATIONS.filter((i) => i.status === "soon").map((i) => i.name);
 
 const line = (p: (typeof PAGES)[number]) =>
-  `- [${p.title}](${SITE.domain}${p.path}): ${p.description}`;
+  `- [${p.title}](${pageUrl(p.path)}): ${p.description}`;
 const sitePages = PAGES.filter((p) => p.priority > 0.3).map(line).join("\n");
 const pages = PAGES.filter((p) => p.priority <= 0.3).map(line).join("\n");
+const posts = POSTS.map((p) => `- [${p.title}](${p.url}) (${p.date}): ${p.description}`).join("\n");
 
 export function llmsIndex() {
   return `# ${SITE.company}
@@ -40,6 +43,10 @@ ${SITE.company} is a developer tool for data teams. Its agents pick up a failed 
 ${sitePages}
 - [Docs](${SITE.docs}): how to connect each tool
 - [Full text](${SITE.domain}/llms-full.txt): every section of the site as plain text
+
+## Blog
+
+${posts}
 
 ## Legal
 
@@ -110,6 +117,10 @@ ${principles}
 ## Questions
 
 ${faq}
+
+## Blog
+
+${posts}
 
 ## Get started
 

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { PAGES, SITE } from "@/lib/content";
+import { POSTS } from "@/lib/blog";
+import { PAGES, SITE, pageUrl } from "@/lib/content";
 import { INTEGRATION_PAGES } from "@/lib/integrations";
 
 /* Pinned so lastmod means "the content changed", not "the site rebuilt".
@@ -18,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${SITE.domain}/opengraph-image`],
     },
     ...PAGES.map((page) => ({
-      url: `${SITE.domain}${page.path}`,
+      url: pageUrl(page.path),
       lastModified: new Date(page.updated),
       changeFrequency: page.priority > 0.3 ? ("monthly" as const) : ("yearly" as const),
       priority: page.priority,
@@ -28,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.5,
+    })),
+    ...POSTS.map((post) => ({
+      url: post.url,
+      lastModified: new Date(post.updated ?? post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }
