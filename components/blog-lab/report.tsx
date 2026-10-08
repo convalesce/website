@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
@@ -469,6 +470,87 @@ export function ReportList({
           ))}
         </ol>
       </div>
+    </LabFrame>
+  );
+}
+
+const cell = "bg-bg flex h-full flex-col gap-3";
+
+/* The list as a set of cells in one rounded box, a hairline between them: the
+   newest post across the full width with its report line, the rest two abreast. */
+export function GridList({ data, slug }: { data: Loaded; slug: VariantSlug }) {
+  const { post, facts: f } = data;
+  return (
+    <LabFrame list>
+      <header className="pt-12 sm:pt-16 lg:pt-24">
+        <h1 className="font-display text-display max-w-[20ch] text-balance">
+          {LIST.title}
+        </h1>
+        <p className="text-muted mt-6 max-w-[62ch] text-pretty">{LIST.intro}</p>
+      </header>
+      <ol className="border-line bg-line mt-12 grid gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:mt-16">
+        <li className="sm:col-span-2">
+          <article
+            className={`${cell} hover:bg-surface relative p-6 transition-colors sm:p-8`}
+          >
+            <p className="mono-label">
+              Latest ·{" "}
+              <time dateTime={post.date}>{formatDay(post.date)}</time> ·{" "}
+              {post.minutes} min
+            </p>
+            <h2 className="font-display text-h2 max-w-[28ch] text-balance">
+              <Link
+                href={postPath(slug)}
+                className="after:absolute after:inset-0"
+              >
+                {post.title}
+              </Link>
+            </h2>
+            <p className="text-muted max-w-[62ch] text-pretty">
+              {post.description}
+            </p>
+            <dl className="text-small flex flex-wrap gap-x-8 gap-y-1 pt-1">
+              <div className="flex gap-2">
+                <dt className="text-faint">What failed</dt>
+                <dd className="text-soft">{f.whatFailed}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="text-faint">Wrong for</dt>
+                <dd className="text-soft tabular-nums">
+                  {span(f.fixed - f.first)}
+                </dd>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <dt className="sr-only">Outcome</dt>
+                <dd className="text-soft flex items-baseline gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="bg-accent size-1.5 -translate-y-0.5 rounded-full"
+                  />
+                  Fixed at <span className={time}>{clock(f.fixed)}</span>
+                </dd>
+              </div>
+            </dl>
+            <p className="text-muted text-small mt-auto inline-flex items-center gap-1 pt-2">
+              Read the post
+              <ArrowUpRight aria-hidden="true" className="size-4" />
+            </p>
+          </article>
+        </li>
+        {SAMPLES.map((sample) => (
+          <li key={sample.title}>
+            <article className={`${cell} p-6`}>
+              <p>
+                <Sample />
+              </p>
+              <h2 className="font-display text-h3 text-muted max-w-[30ch] text-balance">
+                {sample.title}
+              </h2>
+              <p className="text-faint text-small mt-auto">Not yet written</p>
+            </article>
+          </li>
+        ))}
+      </ol>
     </LabFrame>
   );
 }

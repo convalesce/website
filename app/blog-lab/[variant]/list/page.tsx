@@ -5,7 +5,7 @@ import { loadPost, type Loaded } from "@/components/blog-lab/content";
 import { EditorialList } from "@/components/blog-lab/editorial";
 import { LineageList } from "@/components/blog-lab/lineage";
 import { ManualList } from "@/components/blog-lab/manual";
-import { ReportList } from "@/components/blog-lab/report";
+import { GridList, ReportList } from "@/components/blog-lab/report";
 import { TrailList } from "@/components/blog-lab/trail";
 import { VARIANTS, variantOf, type VariantSlug } from "@/components/blog-lab/variants";
 
@@ -29,7 +29,7 @@ const LISTS: Record<VariantSlug, (props: { data: Loaded }) => React.ReactNode> =
   lineage: LineageList,
   editorial: EditorialList,
   "field-manual": ManualList,
-  "field-report": (props) => <ReportList {...props} slug="field-report" boxed />,
+  "field-report": (props) => <GridList {...props} slug="field-report" />,
 };
 
 export default async function Page({ params }: { params: Promise<Params> }) {
