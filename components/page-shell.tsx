@@ -12,17 +12,20 @@ export function PageShell({
   label,
   title,
   intro,
+  home,
   children,
 }: {
   index: string;
   label: string;
   title: string;
   intro: string;
+  /** passed to the nav and footer; set on the blog's pages */
+  home?: string;
   children: ReactNode;
 }) {
   return (
     <>
-      <Nav />
+      <Nav home={home} />
       <main id="main">
         <Section index={index} label={label} pad="tight">
           <div className="pt-12 sm:pt-16 lg:pt-24">
@@ -32,7 +35,7 @@ export function PageShell({
           <div className="mt-12 lg:mt-16">{children}</div>
         </Section>
       </main>
-      <Footer />
+      <Footer home={home} />
     </>
   );
 }

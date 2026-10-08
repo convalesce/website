@@ -13,6 +13,15 @@ export const SITE = {
   docs: "https://docs.convalesce.io",
 } as const;
 
+/* The blog is served from its own host: the list at the root, a post at
+   /<slug>. Inside the app the routes stay under /blog, and the host rules in
+   next.config.ts and vercel.ts map one onto the other. Change the address
+   here, and in the two redirects in vercel.ts, which must be literals. */
+export const BLOG = {
+  url: "https://blog.convalesce.io",
+  title: "Convalesce blog",
+} as const;
+
 /* Every page besides the home page, listed once. The sitemap, the LLM index
    and each page's own metadata all read this, so a new page is added here and
    nowhere else. `updated` is the day its content last changed. */
@@ -24,6 +33,14 @@ export const PAGES = [
       "The orchestrators, warehouses, lakes, streams and dashboards Convalesce connects to, with a setup guide for each.",
     updated: "2026-10-06",
     priority: 0.8,
+  },
+  {
+    path: "/blog",
+    title: "Blog",
+    description:
+      "What a data incident looks like from the inside: where the time goes, who waits, and what shortens it, one real failure at a time.",
+    updated: "2026-10-08",
+    priority: 0.7,
   },
   {
     path: "/changelog",
@@ -77,6 +94,9 @@ export const PAGES = [
 
 export type PagePath = (typeof PAGES)[number]["path"];
 
+/** A page's public address. Every page lives on the main host except the blog. */
+export const pageUrl = (path: PagePath) => (path === "/blog" ? `${BLOG.url}/` : `${SITE.domain}${path}`);
+
 /** A link that leaves the site opens beside it, so the page being read stays. */
 export const outside = (href: string) =>
   href.startsWith("http")
@@ -95,6 +115,7 @@ export const NAV_LINKS = [
   { label: "How it works", href: "/#how-it-works" },
   { label: "Integrations", href: "/integrations" },
   { label: "Changelog", href: "/changelog" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;

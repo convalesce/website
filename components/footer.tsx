@@ -17,6 +17,7 @@ const COLUMNS = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
@@ -25,7 +26,9 @@ const COLUMNS = [
   },
 ] as const;
 
-export function Footer() {
+/* `home` is set on the blog's pages, for the reason given in nav.tsx. */
+export function Footer({ home = "" }: { home?: string }) {
+  const at = (href: string) => (href.startsWith("/#") ? `${home}${href}` : href);
   return (
     <footer className="pb-10">
       <FrameWidth>
@@ -42,7 +45,7 @@ export function Footer() {
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
-                        href={link.href}
+                        href={at(link.href)}
                         {...outside(link.href)}
                         className="text-muted hover:text-ink text-small transition-colors max-lg:inline-flex max-lg:min-h-11 max-lg:items-center"
                       >
