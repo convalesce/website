@@ -1,0 +1,82 @@
+---
+title: "The hour nobody budgets for: what a data incident really costs"
+description: "A failed job costs more than the rerun. Most of the bill is the time one engineer spends finding out what happened, and the people who wait while they do."
+date: 2026-10-08
+tags: [incidents, on-call, data-teams]
+---
+
+A data incident rarely starts with an alarm. It starts with a message.
+
+Someone in finance opens the morning dashboard and the revenue number looks low. Or a scheduled job went red overnight and nobody saw it until the first coffee. Either way, the first sign many teams get is a person asking a question in chat: "Is this number right?"
+
+This post is about what happens next, and what it costs. It is the first in a series. Each later post takes one real failure and walks through it step by step. This one sets out the problem they all share.
+
+## What it looks like from the inside
+
+Incidents come in two common shapes.
+
+In the first, something fails loudly. A job stops with an error, the scheduler marks it failed, and an alert lands in a channel. You know that something broke. You do not yet know why, or what else it touched.
+
+In the second, nothing fails at all. Every job finishes and every status is green, but a number is wrong. A column changed type upstream, or a source sent half its usual rows. This shape is worse, because the first person to notice is often someone who uses the data, not someone who runs it.
+
+Then the questions arrive. Is the dashboard safe to use? Should the weekly report wait? Did last night's export go out with the bad figures? One engineer, often whoever is on call, stops what they were doing and starts to dig.
+
+## Where the time goes
+
+The fix itself is often small: a cast, a filter, a rerun. What takes the time is everything before the fix, which is working out what happened.
+
+Here is that work as a list, with a time against each step.
+
+<ByHand
+  title="One failure, traced by hand"
+  estimate="Our estimate for a mid-sized team"
+  steps={[
+    { step: "Find which run failed, and when it last worked", minutes: 10 },
+    { step: "Read the error and the logs around it", minutes: 10 },
+    { step: "Work out whether the data changed or the code did", minutes: 15 },
+    { step: "Trace upstream through lineage to where it started", minutes: 15 },
+    { step: "Check recent commits and deploys", minutes: 10 },
+    { step: "Ask the people who know the business", minutes: 15, note: "Part of this is waiting for a reply." },
+  ]}
+/>
+
+Every time in that list is our estimate for a mid-sized data team. None of them is a measurement of anyone's real incidents. We arrived at them by walking through each step by hand on our own test pipelines and noting how long it took. Your times will differ. A team with good lineage will be quicker at the fourth step. A team whose expert is on holiday will be slower at the last one.
+
+Two things stand out. Almost none of the work is typing a fix. And the steps are not hard, they are scattered. The run history is in one tool, the logs in another, the lineage in a third if it exists at all, and the commits in a fourth. The reason a column means what it means is in somebody's head.
+
+## Who is waiting
+
+While one person digs, other people wait.
+
+- **Analysts** either stop work, or carry on and risk building on a wrong number.
+- **Dashboards** keep showing stale or wrong figures to everyone who opens them. Most of those people never see the chat thread.
+- **Downstream jobs** fail in turn, or run on bad input and pass it along.
+- **A customer-facing number** is sometimes involved: a usage figure, an invoice line, a report that goes out on a schedule.
+
+The engineer's time is the part you can see. The waiting is wider, and it grows for as long as the cause stays unknown.
+
+## Why the cost stays hidden
+
+Nobody sends an invoice for a data incident. The cost is paid in engineer hours and in decisions that were made late, or made on a wrong number. Neither appears as a line in a budget.
+
+It hides because each incident looks small. No single one seems worth a meeting. The work that was planned for that morning slips quietly, and the slip is blamed on the plan.
+
+It also hides because it is rarely written down. Once the job is green again, everyone goes back to work. The cause lives in a chat thread that nobody will find next time, so next time starts from nothing.
+
+## What reduces it without buying anything
+
+Most of the time in the list above goes on finding context that was never written down or kept. A good part of that context can be put in place with habits, and with tools you most likely have already.
+
+- **Give every table an owner.** A name, written where people will look. It turns "who knows about this?" from a search into a lookup.
+- **Check at the boundaries.** Test data where it enters your systems and where it leaves: row counts, types, empty values in columns that should never be empty. A check at the edge turns a silent wrong number into a loud failure, which is the cheaper kind.
+- **Keep lineage, even a rough one.** Knowing what feeds a table, and what that table feeds, removes most of the tracing.
+- **Keep run history.** If you can see when a job last succeeded and what was different about that run, the question "what changed?" has somewhere to start.
+- **Write down causes.** Two lines per incident will do: what broke, why, and what fixed it. The second time is then shorter than the first.
+
+None of this stops incidents from happening. It shortens the time each one takes.
+
+## Where Convalesce fits
+
+Convalesce does the digging. When a run fails, it investigates the failure: the run, the error, what changed, and what sits upstream and downstream. It shows the evidence it found, so you can check the reasoning yourself. Then it proposes a fix for a person to approve, and nothing ships without that approval. The steps are set out in [how it works](https://convalesce.io/#how-it-works).
+
+The next posts in this series each take one failure and follow it from the first red mark to the fix.
