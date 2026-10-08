@@ -30,7 +30,7 @@ export function Footer() {
     <footer className="pb-10">
       <FrameWidth>
         <div className="on-brand rounded-lg p-7 sm:p-9 lg:p-10">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <Logo />
             </div>
