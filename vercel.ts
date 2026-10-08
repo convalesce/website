@@ -27,6 +27,27 @@ import type { VercelConfig } from "@vercel/config/v1";
 export const config: VercelConfig = {
   framework: "nextjs",
 
+  /* The blog is read at blog.convalesce.io (BLOG.url in lib/content.ts), so
+     its address under the main site moves there for good. Redirects run
+     before any file is looked up, so they belong here. The other half, which
+     serves /blog at the root of the blog's host, is in next.config.ts: a
+     rewrite in this file is tried only after the files, and at "/" the home
+     page is one. The destinations are literals for the reason given above. */
+  redirects: [
+    {
+      source: "/blog",
+      has: [{ type: "host", value: { inc: ["convalesce.io", "www.convalesce.io"] } }],
+      destination: "https://blog.convalesce.io/",
+      permanent: true,
+    },
+    {
+      source: "/blog/:path*",
+      has: [{ type: "host", value: { inc: ["convalesce.io", "www.convalesce.io"] } }],
+      destination: "https://blog.convalesce.io/:path*",
+      permanent: true,
+    },
+  ],
+
   headers: [
     {
       source: "/(.*)",
