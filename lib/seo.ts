@@ -4,6 +4,60 @@ import { PAGES, SITE, type PagePath } from "@/lib/content";
 
 const page = (path: PagePath) => PAGES.find((p) => p.path === path)!;
 
+const SHARED_KEYWORDS = ["Convalesce", "self-healing data infrastructure", "self-healing data pipelines"];
+
+const PAGE_KEYWORDS: Record<PagePath, string[]> = {
+  "/integrations": [
+    "data pipeline integrations",
+    "Airflow integration",
+    "Dagster integration",
+    "Prefect integration",
+    "dbt integration",
+    "Spark integration",
+    "Snowflake integration",
+    "Databricks integration",
+    "BigQuery integration",
+    "Kafka integration",
+    "Great Expectations integration",
+    "data observability integrations",
+    "orchestrator integrations",
+    "warehouse integrations",
+    "lineage integrations",
+    "connect data tools",
+  ],
+  "/changelog": [
+    "Convalesce changelog",
+    "release notes",
+    "plugin releases",
+    "Airflow plugin release",
+    "Dagster plugin release",
+    "Prefect plugin release",
+    "Great Expectations plugin release",
+    "Spark plugin release",
+    "data observability release notes",
+  ],
+  "/about": [
+    "about Convalesce",
+    "why self-healing data infrastructure",
+    "incident evidence",
+    "evidence-backed remediation",
+    "data pipeline incidents",
+    "data privacy",
+    "data reliability company",
+  ],
+  "/contact": [
+    "contact Convalesce",
+    "Convalesce support",
+    "request an integration",
+    "data pipeline help",
+    "privacy request",
+    "product questions",
+  ],
+  "/privacy": ["privacy policy", "personal data", "data retention", "data subject rights", "GDPR"],
+  "/terms": ["terms of service", "free beta terms", "acceptable use", "liability"],
+  "/dpa": ["data processing addendum", "DPA", "subprocessors", "GDPR", "data transfers", "security measures"],
+};
+
 /* A page's own title, description and address, for search results and for
    share cards. Without the openGraph block a page inherits the home page's,
    and a shared link to the privacy policy would be titled as the home page
@@ -21,6 +75,7 @@ export function pageMetadata(path: PagePath): Metadata {
   return {
     title,
     description,
+    keywords: [...SHARED_KEYWORDS, ...PAGE_KEYWORDS[path]],
     alternates: { canonical: path },
     openGraph: {
       title: `${title} | ${SITE.company}`,
