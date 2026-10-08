@@ -9,6 +9,17 @@ A data incident rarely starts with an alarm. It starts with a message.
 
 Someone in finance opens the morning dashboard and the revenue number looks low. Or a scheduled job went red overnight and nobody saw it until the first coffee. Either way, the first sign many teams get is a person asking a question in chat: "Is this number right?"
 
+<Timeline
+  title="An example morning"
+  events={[
+    { time: "08:50", what: "The revenue number on the morning dashboard looks low.", state: "fail" },
+    { time: "09:05", what: "Someone in finance asks in chat whether the number is right." },
+    { time: "09:10", what: "The engineer on call puts their own work down and starts looking." },
+    { time: "10:25", what: "The cause is found, 75 minutes after the engineer started." },
+    { time: "10:40", what: "The fix goes out and the dashboard is right again.", state: "ok" },
+  ]}
+/>
+
 This post is about what happens next, and what it costs. It is the first in a series. Each later post takes one real failure and walks through it step by step. This one sets out the problem they all share.
 
 ## What it looks like from the inside
@@ -40,7 +51,7 @@ Here is that work as a list, with a time against each step.
   ]}
 />
 
-Every time in that list is our estimate for a mid-sized data team. None of them is a measurement of anyone's real incidents. They are our judgement of how long each step takes for someone who knows the tools and does not yet know the answer. We have not timed them. Your times will differ. A team with good lineage will be quicker at the fourth step. A team whose expert is on holiday will be slower at the last one.
+The times in that list are our judgement for a mid-sized team, and nobody timed them. Yours will differ.
 
 Two things stand out. Almost none of the work is typing a fix. And the steps are not hard, they are scattered. The run history is in one tool, the logs in another, the lineage in a third if it exists at all, and the commits in a fourth. The reason a column means what it means is in somebody's head.
 
