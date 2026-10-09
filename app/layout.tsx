@@ -607,6 +607,7 @@ const jsonLd = {
       "@id": `${SITE.domain}/#site`,
       url: SITE.domain,
       name: SITE.company,
+      alternateName: "convalesce.io",
       description: SITE.description,
       publisher: { "@id": `${SITE.domain}/#org` },
       inLanguage: "en",
@@ -622,7 +623,9 @@ const jsonLd = {
       author: { "@id": `${SITE.domain}/#org` },
       offers: {
         "@type": "Offer",
-        availability: "https://schema.org/PreOrder",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
         url: `${SITE.domain}/#top`,
       },
     },

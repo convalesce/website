@@ -8,8 +8,11 @@ import {
   LINEAGE,
   PAGES,
   PRINCIPLES,
+  SECURITY_MEASURES,
+  SECURITY_TOPICS,
   SITE,
   STEPS,
+  USE_CASES,
   pageUrl,
 } from "@/lib/content";
 import { POSTS } from "@/lib/blog";
@@ -81,6 +84,13 @@ export function llmsFull() {
     (p) => `- **${p.name}**: ${p.body} (${p.proof})`,
   ).join("\n");
 
+  const useCases = USE_CASES.map(
+    (u) => `### ${u.name}\n\nWhat the team sees: ${u.sees}\n\nWhat ${SITE.company} gathers: ${u.gathers} (${u.signals})`,
+  ).join("\n\n");
+
+  const security = SECURITY_TOPICS.map((t) => `### ${t.heading}\n\n${t.body.join(" ")}`).join("\n\n");
+  const measures = SECURITY_MEASURES.map((m) => `- **${m.name}**: ${m.body}`).join("\n");
+
   const faq = FAQ.map((f) => `**Q: ${f.q}**\n\n${f.a}`).join("\n\n");
 
   return `# ${SITE.company}: ${SITE.tagline}
@@ -109,6 +119,18 @@ ${sources}
 ## Integrations
 
 ${integrations}
+
+## Use cases
+
+${useCases}
+
+## Security and data
+
+${security}
+
+### The measures in place
+
+${measures}
 
 ## Principles
 

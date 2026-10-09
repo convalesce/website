@@ -27,7 +27,7 @@ export function Nav({ home = "", current = "" }: { home?: string; current?: stri
 
         <nav
           aria-label="Sections"
-          className="hidden items-center gap-7 md:flex"
+          className="hidden items-center gap-4 lg:flex xl:gap-7"
         >
           {NAV_LINKS.map((link) => (
             <a

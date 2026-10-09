@@ -5,7 +5,7 @@ import { INTEGRATION_PAGES } from "@/lib/integrations";
 
 /* Pinned so lastmod means "the content changed", not "the site rebuilt".
    Bump it when the page copy changes. */
-const LAST_MODIFIED = new Date("2026-10-06");
+const LAST_MODIFIED = new Date("2026-10-09");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

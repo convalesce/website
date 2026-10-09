@@ -8,6 +8,29 @@ const page = (path: PagePath) => PAGES.find((p) => p.path === path)!;
 const SHARED_KEYWORDS = ["Convalesce", "self-healing data infrastructure", "self-healing data pipelines"];
 
 const PAGE_KEYWORDS: Record<PagePath, string[]> = {
+  "/use-cases": [
+    "data pipeline failures",
+    "schema change broke pipeline",
+    "column renamed upstream",
+    "null values failing data quality check",
+    "wrong numbers in dashboard",
+    "silent data failure",
+    "commit broke data pipeline",
+    "flaky pipeline run",
+    "root cause analysis for data pipelines",
+    "data incident investigation",
+  ],
+  "/security": [
+    "Convalesce security",
+    "data security",
+    "read-only data access",
+    "PII masking",
+    "data access controls",
+    "subprocessors",
+    "data deletion",
+    "encryption in transit",
+    "AI data handling",
+  ],
   "/integrations": [
     "data pipeline integrations",
     "Airflow integration",

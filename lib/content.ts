@@ -27,6 +27,22 @@ export const BLOG = {
    nowhere else. `updated` is the day its content last changed. */
 export const PAGES = [
   {
+    path: "/use-cases",
+    title: "Use cases",
+    description:
+      "The data failures Convalesce investigates, from a renamed column to a number that is wrong while every job is green, and the evidence it gathers for each.",
+    updated: "2026-10-09",
+    priority: 0.8,
+  },
+  {
+    path: "/security",
+    title: "Security and data",
+    description:
+      "What Convalesce reads, what leaves your environment, what it can change, and the measures that protect your data.",
+    updated: "2026-10-09",
+    priority: 0.8,
+  },
+  {
     path: "/integrations",
     title: "Integrations",
     description:
@@ -113,7 +129,9 @@ export const CTA = {
 
 export const NAV_LINKS = [
   { label: "How it works", href: "/#how-it-works" },
+  { label: "Use cases", href: "/use-cases" },
   { label: "Integrations", href: "/integrations" },
+  { label: "Security", href: "/security" },
   { label: "Changelog", href: "/changelog" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
@@ -388,3 +406,140 @@ export const CLOSER = {
   body: "Sign in with GitHub or Google, connect a tool, and see your next failed run explained.",
   cta: { label: "Get started", href: SITE.app },
 } as const;
+
+/* The kinds of failure the product is pointed at, one row each on /use-cases.
+   A row says what is investigated and what evidence is gathered. It never
+   gives a success rate or a time saved. */
+export type UseCase = {
+  id: string;
+  name: string;
+  sees: string;
+  gathers: string;
+  /** the signals behind the evidence, in mono */
+  signals: string;
+};
+
+export const USE_CASES: readonly UseCase[] = [
+  {
+    id: "schema-change",
+    name: "A column renamed or retyped upstream",
+    sees: "A load or a model fails on a column it can no longer find, or on a type it cannot read. The error names the table, not the change behind it.",
+    gathers:
+      "The column's name and type before and after, the upstream table where it changed, and every table and dashboard downstream that reads it.",
+    signals: "information_schema, lineage, the failing query",
+  },
+  {
+    id: "empty-values",
+    name: "Empty values failing a check",
+    sees: "A data quality check goes red: a column that should always be filled has empty values in it.",
+    gathers:
+      "The run that wrote the rows, the upstream table the empty values came from, and whether the query or the source changed. Where reading is on for the connection, a small read-only query confirms where they start.",
+    signals: "check results, row counts, lineage",
+  },
+  {
+    id: "wrong-number",
+    name: "A number that is wrong while every job is green",
+    sees: "Someone asks whether a dashboard number is right. Every run finished without an error, so nothing says where to start looking.",
+    gathers:
+      "Row counts and freshness for each table behind the number, the lineage path between them, and the recent changes to the code along that path.",
+    signals: "row counts, freshness, lineage, commits",
+  },
+  {
+    id: "commits",
+    name: "A commit that broke a job, and one that only looked guilty",
+    sees: "A job fails soon after a merge. The latest commit is the obvious suspect, and it is not always the right one.",
+    gathers:
+      "The commits that touched the failing query or model, set against when the run first failed and what it executed, so each commit is named with the reason it fits or does not.",
+    signals: "commits, queries, models, run history",
+  },
+  {
+    id: "outside-service",
+    name: "An outside service refusing a call",
+    sees: "A task fails calling an API, a warehouse or a storage bucket: a refused sign-in, a rate limit, a timeout.",
+    gathers:
+      "The exception, each retry and its exit code, the run's settings, and whether those settings differ from the last run that succeeded.",
+    signals: "exceptions, retries, params, config",
+  },
+  {
+    id: "fails-then-passes",
+    name: "A run that fails and then passes",
+    sees: "A run fails, the retry passes, and the alert is closed. The same thing happens again the week after.",
+    gathers:
+      "Each attempt's state and exit code, what else was running at the time, and what differed between the attempt that failed and the one that passed.",
+    signals: "task state, retries, exit codes",
+  },
+] as const;
+
+/* /security. Every statement here restates the FAQ above or a named section
+   of a legal page, and `source` links to it. Change the legal page first. */
+export type SecurityTopic = {
+  id: string;
+  heading: string;
+  body: readonly string[];
+  source: readonly { label: string; href: string }[];
+};
+
+export const SECURITY_TOPICS: readonly SecurityTopic[] = [
+  {
+    id: "reads",
+    heading: "What Convalesce reads",
+    body: [
+      "The shape of your data, all the time: schemas, types, row counts and lineage.",
+      "While it investigates a failure it may also run small read-only queries to confirm a cause. Those are capped, personal columns are masked, and the rows are never stored.",
+    ],
+    source: [{ label: "DPA, section 6.1", href: "/dpa#6-1-investigation-based-processing" }],
+  },
+  {
+    id: "leaves",
+    heading: "What leaves your environment",
+    body: [
+      "Only the incident bundle for the failed run, and only what the investigation needs. It is not a copy of your warehouse.",
+      "Before that context goes to the AI model, Convalesce masks personal information inside its own cloud environment. Automated masking cannot be guaranteed to catch every item, so it reduces that exposure and does not remove it.",
+      "Convalesce does not use customer personal data to train general AI models, and does not instruct its AI provider to.",
+    ],
+    source: [
+      { label: "DPA, section 6.2", href: "/dpa#6-2-pii-redaction" },
+      { label: "DPA, section 6.3", href: "/dpa#6-3-no-generalized-model-training" },
+    ],
+  },
+  {
+    id: "changes",
+    heading: "What it can change",
+    body: [
+      "Nothing on its own. The most it does is open a pull request against your repository, with the evidence attached. You review it and you merge it.",
+    ],
+    source: [],
+  },
+  {
+    id: "access",
+    heading: "The access you choose",
+    body: [
+      "Reading is set per connection, and you can switch it off for any of them.",
+      "Access to your code is a separate step: you install the GitHub app on the repositories you pick.",
+      "You can revoke a connected integration. Once it is revoked, Convalesce stops making new requests with it.",
+    ],
+    source: [{ label: "DPA, schedule 2", href: "/dpa#technical-and-organizational-measures" }],
+  },
+] as const;
+
+/* The measures in schedule 2 of the DPA, and its sections 11 and 15. */
+export const SECURITY_MEASURES: readonly { name: string; body: string }[] = [
+  { name: "Encryption", body: "Information is encrypted in transit." },
+  { name: "Sign-in", body: "Multi-factor authentication for internal and administrative access." },
+  {
+    name: "Access",
+    body: "Role-based access controls, least-privilege service accounts, and restrictions on staff access to customer data.",
+  },
+  { name: "Secrets", body: "Integration credentials and secrets are kept in Google Secret Manager." },
+  { name: "Environments", body: "Development and production are kept separate." },
+  { name: "Logging", body: "Audit logging for the operation and security of the service." },
+  { name: "Hosting", body: "Google Cloud, region us-central1 (Iowa, United States)." },
+  {
+    name: "Deletion",
+    body: "Customer data is deleted within 60 days of a valid deletion request or the end of an account, with the limited exceptions the DPA sets out.",
+  },
+  {
+    name: "Incidents",
+    body: "You are told without undue delay once a security incident affecting your personal data is confirmed.",
+  },
+] as const;
