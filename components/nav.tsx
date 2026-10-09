@@ -46,7 +46,6 @@ export function Nav({ home = "", current = "" }: { home?: string; current?: stri
           <Button
             href={CTA.primary.href}
             size="sm"
-            beta
             className="max-lg:h-11"
             event="open_app"
             label={CTA.primary.label}

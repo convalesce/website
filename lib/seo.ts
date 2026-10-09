@@ -67,7 +67,7 @@ const PAGE_KEYWORDS: Record<PagePath, string[]> = {
     "product questions",
   ],
   "/privacy": ["privacy policy", "personal data", "data retention", "data subject rights", "GDPR"],
-  "/terms": ["terms of service", "free beta terms", "acceptable use", "liability"],
+  "/terms": ["terms of service", "acceptable use", "liability"],
   "/dpa": ["data processing addendum", "DPA", "subprocessors", "GDPR", "data transfers", "security measures"],
 };
 

@@ -30,7 +30,6 @@ export function Button({
   label,
   className = "",
   trailing,
-  beta = false,
 }: {
   href: string;
   children: ReactNode;
@@ -41,8 +40,6 @@ export function Button({
   label?: string;
   className?: string;
   trailing?: ReactNode;
-  /** marks the product behind the button as in beta */
-  beta?: boolean;
 }) {
   const analyticsLabel = label ?? (typeof children === "string" ? children : "");
 
@@ -54,11 +51,6 @@ export function Button({
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
-      {beta ? (
-        <span className="mono-label rounded-sm border border-current/60 !text-current px-1.5 py-0.5 text-[0.65rem] leading-none">
-          Beta
-        </span>
-      ) : null}
       {trailing ? (
         <span aria-hidden="true" className="inline-flex items-center text-[0.9em] opacity-70">
           {trailing}

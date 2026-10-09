@@ -362,7 +362,7 @@ export function PostView({
                 <h2 id="start" className="font-display text-h3">{CLOSER.head}</h2>
                 <p className={`${text} mt-2`}>{CLOSER.body}</p>
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <Button href={CTA.primary.href} beta event="open_app" label={CTA.primary.label}>
+                  <Button href={CTA.primary.href} event="open_app" label={CTA.primary.label}>
                     {CTA.primary.label}
                   </Button>
                   <a href={`${SITE.domain}/${CTA.secondary.href}`} className={secondary}>

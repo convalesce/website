@@ -323,7 +323,6 @@ export const metadata: Metadata = {
     "DataHub",
     "DataHub alternative",
     // Product and audience.
-    "free beta",
     "data engineers",
     "analytics engineers",
     "data platform teams",
@@ -529,8 +528,6 @@ export const metadata: Metadata = {
     "free data observability",
     "free data pipeline monitoring",
     "free self-healing tool",
-    "data observability beta",
-    "data reliability beta",
     "try self-healing data infrastructure",
     "get started self-healing data",
     "data observability for startups",
