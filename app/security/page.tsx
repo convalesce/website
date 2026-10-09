@@ -24,7 +24,7 @@ export default function Page() {
         index="/security"
         label="Security and data"
         title="What Convalesce reads, sends and changes."
-        intro="Convalesce works on your pipelines, so this page says plainly what it touches. Each answer names the part of the legal pages it comes from."
+        intro="Convalesce works on your pipelines, so this page says plainly what it touches. Where an answer rests on the legal pages, it links to the part it comes from."
         meta={
           <nav aria-label="On this page" className="mt-8">
             <ul className="text-small flex flex-wrap gap-x-6">

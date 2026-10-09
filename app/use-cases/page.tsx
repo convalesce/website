@@ -55,9 +55,9 @@ export default function Page() {
             <li
               key={item.id}
               id={item.id}
-              className={`border-line scroll-mt-24 border-b py-8 lg:py-10 ${columns}`}
+              className={`border-line scroll-mt-24 border-b py-8 sm:grid sm:grid-cols-2 sm:gap-x-10 lg:py-10 ${columns}`}
             >
-              <h2 className="font-display text-lead max-w-[24ch] font-semibold text-balance lg:col-span-4">
+              <h2 className="font-display text-lead max-w-[24ch] font-semibold text-balance sm:col-span-2 lg:col-span-4">
                 {item.name}
               </h2>
               <div className="mt-5 lg:col-span-4 lg:mt-0">
