@@ -320,8 +320,6 @@ export const metadata: Metadata = {
     "GitHub pull requests data",
     "OpenLineage",
     "OpenLineage integration",
-    "DataHub",
-    "DataHub alternative",
     // Product and audience.
     "data engineers",
     "analytics engineers",
