@@ -13,7 +13,7 @@ export type Source =
   | { kind: "maven"; id: string };
 
 /** The last versions confirmed published; used only when a registry cannot be read. */
-export const KNOWN_VERSION = "0.1.7";
+export const KNOWN_VERSION = "1.0.0";
 
 async function pypi(name: string): Promise<string | null> {
   const res = await fetch(`https://pypi.org/pypi/${name}/json`, {
