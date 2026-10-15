@@ -1,88 +1,89 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import { JsonLd, PageShell } from "@/components/page-shell";
 import { textLink } from "@/components/ui/text-link";
-import { COMPANY, HERO, PRINCIPLES, SITE } from "@/lib/content";
+import { COMPANY, PRINCIPLES, SITE } from "@/lib/content";
 import { pageJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata("/about");
 
 const primary = "btn-primary inline-flex h-11 items-center rounded-md px-5 text-small font-medium whitespace-nowrap";
 
+/* Every section is one row of the page's grid: its heading in the first
+   third, what it says in the rest, a hairline above, the same space each time. */
+function Part({ id, title, children }: { id: string; title: string; children: ReactNode }) {
+  return (
+    <section aria-labelledby={id} className="border-line grid gap-x-10 gap-y-6 border-t py-12 lg:grid-cols-12 lg:py-16">
+      <h2 id={id} className="font-display text-h2 text-balance lg:col-span-4">{title}</h2>
+      <div className="lg:col-span-8">{children}</div>
+    </section>
+  );
+}
+
 export default function Page() {
+  const [met, problem, started] = COMPANY.story;
   return (
     <>
-      <PageShell
-        index="/about"
-        label="Company"
-        title="Fix the failure, with the evidence behind it."
-        intro={HERO.body}
-      >
-        <section aria-labelledby="who" className="border-line grid gap-x-10 gap-y-6 border-t pt-10 lg:grid-cols-12">
-          <h2 id="who" className="font-display text-h2 lg:col-span-4">Who we are</h2>
-          <div className="lg:col-span-8">
-            {COMPANY.story.map((line) => (
-              <p key={line} className="text-muted mt-4 max-w-[60ch] text-pretty first:mt-0">{line}</p>
-            ))}
-            <dl className="border-line mt-8 grid gap-x-8 border-t sm:grid-cols-3">
-              <div className="border-line border-b py-4">
-                <dt className="text-faint text-small">Founded</dt>
-                <dd className="text-ink mt-1">{COMPANY.founded.label}</dd>
-              </div>
-              <div className="border-line border-b py-4">
-                <dt className="text-faint text-small">Based in</dt>
-                <dd className="text-ink mt-1">{COMPANY.place.city}, {COMPANY.place.regionName}</dd>
-              </div>
-              <div className="border-line border-b py-4">
-                <dt className="text-faint text-small">Founders</dt>
-                <dd className="text-ink mt-1">
-                  {COMPANY.founders.map((f) => (
-                    <span key={f.name} className="mt-2 block first:mt-0">
-                      {f.name}
-                      <span className="text-faint text-small block">{f.role}</span>
-                    </span>
-                  ))}
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </section>
+      <PageShell index="/about" label="Company" title="We built the fix we kept needing." intro={met} standfirst>
+        <Part id="why" title="The hour after the alert">
+          <p className="text-soft text-prose max-w-[62ch] text-pretty">{problem}</p>
+          <p className="text-soft text-prose mt-5 max-w-[62ch] text-pretty">{started}</p>
+          <dl className="mt-10 flex flex-wrap gap-x-14 gap-y-6">
+            <div>
+              <dt className="text-faint text-small">Founded</dt>
+              <dd className="text-ink text-h3 mt-1">{COMPANY.founded.label}</dd>
+            </div>
+            <div>
+              <dt className="text-faint text-small">Based in</dt>
+              <dd className="text-ink text-h3 mt-1">{COMPANY.place.city}, {COMPANY.place.regionName}</dd>
+            </div>
+          </dl>
+        </Part>
 
-        <section aria-labelledby="believe" className="border-line mt-10 border-t pt-10">
-          <h2 id="believe" className="font-display text-h2">What we hold to</h2>
-          <ul className="mt-8">
-            {PRINCIPLES.map((p) => (
-              <li key={p.name} className="border-line grid gap-x-10 gap-y-2 border-t py-7 first:border-t-0 lg:grid-cols-12">
-                <h3 className="font-display text-h3 lg:col-span-4">{p.name}</h3>
-                <p className="text-muted max-w-[52ch] text-pretty lg:col-span-5">{p.body}</p>
-                <p className="text-faint font-mono text-mono-sm lg:col-span-3">{p.proof}</p>
+        <Part id="founders" title="Founders">
+          <ul className="grid sm:grid-cols-2">
+            {COMPANY.founders.map((f) => (
+              <li key={f.name} className="border-line max-sm:not-first:mt-6 max-sm:not-first:border-t max-sm:not-first:pt-6 sm:px-8 sm:first:pl-0 sm:not-first:border-l">
+                <p className="font-display text-h2 text-ink text-balance">{f.name}</p>
+                <p className="text-muted mt-2">{f.role}</p>
               </li>
             ))}
           </ul>
-        </section>
+        </Part>
 
-        <section aria-labelledby="data" className="border-line mt-6 grid gap-x-10 gap-y-3 border-t pt-10 lg:grid-cols-12">
-          <h2 id="data" className="font-display text-h2 lg:col-span-4">Your data</h2>
-          <p className="text-muted max-w-[60ch] text-pretty lg:col-span-8">
+        <Part id="believe" title="What we hold to">
+          <ul>
+            {PRINCIPLES.map((p) => (
+              <li key={p.name} className="border-line grid gap-x-8 gap-y-2 border-t py-6 first:border-t-0 first:pt-0 md:grid-cols-[minmax(0,1fr)_14rem]">
+                <div>
+                  <h3 className="font-display text-h3">{p.name}</h3>
+                  <p className="text-muted mt-2 max-w-[52ch] text-pretty">{p.body}</p>
+                </div>
+                <p className="text-faint font-mono text-mono-sm md:pt-1">{p.proof}</p>
+              </li>
+            ))}
+          </ul>
+        </Part>
+
+        <Part id="data" title="Your data">
+          <p className="text-muted max-w-[60ch] text-pretty">
             The details are written down, not promised: the{" "}
             <Link href="/privacy" className={textLink}>privacy policy</Link>, the{" "}
             <Link href="/terms" className={textLink}>terms of service</Link> and the{" "}
             <Link href="/dpa" className={textLink}>data processing addendum</Link>.
           </p>
-        </section>
+        </Part>
 
-        <section aria-labelledby="talk" className="border-line mt-10 grid gap-x-10 gap-y-5 border-t pt-10 lg:grid-cols-12">
-          <h2 id="talk" className="font-display text-h2 lg:col-span-4">Talk to us</h2>
-          <div className="lg:col-span-8">
-            <p className="text-muted max-w-[60ch] text-pretty">
-              A question, a tool you need, or something to correct. A person reads every message, and the{" "}
-              <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className={textLink}>docs</a> cover setup.
-            </p>
-            <div className="mt-6">
-              <Link href="/contact" className={primary}>Contact us</Link>
-            </div>
+        <Part id="talk" title="Talk to us">
+          <p className="text-muted max-w-[60ch] text-pretty">
+            A question, a tool you need, or something to correct. A person reads every message, and the{" "}
+            <a href={SITE.docs} target="_blank" rel="noopener noreferrer" className={textLink}>docs</a> cover setup.
+          </p>
+          <div className="mt-6">
+            <Link href="/contact" className={primary}>Contact us</Link>
           </div>
-        </section>
+        </Part>
       </PageShell>
       <JsonLd data={pageJsonLd("/about")} />
     </>
