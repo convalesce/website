@@ -584,6 +584,7 @@ const jsonLd = {
         caption: SITE.company,
       },
       image: { "@id": `${SITE.domain}/#logo` },
+      sameAs: SITE.profiles,
       email: SITE.email,
       contactPoint: [
         {

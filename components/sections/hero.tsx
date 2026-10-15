@@ -4,7 +4,7 @@ import { Section } from "@/components/frame";
 import { Button } from "@/components/ui/button";
 import { Reveal, SplitText } from "@/components/ui/reveal";
 import { RotatingWord } from "@/components/ui/rotating-word";
-import { CTA, HERO } from "@/lib/content";
+import { CTA, HERO, SITE } from "@/lib/content";
 
 // The two actions are one width, set by the longer label.
 const pair = "w-56 justify-center";
@@ -28,6 +28,7 @@ export function Hero() {
           <Reveal mode="words">
             {/* the rotating object always drops to its own line under the stem */}
             <h1 className="font-display text-hero">
+              <span className="mono-label mb-6 block">{SITE.company}</span>
               <SplitText text={HERO.headStem} />{" "}
               <span className="block">
                 <RotatingWord
