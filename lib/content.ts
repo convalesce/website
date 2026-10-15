@@ -26,8 +26,8 @@ export const COMPANY = {
   founded: { label: "August 2026", iso: "2026-08" },
   place: { city: "Raleigh", region: "NC", regionName: "North Carolina", country: "US" },
   founders: [
-    { name: "Samarth KaPatel", role: "Co-founder" },
-    { name: "Vedanshu Joshi", role: "Co-founder" },
+    { name: "Samarth KaPatel", role: "Co-founder and CEO" },
+    { name: "Vedanshu Joshi", role: "Co-founder and CTO" },
   ],
   story: [
     "Teams already have tools that tell them when a production data workflow fails. The hard part starts after the alert: an engineer pieces together what happened across the scheduler, the warehouse, the transformation code and the commits, while the people who depend on the data wait.",

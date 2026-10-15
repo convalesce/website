@@ -36,7 +36,12 @@ export default function Page() {
               <div className="border-line border-b py-4">
                 <dt className="text-faint text-small">Founders</dt>
                 <dd className="text-ink mt-1">
-                  {COMPANY.founders.map((f) => <span key={f.name} className="block">{f.name}</span>)}
+                  {COMPANY.founders.map((f) => (
+                    <span key={f.name} className="mt-2 block first:mt-0">
+                      {f.name}
+                      <span className="text-faint text-small block">{f.role}</span>
+                    </span>
+                  ))}
                 </dd>
               </div>
             </dl>
