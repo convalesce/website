@@ -13,6 +13,7 @@ export const SITE = {
   docs: "https://docs.convalesce.io",
   /** The company's own pages elsewhere, so search engines can tie them to this site. */
   profiles: [
+    "https://www.linkedin.com/company/convalesce-io/",
     "https://github.com/convalesce",
     "https://pypi.org/project/convalesce-emit/",
     "https://central.sonatype.com/namespace/io.convalesce",
