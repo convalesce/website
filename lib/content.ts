@@ -30,8 +30,9 @@ export const COMPANY = {
     { name: "Vedanshu Joshi", role: "Co-founder and CTO" },
   ],
   story: [
-    "Teams already have tools that tell them when a production data workflow fails. The hard part starts after the alert: an engineer pieces together what happened across the scheduler, the warehouse, the transformation code and the commits, while the people who depend on the data wait.",
-    "We started Convalesce in August 2026 to do that part. It gathers the context, finds the cause, and brings back a fix with the evidence behind it, for a person to approve.",
+    "We met during our bachelor's and have built things together ever since. For almost three years we worked side by side at a high-growth startup, and each of us has three to four years in data engineering and distributed systems.",
+    "That is where we lived the problem Convalesce solves. A pipeline would fail and an alert would fire, and then one of us would spend the next hour piecing together what happened across the scheduler, the warehouse, the transformation code and the commits, while everyone who relied on the data waited. Our tools could tell us that something broke. None of them could tell us why, or what to change.",
+    "We started Convalesce in August 2026, in Raleigh, North Carolina, to do that part. It gathers the context, finds the cause, and brings back a fix with the evidence behind it, for a person to approve.",
   ],
 } as const;
 
