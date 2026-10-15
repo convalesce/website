@@ -12,7 +12,7 @@ import { CLOSER, CTA, SITE } from "@/lib/content";
 import { PostMeta } from "./post-list";
 import { ThemeToggle } from "./theme-toggle";
 
-const column = "mx-auto w-full max-w-[42rem] px-4 sm:px-6";
+const column = "mx-auto w-full max-w-[52rem] px-4 sm:px-6";
 const secondary =
   "border-ink/25 bg-bg/60 text-ink hover:border-ink/40 hover:bg-ink/[0.06] inline-flex h-11 items-center gap-2 rounded-md border px-5 text-small font-medium whitespace-nowrap transition-colors";
 
