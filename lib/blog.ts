@@ -52,16 +52,6 @@ export function neighbours(post: Post): { newer?: Post; older?: Post } {
   return { newer: POSTS[at - 1], older: POSTS[at + 1] };
 }
 
-/** Other posts that share a tag with this one, the most shared first. */
-export function related(post: Post, limit = 3): Post[] {
-  return POSTS.filter((other) => other.slug !== post.slug)
-    .map((other) => ({ other, shared: other.tags.filter((tag) => post.tags.includes(tag)).length }))
-    .filter(({ shared }) => shared > 0)
-    .sort((a, b) => b.shared - a.shared)
-    .slice(0, limit)
-    .map(({ other }) => other);
-}
-
 const day = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
 /** A post's date as the site prints dates: 8 Oct 2026. */
