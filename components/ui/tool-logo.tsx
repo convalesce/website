@@ -11,6 +11,8 @@ import {
   SiMinio,
   SiMongodb,
   SiMysql,
+  SiOpenjdk,
+  SiPython,
   SiShopify,
 } from "react-icons/si";
 
@@ -30,6 +32,8 @@ const FLAT: Record<string, IconType> = {
   ClickHouse: SiClickhouse,
   Metabase: SiMetabase,
   Superset: SiApachesuperset,
+  Python: SiPython,
+  Java: SiOpenjdk,
 };
 
 /** A tool's own mark, or nothing where it has none: the name beside it carries the row. */

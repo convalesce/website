@@ -11,6 +11,12 @@ export const SITE = {
   privacyEmail: "privacy@convalesce.io",
   app: "https://app.convalesce.io",
   docs: "https://docs.convalesce.io",
+  /** The company's own pages elsewhere, so search engines can tie them to this site. */
+  profiles: [
+    "https://github.com/convalesce",
+    "https://pypi.org/project/convalesce-emit/",
+    "https://central.sonatype.com/namespace/io.convalesce",
+  ],
 } as const;
 
 /* The blog is served from its own host: the list at the root, a post at
@@ -128,8 +134,6 @@ export const CTA = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Use cases", href: "/use-cases" },
   { label: "Integrations", href: "/integrations" },
   { label: "Security", href: "/security" },
   { label: "Changelog", href: "/changelog" },
