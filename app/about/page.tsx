@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { JsonLd, PageShell } from "@/components/page-shell";
 import { textLink } from "@/components/ui/text-link";
-import { HERO, PRINCIPLES, SITE } from "@/lib/content";
+import { COMPANY, HERO, PRINCIPLES, SITE } from "@/lib/content";
 import { pageJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata("/about");
@@ -18,7 +18,32 @@ export default function Page() {
         title="Fix the failure, with the evidence behind it."
         intro={HERO.body}
       >
-        <section aria-labelledby="believe" className="border-line border-t pt-10">
+        <section aria-labelledby="who" className="border-line grid gap-x-10 gap-y-6 border-t pt-10 lg:grid-cols-12">
+          <h2 id="who" className="font-display text-h2 lg:col-span-4">Who we are</h2>
+          <div className="lg:col-span-8">
+            {COMPANY.story.map((line) => (
+              <p key={line} className="text-muted mt-4 max-w-[60ch] text-pretty first:mt-0">{line}</p>
+            ))}
+            <dl className="border-line mt-8 grid gap-x-8 border-t sm:grid-cols-3">
+              <div className="border-line border-b py-4">
+                <dt className="text-faint text-small">Founded</dt>
+                <dd className="text-ink mt-1">{COMPANY.founded.label}</dd>
+              </div>
+              <div className="border-line border-b py-4">
+                <dt className="text-faint text-small">Based in</dt>
+                <dd className="text-ink mt-1">{COMPANY.place.city}, {COMPANY.place.regionName}</dd>
+              </div>
+              <div className="border-line border-b py-4">
+                <dt className="text-faint text-small">Founders</dt>
+                <dd className="text-ink mt-1">
+                  {COMPANY.founders.map((f) => <span key={f.name} className="block">{f.name}</span>)}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section aria-labelledby="believe" className="border-line mt-10 border-t pt-10">
           <h2 id="believe" className="font-display text-h2">What we hold to</h2>
           <ul className="mt-8">
             {PRINCIPLES.map((p) => (

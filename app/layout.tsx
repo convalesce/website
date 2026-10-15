@@ -4,7 +4,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Analytics } from "@/components/analytics";
-import { FAQ, SITE } from "@/lib/content";
+import { COMPANY, FAQ, SITE } from "@/lib/content";
 import "./globals.css";
 
 const display = Instrument_Sans({
@@ -585,6 +585,14 @@ const jsonLd = {
       },
       image: { "@id": `${SITE.domain}/#logo` },
       sameAs: SITE.profiles,
+      foundingDate: COMPANY.founded.iso,
+      founders: COMPANY.founders.map((f) => ({ "@type": "Person", name: f.name, jobTitle: f.role })),
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: COMPANY.place.city,
+        addressRegion: COMPANY.place.region,
+        addressCountry: COMPANY.place.country,
+      },
       email: SITE.email,
       contactPoint: [
         {

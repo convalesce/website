@@ -20,6 +20,21 @@ export const SITE = {
   ],
 } as const;
 
+/* Who runs Convalesce, as the About page and the company's structured data
+   state it. The names match the legal pages. */
+export const COMPANY = {
+  founded: { label: "August 2026", iso: "2026-08" },
+  place: { city: "Raleigh", region: "NC", regionName: "North Carolina", country: "US" },
+  founders: [
+    { name: "Samarth KaPatel", role: "Co-founder" },
+    { name: "Vedanshu Joshi", role: "Co-founder" },
+  ],
+  story: [
+    "Teams already have tools that tell them when a production data workflow fails. The hard part starts after the alert: an engineer pieces together what happened across the scheduler, the warehouse, the transformation code and the commits, while the people who depend on the data wait.",
+    "We started Convalesce in August 2026 to do that part. It gathers the context, finds the cause, and brings back a fix with the evidence behind it, for a person to approve.",
+  ],
+} as const;
+
 /* The blog is served from its own host: the list at the root, a post at
    /<slug>. Inside the app the routes stay under /blog, and the host rules in
    next.config.ts and vercel.ts map one onto the other. Change the address
@@ -77,8 +92,8 @@ export const PAGES = [
     path: "/about",
     title: "About",
     description:
-      "Why Convalesce exists, what it believes about incidents and evidence, and how it handles your data.",
-    updated: "2026-10-06",
+      "Who is behind Convalesce, founded in August 2026 in Raleigh, North Carolina, what it believes about incidents and evidence, and how it handles your data.",
+    updated: "2026-10-15",
     priority: 0.6,
   },
   {
