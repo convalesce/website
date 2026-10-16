@@ -14,11 +14,23 @@ export const SITE = {
   /** The company's own pages elsewhere, so search engines can tie them to this site. */
   profiles: [
     "https://www.linkedin.com/company/convalesce-io/",
+    "https://x.com/convalesce_io",
+    "https://www.youtube.com/@Convalesce-inc",
+    "https://medium.com/@v.joshi_68956",
     "https://github.com/convalesce",
     "https://pypi.org/project/convalesce-emit/",
     "https://central.sonatype.com/namespace/io.convalesce",
   ],
 } as const;
+
+/** The company's accounts the footer links to, in the order they are shown. */
+export const SOCIAL = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/convalesce-io/" },
+  { name: "X", href: "https://x.com/convalesce_io" },
+  { name: "YouTube", href: "https://www.youtube.com/@Convalesce-inc" },
+  { name: "Medium", href: "https://medium.com/@v.joshi_68956" },
+  { name: "GitHub", href: "https://github.com/convalesce" },
+] as const;
 
 /* Who runs Convalesce, as the About page and the company's structured data
    state it. The names match the legal pages. */

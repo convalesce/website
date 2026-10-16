@@ -1,6 +1,18 @@
+import type { IconType } from "react-icons";
+import { FaLinkedin } from "react-icons/fa6";
+import { SiGithub, SiMedium, SiX, SiYoutube } from "react-icons/si";
+
 import { FrameWidth } from "@/components/frame";
 import { Logo } from "@/components/logo";
-import { HERO, SITE, outside } from "@/lib/content";
+import { HERO, SITE, SOCIAL, outside } from "@/lib/content";
+
+const SOCIAL_ICON: Record<(typeof SOCIAL)[number]["name"], IconType> = {
+  LinkedIn: FaLinkedin,
+  X: SiX,
+  YouTube: SiYoutube,
+  Medium: SiMedium,
+  GitHub: SiGithub,
+};
 
 const COLUMNS = [
   {
@@ -38,6 +50,24 @@ export function Footer({ home = "" }: { home?: string }) {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <Logo />
+              <ul className="mt-6 flex flex-wrap gap-1" aria-label="Convalesce elsewhere">
+                {SOCIAL.map(({ name, href }) => {
+                  const Icon = SOCIAL_ICON[name];
+                  return (
+                    <li key={name}>
+                      <a
+                        href={href}
+                        {...outside(href)}
+                        aria-label={name}
+                        title={name}
+                        className="text-muted hover:text-ink inline-flex size-11 items-center justify-center rounded-md transition-colors"
+                      >
+                        <Icon aria-hidden="true" className="size-5" />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
 
             {COLUMNS.map((column) => (
